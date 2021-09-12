@@ -1156,7 +1156,6 @@ figure {
   padding: 2em 0 0 0;
   width: 100%;
   float: left;
- /* добавили */
 }
 @media screen and (max-width: 768px) {
   #footer {
@@ -1228,6 +1227,7 @@ figure {
     display: inline;
   }
 }
+
 
 .btn {
   margin-right: 4px;
