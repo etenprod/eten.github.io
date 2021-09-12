@@ -1152,8 +1152,6 @@ figure {
 }
 
 #footer {
-  position: fixed;
-  bottom: 0;
   background: #2F3032;
   padding: 2em 0 0 0;
   width: 100%;
