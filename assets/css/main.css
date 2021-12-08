@@ -80,6 +80,7 @@ a:after {
 
 footer{
     text-align: center;
+    vertical-align:bottom;
 }
 .round {
     border-radius: 200px; /* Радиус скругления */
