@@ -79,7 +79,7 @@ a:after {
    ========================================================================== */
 
 footer {
-    vertical-align:bottom;
+    text-align: center;
 }
 .round {
     border-radius: 200px; /* Радиус скругления */
