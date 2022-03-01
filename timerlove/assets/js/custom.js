@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
 
 	*/
 
-	var finalDate = '2023/01/23';
+	var finalDate = '2024/03/30';
 
 
 
