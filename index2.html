@@ -6,25 +6,35 @@
   <body style="background: url(assets/img/bg23.png) no-repeat fixed; -webkit-background-size: cover; background-size: cover;">
 fff
 <style>
+  
+* {
+  margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
+}
+
+html,
 body {
   height: 100%;
 }
-#wrap {
-  min-height: 100%;
-}
-main {
-  padding-bottom: 100px;
-  /*Высота футера*/
-}
-.footer {
-  display: bottom;
-  height: 50px;
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer .copyright {
-  align-self: center;
-  margin: 0 auto;
+.content {
+  flex: 1 0 auto;
+  
+  padding: 1rem;/*это свойство можно удалить, добавлено для наглядности*/
+  background: #e6f2ff;/*это свойство можно удалить, добавлено для наглядности*/
 }
+
+footer {
+  flex: 0 0 auto;
+  
+  padding: 1rem;/*это свойство можно удалить, добавлено для наглядности*/
+  background: #e6ffe6;/*это свойство можно удалить, добавлено для наглядности*/
+}
+
 p { text-align:center; }
 </style>
 <div class="footer">
