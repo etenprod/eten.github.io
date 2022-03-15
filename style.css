@@ -1,5 +1,7 @@
 html,
 body {
+  background: url(assets/img/bg23.png) no-repeat;
+  background-size: cover;
   height: 100%;
   display: flex;
   flex-direction: column;
