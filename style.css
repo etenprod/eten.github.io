@@ -1,6 +1,4 @@
-<style>
-  
-* {
+ * {
   margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
 }
 
@@ -35,5 +33,3 @@ p {
   text-align:center;
   line-height: 28px;
 }
-
-</style>
