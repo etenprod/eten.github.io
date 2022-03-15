@@ -22,7 +22,8 @@ footer {
 
 .center-img {
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 h2 {
   padding-top: 0px;
