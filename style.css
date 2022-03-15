@@ -1,11 +1,19 @@
+html,
 body {
   height: 100%;
 }
+#wrap {
+  min-height: 100%;
+}
+main {
+  padding-bottom: 100px;
+  /*Высота футера*/
+}
 footer {
-  flex: 0 0 auto;
-  hight: 50px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  margin-top: -100px;
+  /*Минус Высота футера*/
+  height: 100px;
+  /*Высота футера*/
 }
 
 h2 {
