@@ -19,6 +19,11 @@ body {
 footer {
   flex: 0 0 auto;
 }
+
+.center-img {
+  display: block;
+  margin: 0 auto;
+}
 h2 {
   padding-top: 0px;
   padding-bottom: 20px;
