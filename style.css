@@ -22,8 +22,8 @@ footer {
 
 .center-img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 10px; /* Отступ справа */
+  margin-bottom: 10px; /* Отступ снизу */
 }
 h2 {
   padding-top: 0px;
