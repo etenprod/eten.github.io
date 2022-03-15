@@ -7,6 +7,10 @@ body {
 #wrap {
   min-height: 100%;
 }
+header{
+   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 0 0 auto;
+}
 main {
   padding-bottom: 0px;
   /*Высота футера*/
@@ -19,8 +23,8 @@ footer {
 }
 
 h2 {
-  padding-top: -20px;
-  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 20px;
   text-align: center;
   font-family: 'Lobster', sans-serif;
   text-shadow: 5px 5px 20px #000000;
