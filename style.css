@@ -1,27 +1,23 @@
 html,
 body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+	margin: 0;
+	padding: 0;
 }
-#wrap {
-  min-height: 100%;
-}
-header{
-   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-   flex: 0 0 auto;
-}
-main {
-  padding-bottom: 0px;
-  /*Высота футера*/
-}
-footer {
-  margin-top: -100px;
-  /*Минус Высота футера*/
-  height: 100px;
-  /*Высота футера*/
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+     flex: 0 0 auto;
+}
 h2 {
   padding-top: 0px;
   padding-bottom: 20px;
