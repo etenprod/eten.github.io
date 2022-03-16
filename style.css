@@ -19,7 +19,12 @@ body {
    padding: 10px; /* Поля вокруг текста */
    margin: auto; /* Выравниваем по центру */
 	}
-
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 footer {
   flex: 0 0 auto;
 } 
