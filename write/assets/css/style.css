@@ -58,6 +58,11 @@ p{
 
 }
 
+h1 {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 5px 5px 20px #000000;
+}
 .thumb img  {
 
    margin-right: 10px; /* Отступ справа */
