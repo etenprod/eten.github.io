@@ -29,6 +29,10 @@ h8 {
   text-shadow: 5px 5px 20px #000000;
   letter-spacing: 8px;
 }
+p{
+  text-align:center;
+  line-height: 28px;
+}
 
 
 .full {
