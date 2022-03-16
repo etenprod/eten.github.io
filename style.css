@@ -45,11 +45,58 @@ p{
   line-height: 28px;
 }
 
-.thumb img  {
+.thumb1 img  {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    margin-right: 10px; /* Отступ справа */
    margin-bottom: 10px; /* Отступ снизу */
    border-radius: 20px;
    border: 5px #ccc solid;
    box-shadow: 0 0 10px #444;
   }
-
+.thumb2 img  {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-right: 10px; /* Отступ справа */
+   margin-bottom: 10px; /* Отступ снизу */
+   border-radius: 20px;
+   border: 5px #ccc solid;
+   box-shadow: 0 0 10px #444;
+  }
+.thumb3 img  {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-right: 10px; /* Отступ справа */
+   margin-bottom: 10px; /* Отступ снизу */
+   border-radius: 20px;
+   border: 5px #ccc solid;
+   box-shadow: 0 0 10px #444;
+  }
+.thumb4 img  {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-right: 10px; /* Отступ справа */
+   margin-bottom: 10px; /* Отступ снизу */
+   border-radius: 20px;
+   border: 5px #ccc solid;
+   box-shadow: 0 0 10px #444;
+  }
+.thumb5 img  {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-right: 10px; /* Отступ справа */
+   margin-bottom: 10px; /* Отступ снизу */
+   border-radius: 20px;
+   border: 5px #ccc solid;
+   box-shadow: 0 0 10px #444;
+  }
