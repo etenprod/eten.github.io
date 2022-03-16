@@ -14,8 +14,8 @@ body {
 
 .content {
    position: relative;
-    text-align: center;
-    color: white;
+   text-align: center;
+   color: white;
    padding: 10px; /* Поля вокруг текста */
    margin: auto; /* Выравниваем по центру */
 	}
