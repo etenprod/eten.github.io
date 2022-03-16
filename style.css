@@ -15,18 +15,10 @@ body {
 .content {
    padding: 10px; /* Поля вокруг текста */
    margin: auto; /* Выравниваем по центру */
-	}
-.container {
-    position: relative;
+   position: relative;
     text-align: center;
     color: white;
-}
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+	}
 
 footer {
   flex: 0 0 auto;
