@@ -16,6 +16,11 @@ body {
    padding: 10px; /* Поля вокруг текста */
    margin: auto; /* Выравниваем по центру */
 	}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
 .centered {
     position: absolute;
     top: 50%;
