@@ -17,6 +17,11 @@ body {
    margin: auto; /* Выравниваем по центру */
 	}
 .container {
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+    border-radius: 20px;
+    border: 5px #ccc solid;
+    box-shadow: 0 0 10px #444;
     position: relative;
     text-align: center;
     color: white;
