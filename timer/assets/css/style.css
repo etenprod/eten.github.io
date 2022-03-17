@@ -43,13 +43,13 @@ body {
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translateX(-500%);
+  transform: translateX(100%);
   font-size: 14px;
 }
 .timer__item:not(:last-child)::after {
   content: ':';
   position: absolute;
-  right: 10%;
+  right: 40%;
 }
 .content {
    padding: 10px; /* Поля вокруг текста */
