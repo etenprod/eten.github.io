@@ -36,7 +36,7 @@ body {
   margin-right: 10px;
   padding-bottom: 15px;
   text-align: center;
-    }
+    } 
 .timer__item::before {
   content: attr(data-title);
   display: block;
