@@ -53,6 +53,7 @@ body {
 }
 .content {
    flex: 0 0 auto;
+   margin: 0;
    padding: 10px; /* Поля вокруг текста */
 	}
  
