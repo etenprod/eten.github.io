@@ -1,66 +1,59 @@
-<html xmlns="http://www.w3.org/1999/xhtml" >
-    <head runat="server" profile="http://gmpg.org/xfn/11">
-    <title>title</title>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>        
- 
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Шифрация</title>
 </head>
-<body>    
-    <div align="left">
-        <b>Шифровка и дешифровка текста методом Короля</b> <br />
-        Ключ <input id="key" name="key" type="text" size="4" />
-        Исходный текст <input id="text" type="text" size="20" /> <br />
-        <input id="code_button" type="button" name="button_Code" value="Зашифровать" />
-        <input type="button" id="decode_button" value="Расшифровать" /> <br />
-        <b>Зашифрованный текст</b>
-<input id="text_code" type="text" size="20"> <br />
-        <b>Дешифрованный текст</b>
-        <input id="text_decode" type="text" size="20"> <br /> 
-    </div>
-    
+
+<body>
+<h1>Шифрация текста на JavaScript</h1>
+<br>
 <script type="text/javascript">
-var alfavit = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'];
-var text, i, kluc, k, shcifrText = new Array(), j, dlinaalfavit, nevKluc;
-code_button.onclick = function(){
-    text = document.getElementById('text').value;
-    kluc = parseInt(document.getElementById('key').value);
-    i = text.length;
-    dlinaalfavit = alfavit.length;
-    for(k=0;k<i;k++){
-        for(j=0; j<dlinaalfavit; j++){
-            if(text[k]==alfavit[j]){
-                if((j+kluc)>=dlinaalfavit){
-                    nevKluc=kluc-(dlinaalfavit-j);
-                    shcifrText[k]=alfavit[nevKluc];
-                }
-                else{
-                    shcifrText[k]=alfavit[j+kluc];
-                }
-            }
-        }
-    }
-    document.getElementById("text_code").value = shcifrText.join("");
+
+function Encrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+ rnd = Math.round(Math.random() * 122) + 68;
+ Temp[i] = theText.charCodeAt(i) + rnd;
+ Temp2[i] = rnd;
 }
-decode_button.onclick = function(){
-    text = document.getElementById('text_code').value;
-    kluc = parseInt(document.getElementById('key').value);
-    i = text.length;
-    dlinaalfavit = alfavit.length;
-    for(k=0;k<i;k++){
-        for(j=0; j<dlinaalfavit; j++){
-            if(text[k]==alfavit[j]){
-                if((j-kluc)<=0){
-                    nevKluc=dlinaalfavit-(kluc-j);
-                    shcifrText[k]=alfavit[nevKluc];
-                }
-                else{
-                    shcifrText[k]=alfavit[j-kluc];
-                }
-            }
-        }
-    }
-    document.getElementById("text_decode").value = shcifrText.join("");
+for (i = 0; i < TextSize; i++) {
+ output += String.fromCharCode(Temp[i], Temp2[i]);
 }
+return output;
+}
+function unEncrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+ Temp[i] = theText.charCodeAt(i);
+ Temp2[i] = theText.charCodeAt(i + 1);
+}
+for (i = 0; i < TextSize; i = i+2) {
+ output += String.fromCharCode(Temp[i] - Temp2[i]);
+}
+return output;
+}
+
 </script>
+
+<form name=encform onsubmit="return false;">
+<p>
+<textarea name=box1 rows=5 cols=80>Текст для проверки возможности шифрования</textarea>
+<p>
+<input type=button value="Зашифровать Box1 в Box2" onClick="this.form.box2.value=Encrypt(this.form.box1.value);">
+<br><p>
+<textarea name=box2 rows=5 cols=80></textarea>
+<p>
+<input type=button value="Расшифровать Box2 to Box3" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
+<br><p>
+<textarea name=box3 rows=5 cols=80></textarea>
+</form>
+
 </body>
 </html>
