@@ -13,10 +13,14 @@ body {
   overflow-x: hidden;
 }
 .content {
+   height: 100%;
+   width: 100%;
    padding: 10px; /* Поля вокруг текста */
    margin: auto; /* Выравниваем по центру */
 }
 footer {
+  height: 80%;
+  width: 80%;
   flex: 0 0 auto;
 } 
 h1 {
