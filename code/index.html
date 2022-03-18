@@ -45,6 +45,17 @@ for (i = 0; i < TextSize; i = i+2) {
 }
 return output;
 }
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+
+</body>
+</html>
+
 
 </script>
 
@@ -58,7 +69,10 @@ return output;
 <p>
 <input type=button value="Расшифровать" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
 <br><p>
-<textarea name=box3 rows=10 cols=40></textarea>
+<textarea name=box3 rows=10 cols=40 id="myInput">></textarea>
+<p>
+<button onclick="myFunction()">Copy text</button> 
+  
 </form>
 </div>
 <footer>
