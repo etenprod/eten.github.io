@@ -1,30 +1,21 @@
-* { 
+* {
   margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
 }
-
 html,
-body {
+body { 
   height: 100%;
 }
-
 body {
   display: flex;
   flex-direction: column;
-  color: #ffffff;
 }
 .content {
    padding: 10px; /* Поля вокруг текста */
    margin: auto; /* Выравниваем по центру */
-	}
-
+}
 footer {
   flex: 0 0 auto;
 } 
-h1 {
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 5px 5px 20px #000000;
-}
 h2 {
   padding-top: 25px;
   padding-bottom: 20px;
@@ -33,11 +24,15 @@ h2 {
   text-shadow: 5px 5px 20px #000000;
   letter-spacing: 8px;
 }
-h3 {
-  color: #ffffff;
-  text-shadow: 5px 5px 20px #000000;
-}
 p{
   text-align:center;
   line-height: 28px;
 }
+.thumb img  {
+   margin-right: 25px; /* Отступ справа */
+   margin-left: 25px; 
+   margin-bottom: 10px; /* Отступ снизу */
+   border-radius: 20px;
+   border: 5px #ccc solid;
+   box-shadow: 0 0 10px #444;
+  }
