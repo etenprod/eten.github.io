@@ -1,18 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>cesar</title>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server" profile="http://gmpg.org/xfn/11">
+    <title>title</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>        
+ 
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
-<body>  
-Введите текс<input type="text" value="privet" id="text"/><br />
-Введите ключ<input id="kluc" type="text" /><br />
-<input type="button" value="Зашифровать" onclick="shcifr()"/> 
+<body>    
+    <div align="left">
+        <b>Шифровка и дешифровка текста методом Короля</b> <br />
+        Ключ <input id="key" name="key" type="text" size="4" />
+        Исходный текст <input id="text" type="text" size="20" /> <br />
+        <input id="code_button" type="button" name="button_Code" value="Зашифровать" />
+        <input type="button" id="decode_button" value="Расшифровать" /> <br />
+        <b>Зашифрованный текст</b>
+<input id="text_code" type="text" size="20"> <br />
+        <b>Дешифрованный текст</b>
+        <input id="text_decode" type="text" size="20"> <br /> 
+    </div>
+    
 <script type="text/javascript">
 var alfavit = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'];
 var text, i, kluc, k, shcifrText = new Array(), j, dlinaalfavit, nevKluc;
-function shcifr(){
+code_button.onclick = function(){
     text = document.getElementById('text').value;
-    kluc = parseInt(document.getElementById('kluc').value);
+    kluc = parseInt(document.getElementById('key').value);
     i = text.length;
     dlinaalfavit = alfavit.length;
     for(k=0;k<i;k++){
@@ -28,9 +39,27 @@ function shcifr(){
             }
         }
     }
+    document.getElementById("text_code").value = shcifrText.join("");
+}
+decode_button.onclick = function(){
+    text = document.getElementById('text_code').value;
+    kluc = parseInt(document.getElementById('key').value);
+    i = text.length;
+    dlinaalfavit = alfavit.length;
     for(k=0;k<i;k++){
-        document.write(shcifrText[k]);
+        for(j=0; j<dlinaalfavit; j++){
+            if(text[k]==alfavit[j]){
+                if((j-kluc)<=0){
+                    nevKluc=dlinaalfavit-(kluc-j);
+                    shcifrText[k]=alfavit[nevKluc];
+                }
+                else{
+                    shcifrText[k]=alfavit[j-kluc];
+                }
+            }
+        }
     }
+    document.getElementById("text_decode").value = shcifrText.join("");
 }
 </script>
 </body>
