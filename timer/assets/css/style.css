@@ -52,8 +52,8 @@ body {
   right: -45%;
 }
 .content {
+   flex: 0 0 auto;
    padding: 10px; /* Поля вокруг текста */
-   margin: auto; /* Выравниваем по центру */
 	}
 
 footer {
