@@ -1,68 +1,59 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Timer</title>
-    <link rel="shortcut icon" href="assets/img/t.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // конечная дата - 1 месяц
-      const deadline = new Date(2022, 12, 23);
-      // id таймера
-      let timerId = null;
-      // склонение числительных
-      function declensionNum(num, words) {
-        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
-      }
-      // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
-      function countdownTimer() {
-        const diff = deadline - new Date();
-        if (diff <= 0) {
-          clearInterval(timerId);
-        }
-        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
-        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
-        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-        $days.textContent = days < 10 ? '0' + days : days;
-        $hours.textContent = hours < 10 ? '0' + hours : hours;
-        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
-        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
-        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
-        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
-      }
-      // получаем элементы, содержащие компоненты даты
-      const $days = document.querySelector('.timer__days');
-      const $hours = document.querySelector('.timer__hours');
-      const $minutes = document.querySelector('.timer__minutes');
-      const $seconds = document.querySelector('.timer__seconds');
-      // вызываем функцию countdownTimer
-      countdownTimer();
-      // вызываем функцию countdownTimer каждую секунду
-      timerId = setInterval(countdownTimer, 1000);
-    });
-  </script>
-   
-  </head>
-<body style="background: url(assets/img/patterns-artistic-4959.jpg) no-repeat fixed; -webkit-background-size: cover; background-size: cover;">
-  
-<font size="20" color="white"><h2><b>EtEn Timer</b></h2></font>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Шифрация</title>
+</head>
 
-<div class="content">
-     <h1>Таймер до дня рождения EtEn</h1>
-    <div class="timer">
-    <div class="timer__items">
-   <div class="timer__item timer__days">00</div> <div class="timer__item timer__hours">00</div> <div class="timer__item timer__minutes">00</div> <div class="timer__item timer__seconds">00</div>
-    </div>
-  </div>
- </div>
- <footer>
-<a href="https://eten.pp.ua/"><p><b><font size="4" color="white" face="Arial">© <u>EtEn Company</u></b></p></font></a></div>
-</footer>
+<body>
+<h1>Шифрация текста на JavaScript</h1>
+<br>
+<script type="text/javascript">
+
+function Encrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+ rnd = Math.round(Math.random() * 122) + 68;
+ Temp[i] = theText.charCodeAt(i) + rnd;
+ Temp2[i] = rnd;
+}
+for (i = 0; i < TextSize; i++) {
+ output += String.fromCharCode(Temp[i], Temp2[i]);
+}
+return output;
+}
+function unEncrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+ Temp[i] = theText.charCodeAt(i);
+ Temp2[i] = theText.charCodeAt(i + 1);
+}
+for (i = 0; i < TextSize; i = i+2) {
+ output += String.fromCharCode(Temp[i] - Temp2[i]);
+}
+return output;
+}
+
+</script>
+
+<form name=encform onsubmit="return false;">
+<p>
+<textarea name=box1 rows=5 cols=80>Текст для проверки возможности шифрования</textarea>
+<p>
+<input type=button value="Зашифровать Box1 в Box2" onClick="this.form.box2.value=Encrypt(this.form.box1.value);">
+<br><p>
+<textarea name=box2 rows=5 cols=80></textarea>
+<p>
+<input type=button value="Расшифровать Box2 to Box3" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
+<br><p>
+<textarea name=box3 rows=5 cols=80></textarea>
+</form>
+
 </body>
 </html>
