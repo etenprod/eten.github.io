@@ -12,6 +12,7 @@ body {
 .content {
    flex: 0 0 auto;
    padding: 10px; /* Поля вокруг текста */
+   color: #ffffff;
 }
 footer {
   flex: 0 0 auto;
