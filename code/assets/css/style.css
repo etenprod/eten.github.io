@@ -1,0 +1,44 @@
+* {
+  margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.content {
+   padding: 10px; /* Поля вокруг текста */
+   margin: auto; /* Выравниваем по центру */
+	}
+
+footer {
+  flex: 0 0 auto;
+} 
+h1 {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 5px 5px 20px #000000;
+}
+h2 {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: 'Lobster', sans-serif;
+  text-shadow: 5px 5px 20px #000000;
+  letter-spacing: 8px;
+}
+h3 {
+  color: #ffffff;
+  text-shadow: 5px 5px 20px #000000;
+}
+p{
+  text-align:center;
+  line-height: 28px;
+}
+ 
