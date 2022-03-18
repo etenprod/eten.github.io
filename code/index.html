@@ -60,15 +60,15 @@ function myFunction() {
 <form name=encform onsubmit="return false;">
 <p>
 <textarea name=box1 rows=10 cols=40 placeholder="Текст" ></textarea>
-<p>
+<br><p>
 <input type=button value="Зашифровать" onClick="this.form.box3.value=Encrypt(this.form.box1.value);">
 <br><p>
 <textarea name=box2 rows=10 cols=40 placeholder="Код"></textarea>
-<p>
+<br><p>
 <input type=button value="Расшифровать" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
 <br><p>
 <textarea name=box3 rows=10 cols=40 id="myInput"></textarea>
-<p>
+<br><p>
 <button onclick="myFunction()">Скопировать</button> 
   
 </form>
