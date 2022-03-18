@@ -12,7 +12,7 @@
 <body style="background: url(assets/img/bg23.jpg) no-repeat fixed; -webkit-background-size: cover; background-size: cover;">
 <font size="20" color="white"><h2><b>EtEn Code</b></h2></font>
 <div class="content">
-<h1>Кодировка</h1>
+<h1>Кодировка</h1><input type="button" onClick="resetValue('textarea1');" value="Очистить" />
 <br>
 <script type="text/javascript">
 
@@ -49,6 +49,10 @@ function myFunction() {
   var copyText = document.getElementById("myInput");
   copyText.select();
   document.execCommand("copy");
+function resetValue(elem)
+ {
+ elem = document.getElementById(elem);
+ elem.value = "";
 }
 </script>
 
@@ -60,15 +64,15 @@ function myFunction() {
 
 <form name=encform onsubmit="return false;">
 <p>
-<textarea name=box1 rows=10 cols=40 placeholder="Текст" ></textarea>
+<textarea id="textcode" name=box1 rows=10 cols=40 placeholder="Текст" ></textarea>
 <p>
 <input type=button value="Зашифровать" onClick="this.form.box3.value=Encrypt(this.form.box1.value);">
 <br><p>
-<textarea name=box2 rows=10 cols=40 placeholder="Код"></textarea>
+<textarea id="textcode" name=box2 rows=10 cols=40 placeholder="Код"></textarea>
 <p>
 <input type=button value="Расшифровать" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
 <br><p>
-<textarea name=box3 rows=10 cols=40 id="myInput">></textarea>
+<textarea id="textcode"  name=box3 rows=10 cols=40 id="myInput">></textarea>
 <p>
 <button onclick="myFunction()">Скопировать</button> 
   
