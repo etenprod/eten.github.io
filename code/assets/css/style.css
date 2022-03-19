@@ -41,32 +41,22 @@ p{
    border: 5px #ccc solid;
    box-shadow: 0 0 10px #444;
   }
- .double-border-button {
-  text-decoration: none;
+.ghost-button-transition {
   display: inline-block;
-  margin: 10px 20px;
-  padding: 10px 30px;
-  position: relative;
-  border: 2px solid #f1c40f;
-  color: #f1c40f;
-  font-family: 'Montserrat', sans-serif;
-  transition: .4s;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
 }
-.double-border-button:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  border: 2px solid rgba(0, 0, 0, 0);
-  transition: .4s;
-}
-.double-border-button:hover:after {
-  border-color: #f1c40f;
-  width: calc(100% - 10px);
-  height: calc(100% + 10px);
+.ghost-button-transition:hover,
+.ghost-button-transition:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }
