@@ -59,7 +59,7 @@ p{
       display:inline-block;
       border:1px solid ;
       }
-      .button::before{
+.button::before{
       content: "";
       position: absolute;
       top: 0;
@@ -72,10 +72,10 @@ p{
       transform: scaleY(.1);
       transition: all .4s
       }
-      .button:hover{
+.button:hover{
       color:#b414ba;  
       }
-      .button:hover::before{
+.button:hover::before{
       opacity: 1;
       background-color: #f7c2f9;
       -webkit-transform: scaleY(1);
