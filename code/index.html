@@ -61,15 +61,15 @@ function myFunction() {
 <p>
 <textarea name=box1 rows=10 cols=40 placeholder="Текст" ></textarea>
 <br><p>
-<input type=button id=coddvalue="Зашифровать" id="codd" onClick="this.form.box3.value=Encrypt(this.form.box1.value);">
+<input type=button id=coddvalue="Зашифровать" onClick="this.form.box3.value=Encrypt(this.form.box1.value);">
 <br><p>
 <textarea name=box2 rows=10 cols=40 placeholder="Код"></textarea>
 <br><p>
-<input type=button value="Расшифровать" id="codd" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
+<input type=button value="Расшифровать"  onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
 <br><p>
 <textarea name=box3 rows=10 cols=40 id="myInput"></textarea>
 <br><p>
-<button id="codd" onclick="myFunction()">Скопировать</button> 
+<button onclick="myFunction()">Скопировать</button> 
   
 </form>
 </div>
