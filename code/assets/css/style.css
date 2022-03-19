@@ -41,15 +41,3 @@ p{
    border: 5px #ccc solid;
    box-shadow: 0 0 10px #444;
   }
-#codd{
-   width: 115px;
-   height: 30px;
-   margin-top: 5px;
-   margin-bottom: 5px;
-   padding: 1px 1px;
-   border: 2px solid #fff;
-   background: transparent;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   color: #fff;
-    }
