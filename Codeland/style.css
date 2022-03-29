@@ -2,21 +2,9 @@
     margin: 0;
     padding: 0;
 }
-html,
-body { 
-  height: 100%;
-}
 body {
-  display: flex;
-  flex-direction: column;
+    background: rgb(123, 158, 158);
 }
-.content {
-   padding: 10px; /* Поля вокруг текста */
-   margin: auto; /* Выравниваем по центру */
-}
-footer {
-  flex: 0 0 auto;
-} 
 #hexGrid {
   display: flex;
   flex-wrap: wrap;
