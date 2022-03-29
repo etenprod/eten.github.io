@@ -8,6 +8,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+	  <script>
+	  S(document).ready(function(){
+	var hexmap = S.hexmap('hexmap-6');
+	hexmap.positionHexes().resize();
+	hexmap.on('click',function(e){
+
+		S('#message-6').html('You have clicked hex '+e.i+' ('+e.hex.id+')')
+
+	}).on('mouseover',function(e){
+
+		S('#message-6').html('You have hovered over hex '+e.i+' ('+e.hex.id+')')
+
+	}).on('mouseout',function(e){
+
+		S('#message-6').html('You have left hex '+e.i+' ('+e.hex.id+')')
+
+	}).on('focus',function(e){
+
+		S('#message-6').html('You have focussed on hex '+e.i+' ('+e.hex.id+')')
+
+	});
+});
+		  </script>
   </head>
 <body style="background: url(back.png) no-repeat fixed; -webkit-background-size: cover; background-size: cover;">
 <div class="content">
