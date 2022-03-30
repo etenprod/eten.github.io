@@ -44,6 +44,7 @@ p{
   border-collapse: collapse;
   background: #252F48;
   margin: 10px;
+  flex: 0 0 auto;
 }
 .table_dark th {
   color: #EDB749;
