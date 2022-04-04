@@ -19,12 +19,12 @@ body {
 }
 footer {
   flex: 0 0 auto;
-  padding-top: 10px;
 } 
 h2 {
   font-family: 'Lobster', sans-serif;
   text-shadow: 5px 5px 20px #000000;
   letter-spacing: 8px;
+  padding-top: 5px;
 }
 p{
   text-align:center;
