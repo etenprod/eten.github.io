@@ -6,6 +6,10 @@ body {
   height: 100%;
 }
 body {
+  background: #292929;
+  no-repeat fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
 }
