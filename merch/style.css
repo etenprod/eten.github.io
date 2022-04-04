@@ -89,15 +89,3 @@ p{
    content: "\f005\f005\f005\f005\f123";
    color: #F2453E;
 }
-.product-title {
-   font-weight: normal;
-   font-family: "Open Sans";
-   color: #162546;
-   font-size: 18px;
-}
-.price {
-   font-family: "Open Sans";
-   color: #162546;
-   font-style: italic;
-   font-weight: bold;
-}
