@@ -39,7 +39,7 @@ p{
 .border {
    width: 300px;
    margin: 0 auto;
-   background: white;
+   background: #cfcfcf;
    padding: 20px;
    border: 1px solid #F1E7E8;
    border-bottom: 4px solid #582ad7;
@@ -53,7 +53,7 @@ p{
 }
 .product-wrap:after {
    content: '';
-   background: rgba(73, 102, 162, .5);
+   sdbackground: rgba(73, 102, 162, .5);
    position: absolute;
    left: 0;
    right: 0;
