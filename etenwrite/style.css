@@ -11,6 +11,9 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+footer {
+  flex: 0 0 auto;
+} 
 
 header a {
   text-decoration: none;
