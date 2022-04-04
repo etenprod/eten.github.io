@@ -76,9 +76,6 @@ p{
    display: block;
    width: 100%;
 }
-.border:hover {
-   border-color: #4966A2;
-}
 .product-info {
    padding-top: 15px;
 }
