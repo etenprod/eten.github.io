@@ -42,7 +42,8 @@ p{
    background: white;
    padding: 20px;
    border: 1px solid #F1E7E8;
-   border-bottom: 8px solid #8b61ff;
+   border-bottom: 8px solid #582ad7;
+   border-top: 8px solid #582ad7;
 }
 .wrap {
    height: 100%;
