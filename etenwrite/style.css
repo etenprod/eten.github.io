@@ -72,3 +72,11 @@ nav ul li a {
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
 }
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
