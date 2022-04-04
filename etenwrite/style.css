@@ -24,6 +24,7 @@ h2 {
   font-family: 'Lobster', sans-serif;
   text-shadow: 5px 5px 20px #000000;
   letter-spacing: 8px;
+  padding-top: 10px;
 }
 p{
   text-align:center;
