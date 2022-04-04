@@ -1,5 +1,6 @@
 * {
   margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
+  box-sizing: border-box;
 }
 html,
 body { 
