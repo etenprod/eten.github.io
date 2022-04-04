@@ -21,8 +21,6 @@ footer {
   flex: 0 0 auto;
 } 
 h2 {
-  padding-top: 25px;
-  padding-bottom: 20px;
   font-family: 'Lobster', sans-serif;
   text-shadow: 5px 5px 20px #000000;
   letter-spacing: 8px;
