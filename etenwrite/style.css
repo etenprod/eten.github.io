@@ -10,13 +10,11 @@ body {
   background-color: #353836;
   color: white;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 .footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 80px;
+	flex: 0 0 auto;
 }
 h2 {
   font-family: 'Lobster', sans-serif;
