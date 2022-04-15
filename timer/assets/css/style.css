@@ -40,7 +40,6 @@ p{
   box-sizing: border-box;
 }
 .timer__items {
-  flex: 2 0 auto;
   font-size: 48px;
 }
 
