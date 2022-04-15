@@ -45,7 +45,6 @@ p{
 }
 
 .timer__item {
-  position: relative;
   min-width: 60px;
   margin-left: 10px;
   margin-right: 10px;
