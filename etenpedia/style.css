@@ -1,17 +1,80 @@
-* {
-  margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
-}
-html,
-body { 
-  height: 100%;
-}
-body {
-  display: flex;
-  flex-direction: column;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Play&family=Montserrat&display=swap');
 
-
-
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width: 0;
+}
+::selection{
+  background: #223355;
+  color: white;
+}
+body{
+	margin: 10px;
+	padding: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-size: cover;
+	background-attachment: fixed;
+  background-image: url(img/bg1.jpg);
+	font-family: 'Play', sans-serif;
+}
+header{
+	width: 70%;
+	height: 84px;
+	overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  background-color: rgba(34, 51, 85, 0.8);
+  border: 2px solid rgba(34, 51, 85, 0.8);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#title{
+	float: left;
+	position: absolute;
+  height: 50%;
+	font-family: 'Lobster', cursive;
+	color: white;
+}
+#paragraps{
+	text-align: center;
+	margin-top: 55px;
+}
+#logo{
+	float: right;
+	margin-right: 30px;
+	align-content: center;
+	position: absolute;
+  height: 50%;
+  top: 20%;
+  right: 0%;
+}
+footer{
+	width: 70%;
+	height: 74px;
+	background-color: #223355;
+	border: 2px solid rgba(34, 51, 85, 0.8);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#social{
+	text-align: center;
+	margin-top: 5px;
+}
+#social a{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#cop{
+	text-align: center;
+	color: white;
+}
+#cop2{
+	text-align: center;
+	color: lightgray;
+}
 main{
   text-align: left;
   width: 70%;
@@ -197,30 +260,4 @@ details[open] summary:before{
     content: 'Эпоха "4"';
   }
 }
-
-
-
-
-footer {
-  flex: 0 0 auto;
-} 
-h2 {
-  padding-top: 25px;
-  padding-bottom: 20px;
-  text-align: center;
-  font-family: 'Lobster', sans-serif;
-  text-shadow: 5px 5px 20px #000000;
-  letter-spacing: 8px;
-}
-p{
-  text-align:center;
-  line-height: 28px;
-}
-.thumb img  {
-   margin-right: 25px; /* Отступ справа */
-   margin-left: 25px; 
-   margin-bottom: 10px; /* Отступ снизу */
-   border-radius: 20px;
-   border: 5px #ccc solid;
-   box-shadow: 0 0 10px #444;
-  }
+/*----------------------------*/
