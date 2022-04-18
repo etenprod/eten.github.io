@@ -7,7 +7,7 @@ html {
   width: 0;
 }
 ::selection{
-  background: #4d0066;
+  background: #0b165a;
   color: white;
 }
 body{
@@ -26,8 +26,8 @@ header{
 	overflow-x: auto;
   overflow-y: hidden;
   position: relative;
-  background-color: #4d0066e6;
-  border: 2px solid #7f04a7;
+  background-color: #081560e6;
+  border: 2px solid #3142a7;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -54,8 +54,8 @@ header{
 footer{
 	width: 70%;
 	height: 74px;
-	background-color: #4d0066e6;
-	border: 2px solid #7f04a7;
+	background-color: #081560e6;
+	border: 2px solid #3142a7;
   padding-left: 30px;
   padding-right: 30px;
 }
