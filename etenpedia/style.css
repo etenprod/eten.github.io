@@ -32,7 +32,7 @@ header{
   padding-right: 30px;
 }
 #title{
-	float: left;
+	float: center;
 	position: absolute;
   height: 50%;
 	font-family: 'Lobster', cursive;
