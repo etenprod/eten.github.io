@@ -7,7 +7,7 @@ html {
   width: 0;
 }
 ::selection{
-  background: #223355;
+  background: #4d0066;
   color: white;
 }
 body{
@@ -22,7 +22,7 @@ body{
 }
 header{
 	width: 70%;
-	height: 150px;
+	height: 100px;
 	overflow-x: auto;
   overflow-y: hidden;
   position: relative;
