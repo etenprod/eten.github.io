@@ -76,7 +76,8 @@ ul li:hover {
 }
 
 #login {
-  border: 1px solid #498afb;
+  border: 1px solid #6440F3;
+  background: #6440F3;
 }
 
 #signup {
@@ -89,7 +90,7 @@ ul li:hover {
 }
 
 #login a {
-  color: #498afb;
+  color: #6440F3;
 }
 
 #hamburger-icon {
