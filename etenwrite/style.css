@@ -21,7 +21,6 @@ body {
 }
 h2 {
   font-family: 'Lobster', sans-serif;
-  text-shadow: 5px 5px 20px #000000;
   letter-spacing: 8px;
 }
 header a {
@@ -46,7 +45,7 @@ header {
 #brand a {
   color: #7300ba;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 ul {
