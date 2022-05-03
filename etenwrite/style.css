@@ -57,6 +57,7 @@ ul {
 
 ul a {
   color: white;
+  font-weight: bold;
 }
 
 ul li {
@@ -87,10 +88,12 @@ ul li:hover {
 
 #signup a {
   color: #ffffff;
+  font-weight: bold;
 }
 
 #login a {
   color: #ffffff;
+  font-weight: bold;
 }
 
 #hamburger-icon {
