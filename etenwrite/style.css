@@ -46,6 +46,7 @@ header {
 #brand a {
   color: #7300ba;
   font-weight: bold;
+  font-size: 35px;
 }
 
 ul {
@@ -59,6 +60,7 @@ ul {
 ul a {
   color: white;
   font-weight: bold;
+  font-size: 18px;
 }
 
 ul li {
