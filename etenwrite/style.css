@@ -80,11 +80,12 @@ ul li:hover {
 }
 
 #signup {
-  border: 1px solid #ff3860;
+  border: 1px solid #FF0000;
+  background: #FF0000;
 }
 
 #signup a {
-  color: #ff3860;
+  color: #FF0000;
 }
 
 #login a {
