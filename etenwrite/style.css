@@ -19,7 +19,7 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      background: #353836;
+      background: rgba(0, 0, 0, 0.5);
       /* цвет фона */
       z-index: 1050;
       opacity: 0;
@@ -65,7 +65,7 @@ body {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      background-color: #fff;
+      background-color: #353836;
       -webkit-background-clip: padding-box;
       background-clip: padding-box;
       border: 1px solid rgba(0, 0, 0, .2);
