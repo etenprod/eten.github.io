@@ -12,7 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100%;
 }
-    .modal {
+    .login {
       position: fixed;
       /* фиксированное положение */
       top: 0;
@@ -33,28 +33,28 @@ body {
     }
 
     /* при отображении модального окно */
-    .modal:target {
+    .login:target {
       opacity: 1;
       pointer-events: auto;
       overflow-y: auto;
     }
 
     /* ширина модального окна и его отступы от экрана */
-    .modal-dialog {
+    .login-dialog {
       position: relative;
       width: auto;
       margin: 10px;
     }
 
     @media (min-width: 576px) {
-      .modal-dialog {
+      .login-dialog {
         max-width: 500px;
         margin: 30px auto;
       }
     }
 
     /* свойства для блока, содержащего контент модального окна */
-    .modal-content {
+    .login-content {
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -74,14 +74,14 @@ body {
     }
 
     @media (min-width: 768px) {
-      .modal-content {
+      .login-content {
         -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
         box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
       }
     }
 
     /* свойства для заголовка модального окна */
-    .modal-header {
+    .login-header {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -98,7 +98,7 @@ body {
       border-bottom: 1px solid #eceeef;
     }
 
-    .modal-title {
+    .login-title {
       margin-top: 0;
       margin-bottom: 0;
       line-height: 1.5;
@@ -129,7 +129,7 @@ body {
     }
 
     /* свойства для блока, содержащего основное содержимое окна */
-    .modal-body {
+    .login-body {
       position: relative;
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 auto;
