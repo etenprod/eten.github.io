@@ -13,7 +13,7 @@
       <nav>
         <ul>
           <li><a href="https://eten.pp.ua/etenwrite/">Главная</a></li>
-          <li id="login"><a href="#openModal" >Войти</a></li>
+          <li id="login"><a href="#login" >Войти</a></li>  /* 1 */
           <li id="signup"><a href="https://eten.pp.ua/etenwrite/">Регистрация</a></li>
         </ul>
       </nav>
@@ -29,15 +29,15 @@
       </div>
     </header>
     
-     <div id="openModal" class="modal">
+     <div id="login" class="modal"> /* 1 */
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title">Название</h3>
+            <h3 class="modal-title">Войти в аккаунт</h3>
             <a href="#close" title="Close" class="close">×</a>
           </div>
           <div class="modal-body">
-            Содержимое модального окна...
+            окно
           </div>
         </div>
       </div>
@@ -48,13 +48,13 @@
     document.addEventListener("DOMContentLoaded", function () {
       var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
       console.log(scrollbar);
-      document.querySelector('[href="#openModal"]').addEventListener('click', function () {
+      document.querySelector('[href="#login"]').addEventListener('click', function () { 
         document.body.style.overflow = 'hidden';
-        document.querySelector('#openModal').style.marginLeft = scrollbar;
+        document.querySelector('#login').style.marginLeft = scrollbar; 
       });
       document.querySelector('[href="#close"]').addEventListener('click', function () {
         document.body.style.overflow = 'visible';
-        document.querySelector('#openModal').style.marginLeft = '0px';
+        document.querySelector('#login').style.marginLeft = '0px';
       });
     });
   </script>
