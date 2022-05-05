@@ -13,7 +13,7 @@
       <nav>
         <ul>
           <li><a href="https://eten.pp.ua/etenwrite/">Главная</a></li>
-          <li id="login"><a href="#login" >Войти</a></li>  /* 1 */
+          <li id="login"><a href="#openModal" >Войти</a></li> 
           <li id="signup"><a href="https://eten.pp.ua/etenwrite/">Регистрация</a></li>
         </ul>
       </nav>
@@ -29,7 +29,7 @@
       </div>
     </header>
     
-     <div id="openModel" class="modal"> /* 1 */
+     <div id="openModel" class="modal"> 
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -48,13 +48,13 @@
     document.addEventListener("DOMContentLoaded", function () {
       var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
       console.log(scrollbar);
-      document.querySelector('[href="#login"]').addEventListener('click', function () { 
+      document.querySelector('[href="#openModal"]').addEventListener('click', function () {
         document.body.style.overflow = 'hidden';
-        document.querySelector('#login').style.marginLeft = scrollbar; 
+        document.querySelector('#openModal').style.marginLeft = scrollbar;
       });
       document.querySelector('[href="#close"]').addEventListener('click', function () {
         document.body.style.overflow = 'visible';
-        document.querySelector('#login').style.marginLeft = '0px';
+        document.querySelector('#openModal').style.marginLeft = '0px';
       });
     });
   </script>
