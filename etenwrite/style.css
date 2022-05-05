@@ -12,7 +12,6 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100%;
 }
-    /* свойства модального окна по умолчанию */
     .modal {
       position: fixed;
       /* фиксированное положение */
