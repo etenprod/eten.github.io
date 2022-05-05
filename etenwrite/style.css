@@ -130,6 +130,7 @@ body {
 
     /* свойства для блока, содержащего основное содержимое окна */
     .modal-body {
+      color: #A3A3A3;
       position: relative;
       -webkit-box-flex: 1;
       -webkit-flex: 1 1 auto;
