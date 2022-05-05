@@ -95,7 +95,7 @@ body {
       -ms-flex-pack: justify;
       justify-content: space-between;
       padding: 15px;
-      border-bottom: 1px solid #eceeef;
+      border-bottom: 3px solid #a3a3a3;
     }
 
     .modal-title {
