@@ -14,7 +14,7 @@ h1 {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
 
       text-shadow:
-      0 0 4px #9d9d9d,
+      0 0 4px #b3b3b3,
       0 0 11px #fff,
       0 0 19px #fff,
       0 0 40px #5882cf,
@@ -42,6 +42,8 @@ body {
   flex-direction: column;
 }
 h1 {
+  padding-top: 25px;
+  padding-bottom: 20px;
   text-align: center;
   font-family: 'Lobster', sans-serif;
   text-shadow: 5px 5px 20px #000000;
