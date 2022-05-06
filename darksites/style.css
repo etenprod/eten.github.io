@@ -30,16 +30,6 @@ h1 {
   }    
 }
 
-
-/* Дополнительный стиль */
- 
-h2 {
- font-size: 1.8rem;
-}
-.container {
-  margin-top: 20vh;
-}
-
 * {
   margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
 }
@@ -52,10 +42,13 @@ body {
   flex-direction: column;
 }
 
-h1, h2 {
+h1,  {
+  padding-top: 25px;
+  padding-bottom: 20px;
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 400;
+  font-family: 'Lobster', sans-serif;
+  text-shadow: 5px 5px 20px #000000;
+  letter-spacing: 8px;
 }
 .content {
    padding: 10px; /* Поля вокруг текста */
