@@ -145,7 +145,7 @@ body {
 /* Add padding to containers */
 .container {
     padding: 1px;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 /* Full-width input fields */
