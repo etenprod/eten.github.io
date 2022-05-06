@@ -41,14 +41,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-h1 {
-  padding-top: 25px;
-  padding-bottom: 20px;
-  text-align: center;
-  font-family: 'Lobster', sans-serif;
-  text-shadow: 5px 5px 20px #000000;
-  letter-spacing: 8px;
 }
 .content {
    padding: 10px; /* Поля вокруг текста */
