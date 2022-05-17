@@ -1125,12 +1125,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-blue1\.5 {
   --tw-border-opacity: 1;
-  border-color: rgb(57 185 255 / var(--tw-border-opacity));
+  border-color: rgb(139 42 178 / var(--tw-border-opacity));
 }
 
 .border-blue1 {
   --tw-border-opacity: 1;
-  border-color: rgb(55 207 255 / var(--tw-border-opacity));
+  border-color: rgb(145 70 255 / var(--tw-border-opacity));
 }
 
 .border-text {
