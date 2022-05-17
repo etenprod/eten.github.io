@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["/rules/farm","/rules/mods","/wiki/guide/chat","/wiki/guide/emotes","/wiki/guide/heads","/wiki/guide/itemedit","/wiki/guide/tns","/wiki/ws/replenish"]),self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB();
