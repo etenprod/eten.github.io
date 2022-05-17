@@ -1158,12 +1158,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-blue1\.5 {
   --tw-bg-opacity: 1;
-  background-color: rgb(57 185 255 / var(--tw-bg-opacity));
+  background-color: rgb(139 42 178 / var(--tw-bg-opacity));
 }
 
 .bg-blue1 {
   --tw-bg-opacity: 1;
-  background-color: rgb(55 207 255 / var(--tw-bg-opacity));
+  background-color: rgb(145 70 255 / var(--tw-bg-opacity));
 }
 
 .bg-border {
