@@ -1190,17 +1190,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .from-blue1\/70 {
-  --tw-gradient-from: rgb(55 207 255 / 0.7);
+  --tw-gradient-from: rgb(139 42 178 / 0.7);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(55 207 255 / 0));
 }
 
 .from-blue1\/20 {
-  --tw-gradient-from: rgb(55 207 255 / 0.2);
+  --tw-gradient-from: rgb(139 42 178 / 0.2);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(55 207 255 / 0));
 }
 
 .from-blue1\/10 {
-  --tw-gradient-from: rgb(55 207 255 / 0.1);
+  --tw-gradient-from: rgb(139 42 178 / 0.1);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(55 207 255 / 0));
 }
 
@@ -1209,15 +1209,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .to-blue2\/70 {
-  --tw-gradient-to: rgb(58 161 255 / 0.7);
+  --tw-gradient-to: rgb(139 42 178 / 0.7);
 }
 
 .to-blue2\/20 {
-  --tw-gradient-to: rgb(58 161 255 / 0.2);
+  --tw-gradient-to: rgb(139 42 178 / 0.2);
 }
 
 .to-blue2\/10 {
-  --tw-gradient-to: rgb(58 161 255 / 0.1);
+  --tw-gradient-to: rgb(139 42 178 / 0.1);
 }
 
 .bg-cover {
@@ -1510,12 +1510,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-blue1\.5 {
   --tw-text-opacity: 1;
-  color: rgb(57 185 255 / var(--tw-text-opacity));
+  color: rgb(139 42 178 / var(--tw-text-opacity));
 }
 
 .text-blue1 {
   --tw-text-opacity: 1;
-  color: rgb(55 207 255 / var(--tw-text-opacity));
+  color: rgb(145 70 255 / var(--tw-text-opacity));
 }
 
 .text-white\/70 {
