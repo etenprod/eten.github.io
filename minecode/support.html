@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="ico/v2/vanil256.png" />
+    <link rel="apple-touch-icon" href="ico/v2/vanil256.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#092439">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5RMXX7S1GK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5RMXX7S1GK');
+    </script>
+                    
+    <title>Поддержка сервера</title>
+    <meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="cSJMcYPxRn0NoYiB-z3d1jQtsU4uAwXukfscrezTacY0azYpz7R2BU75uNKaS4W3ZXvcKncxa6L2rC3yu7cYgQ==">
+
+<link href="libs/animate.min.css@v=1638384096.css" rel="stylesheet">
+<link href="assets/8c338d8a/font/bootstrap-icons.css@v=1645756643.css" rel="stylesheet">
+<link href="assets/fb5eefff/css/bootstrap.css@v=1645756643.css" rel="stylesheet">
+<link href="css/animate.min.css@v=1636646333.css" rel="stylesheet">
+<link href="css/site.css@v=1651525566.css" rel="stylesheet">    <meta name="google-site-verification" content="o40r-lK13JVcihXHOJrD3L8-guVDMiSx9-VBsXMJf4E" />
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w0" class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="vanilla-color-gr navbar-brand" href="index.html">Vanilla Club</a>
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarIdExp" aria-controls="navbarIdExp" aria-controls="navbarIdExp" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div id="navbarIdExp" class="collapse navbar-collapse">
+<ul id="w1" class="navbar-nav me-auto nav"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link" href="vote.html">Голоса</a></li>
+<li class="nav-item"><a class="nav-link" href="rules.html">Правила</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+<li class="nav-item"><a class="nav-link active" href="support.html">Помочь нам</a></li></ul><ul id="w2" class="nav"></ul></div>
+</div>
+</nav>
+    <div class="js-container-main">
+                <div class="container">
+                    </div>
+        
+<div class="container  mt-lg-5 d-flex justify-content-center animate__animated animate__zoomIn">
+    <div class="site-about">
+        <h1 class="display-6">Поддержка сервера</h1>
+
+        <p class="font-weight-light">
+            Мы сами полностью оплачиваем содержание сервера, тратя свои ресурсы. <br>
+            Вы можете помочь нам возместить траты на эти расходы. <br>
+        </p>
+
+        <div class="p-3 p-md-5 bg-black border-golden-50 rounded-5">
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml" class="mb-2">
+                        <input type="hidden" name="receiver" value="4100117431359123"/>
+                        <input type="hidden" name="formcomment" value="Vanilla Club donate"/>
+                        <input type="hidden" name="short-dest" value="Vanilla Club donate"/>
+                        <input type="hidden" name="quickpay-form" value="donate"/>
+                        <input type="hidden" name="targets" value="На помощь серверу Vanilla Club"/>
+                        <input type="hidden" name="need-fio" value="false"/>
+                        <input type="hidden" name="need-email" value="false"/>
+                        <input type="hidden" name="need-phone" value="false"/>
+                        <input type="hidden" name="need-address" value="false"/>
+
+
+                        <div class="col">
+                            <div class="btn-group">
+                                <input id="option1" type="radio" name="paymentType" value="PC" class="btn-check" autocomplete="off">
+                                <label class="btn btn-sm btn-golden me-2" for="option1">ЮMoney</label>
+
+                                <input id="option2" type="radio" name="paymentType" value="AC" class="btn-check" checked autocomplete="off">
+                                <label class="btn btn-sm btn-golden me-2" for="option2">Банковской картой</label>
+
+                                <input id="option3" type="radio" name="paymentType" value="MC" class="btn-check" autocomplete="off">
+                                <label class="btn btn-sm btn-golden me-2" for="option3">С телефона</label>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-3">
+                                <div class="form-floating">
+                                    <input type="number" id="donat-sum" class="form-control" name="sum" value="65" data-type="number" placeholder="Сумма">
+                                    <label for="donat-sum">Сумма, руб</label>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-floating">
+                                    <textarea id="donat-comment" name="comment" class="form-control"  style="height: 70px"></textarea>
+                                    <label for="donat-comment">Комментарий</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <input class="btn btn-lg btn-golden d-block mt-4" type="submit" value="Поддержать"/>
+                        </div>
+                    </form>
+                    <div class="mt-4">
+                        <i class="bi bi-shield-lock text-success fs-5"></i><span class="text-muted"> Операция проводится сервисом ЮMoney (Яндекс.Деньги)</span> <br>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3" style="border-left: 1px solid rgb(53, 41, 64)">
+                    <div style="max-width: 300px;" class="ms-3 text-center">
+                        Или подпишись на <a class="btn btn-lg btn-golden d-block mt-4 mb-1" href="https://boosty.to/vanilla">Ежемесячную поддержку</a>(от 25 руб.)<br>
+                        <div class="border-success rounded mt-2 p-2 d-none">
+                            <i class="bi bi-exclamation-circle "></i> комиссия 10%
+                        </div>
+                        <span class="text-muted">
+                        Подписка гарантирует нам стабильную поддержку, поэтому важна любая сумма.
+                    </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="float-start">&copy; Vanilla Club 2022</div>
+
+        <div class="float-end"><span class="badge badge-light bg-dark"><a href="https://mc-servera.net" title="">https://mc-servera.net</a></span></div>
+    </div>
+</footer>
+
+<script src="assets/e3991cb7/jquery.min.js@v=1645756643"></script>
+<script src="assets/48b9ee35/yii.js@v=1645756643"></script>
+<script src="js/murmurhash3.js@v=1636646333"></script>
+<script src="js/main.js@v=1647281999"></script>
+<script src="assets/fb5eefff/js/bootstrap.bundle.js@v=1645756643"></script>
+<script>jQuery(function ($) {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    $(function () {
+      $('[data-bs-toggle="popover"]').popover({
+        title: 'Уточнение',
+        container: 'body'
+  })
+    })
+});</script></body>
+</html>

@@ -1,0 +1,38 @@
+
+window.addEventListener('load', () => {
+
+    if ('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('SW Work');
+            })
+            .catch(error => {
+                console.log('SW failed');
+            });
+    }
+});
+
+
+$(document).click(function(){
+    // $('#music')[0].play()
+})
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+
+$().ready(function(){
+
+    $('#appeals-username').change(function(event){
+        let nickname = $(event.target).val()
+        let url = nickname == null ? '' : `https://minotar.net/avatar/${nickname}/75`
+        $('#appealAvatar').prop('src', url)
+    })
+})
+
+// $('.submit-appeal').click(function() {
+//     $(this).attr('disabled', true);
+//     $(this).submit()
+// });

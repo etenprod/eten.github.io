@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="ico/v2/vanil256.png" />
+    <link rel="apple-touch-icon" href="ico/v2/vanil256.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#092439">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5RMXX7S1GK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5RMXX7S1GK');
+    </script>
+                    
+    <title>Заявка в вайтлист</title>
+    <meta name="description" content="Подача заявки на приватный сервер майнкрафт ванилла клаб">
+<meta name="keywords" content="майнкрафт, minecraft, заявка, на, сервер, вайтлист, белый список">
+<meta name="robots" content="index, follow">
+<meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="yRI0CnDExHVOPKkYmGbz9iKLD8HK975QXOBBYYBL54yMW05SPIH0DQ1kmUv5EKuXc91ipZPF0Bw7t3A-1y-Wyw==">
+
+<link href="libs/animate.min.css@v=1638384096.css" rel="stylesheet">
+<link href="assets/8c338d8a/font/bootstrap-icons.css@v=1645756643.css" rel="stylesheet">
+<link href="assets/fb5eefff/css/bootstrap.css@v=1645756643.css" rel="stylesheet">
+<link href="css/animate.min.css@v=1636646333.css" rel="stylesheet">
+<link href="css/site.css@v=1651525566.css" rel="stylesheet">    <meta name="google-site-verification" content="o40r-lK13JVcihXHOJrD3L8-guVDMiSx9-VBsXMJf4E" />
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w0" class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="vanilla-color-gr navbar-brand" href="index.html">Vanilla Club</a>
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarIdExp" aria-controls="navbarIdExp" aria-controls="navbarIdExp" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div id="navbarIdExp" class="collapse navbar-collapse">
+<ul id="w1" class="navbar-nav me-auto nav"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link" href="vote.html">Голоса</a></li>
+<li class="nav-item"><a class="nav-link" href="rules.html">Правила</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+<li class="nav-item"><a class="nav-link" href="support.html">Помочь нам</a></li></ul><ul id="w2" class="nav"></ul></div>
+</div>
+</nav>
+    <div class="js-container-main">
+                <div class="container">
+                    </div>
+        
+<style>
+    .form-control, #appealSubmit, .appeal-wrapper{
+        border-radius: 1.25rem!important;
+    }
+</style>
+
+<div class="container">
+    <div class="appeals-create animate__animated animate__fadeInRightBig p-md-4">
+        <div class="appeals-form dark-form">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-lg-6 bg-black border-golden-2 rounded-5 px-lg-5 py-2 py-lg-5 appeal-wrapper">
+                    <h1 class="display-6">Ваша заявка</h1>
+                    <div class=" mt-1">
+                        <div class="p-2 fw-lighter fs-6 rounded-5 inner-shadow">
+                            <i class="bi bi-exclamation-circle text-golden"></i>                            <span class="ms-2">Отнеситесь ответственно к заполнению формы</span>
+                            <div class="border-golden-50 m-3 rounded-5 p-3 fs-4" style="display: none" id="appealInfo" ><div class="spinner-grow spinner-grow-lg text-golden m-2"></div>Создаём заявку...</div>
+                        </div>
+                    </div>
+                    <form id="appealForm" action="appeal.html" method="post">
+<input type="hidden" name="_csrf-frontend" value="yRI0CnDExHVOPKkYmGbz9iKLD8HK975QXOBBYYBL54yMW05SPIH0DQ1kmUv5EKuXc91ipZPF0Bw7t3A-1y-Wyw==">                    <div class="d-flex justify-content-center">
+                        <img id="appealAvatar" class="rounded-5 my-2" src="appeal.html" alt="">                    </div>
+
+                    <div class="form-floating mb-3 field-appeals-username required">
+<input type="text" id="appeals-username" class="form-control" name="Appeals[username]" maxlength="255" placeholder="nickname" aria-required="true">
+<label class="form-label" for="appeals-username">Лицензионный никнейм в java версии</label>
+
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="form-floating mb-3 field-appeals-game_activity required">
+<textarea id="appeals-game_activity" class="form-control" name="Appeals[game_activity]" maxlength="1900" style="height: 7em" placeholder="Строю замки и торгую" aria-required="true"></textarea>
+<label class="form-label" for="appeals-game_activity">Чем Вы обычно занимаетесь в игре и чем нравится игра</label>
+<div class="form-text text-muted">Напишите от 10 слов</div>
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="form-floating mb-3 field-appeals-age required">
+<input type="text" id="appeals-age" class="form-control" name="Appeals[age]" placeholder="21" aria-required="true">
+<label class="form-label" for="appeals-age">Ваш возраст</label>
+
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="form-floating mb-3 field-appeals-with_friend">
+<input type="text" id="appeals-with_friend" class="form-control" name="Appeals[with_friend]" maxlength="255" placeholder=" ">
+<label class="form-label" for="appeals-with_friend">Никнейм друга, если играете с кем-то</label>
+
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="form-floating mb-3 field-inputCanvas">
+<input type="hidden" id="inputCanvas" class="form-control" name="Appeals[hash_canvas]">
+
+
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="form-floating mb-3 field-inputNoCanvas">
+<input type="hidden" id="inputNoCanvas" class="form-control" name="Appeals[hash]">
+
+
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="form-floating mb-3 field-inputSubscribe">
+<input type="hidden" id="inputSubscribe" class="form-control" name="Appeals[SUBSCRIBER_UUID]">
+
+
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="form-check form-switch mb-3">
+                        <label class="form-check-label" for="subscribe">Подписаться на статус заявки</label>                        <input type="checkbox" id="subscribe" class="form-check-input" name="subscribe_inp" value="1">                        <div id="subscribeHelp" class="form-text">Вы получите уведомление о статусе на устройство.</div>
+                    </div>
+
+                    <div class="form-floating mb-3 field-appeals-recaptcha required">
+<input type="hidden" id="appeals-recaptcha" class="form-control" name="Appeals[reCaptcha]" aria-required="true">
+
+
+<div class="invalid-feedback"></div>
+</div>
+                    <div class="p-2 fw-lighter fs-6 rounded-5 inner-shadow mb-3">
+                        <i class="bi bi-info-lg text-golden"></i>                        <span class="ms-2">Статус заявки будет отображен на главной странице сайта</span>
+                    </div>
+                    <div class="form-group d-grid">
+                        <button type="submit" id="appealSubmit" class="btn btn-lg btn-golden">Отправить заявку</button>                    </div>
+
+                    </form>                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="float-start">&copy; Vanilla Club 2022</div>
+
+        <div class="float-end"><span class="badge badge-light bg-dark"><a href="https://mc-servera.net" title="">https://mc-servera.net</a></span></div>
+    </div>
+</footer>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LfeSXIdAAAAALb35H2rHjGLU9k53nhxFMRsjxIL"></script>
+<script src="assets/e3991cb7/jquery.min.js@v=1645756643"></script>
+<script src="js/assetes.js@v=1636646333"></script>
+<script src="https://gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+<script src="js/firebase_subscribe.js@v=1643269464"></script>
+<script src="assets/48b9ee35/yii.js@v=1645756643"></script>
+<script src="assets/48b9ee35/yii.validation.js@v=1645756643"></script>
+<script src="assets/48b9ee35/yii.activeForm.js@v=1645756643"></script>
+<script src="js/murmurhash3.js@v=1636646333"></script>
+<script src="js/main.js@v=1647281999"></script>
+<script src="assets/fb5eefff/js/bootstrap.bundle.js@v=1645756643"></script>
+<script>jQuery(function ($) {
+    $(function(){
+        $('#appealForm').on('beforeSubmit', function (){
+            $('#appealSubmit').attr('disabled', true)
+            if ($('#appealForm .is-invalid').length == 0) {
+                var appealInfo = $('#appealInfo');
+                appealInfo.show();
+            }
+        });
+        $('#appealForm').on('afterValidate ', function (){
+            $('#appealSubmit').attr('disabled', false)
+        });
+    })
+
+"use strict";
+grecaptcha.ready(function() {
+    grecaptcha.execute("6LfeSXIdAAAAALb35H2rHjGLU9k53nhxFMRsjxIL", {action: "appeal"}).then(function(token) {
+        jQuery("#" + "appeals-recaptcha").val(token);
+
+        const jsCallback = "";
+        if (jsCallback) {
+            eval("(" + jsCallback + ")(token)");
+        }
+    });
+});
+jQuery('#appealForm').yiiActiveForm([{"id":"appeals-username","name":"username","container":".field-appeals-username","input":"#appeals-username","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Лицензионный никнейм в java версии»."});value = yii.validation.trim($form, attribute, [], value);yii.validation.string(value, messages, {"message":"Значение «Лицензионный никнейм в java версии» должно быть строкой.","max":255,"tooLong":"Значение «Лицензионный никнейм в java версии» должно содержать максимум 255 символов.","skipOnEmpty":1});yii.validation.regularExpression(value, messages, {"pattern":/^[a-zA-Z0-9_]\w*$/i,"not":false,"message":"Допущена символьная ошибка при написании никнейма","skipOnEmpty":1});}},{"id":"appeals-game_activity","name":"game_activity","container":".field-appeals-game_activity","input":"#appeals-game_activity","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Чем Вы обычно занимаетесь в игре и чем нравится игра»."});yii.validation.string(value, messages, {"message":"Значение «Чем Вы обычно занимаетесь в игре и чем нравится игра» должно быть строкой.","max":1900,"tooLong":"Значение «Чем Вы обычно занимаетесь в игре и чем нравится игра» должно содержать максимум 1 900 символов.","skipOnEmpty":1});}},{"id":"appeals-age","name":"age","container":".field-appeals-age","input":"#appeals-age","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Ваш возраст»."});yii.validation.string(value, messages, {"message":"Значение «Ваш возраст» должно быть строкой.","max":255,"tooLong":"Значение «Ваш возраст» должно содержать максимум 255 символов.","skipOnEmpty":1});}},{"id":"appeals-with_friend","name":"with_friend","container":".field-appeals-with_friend","input":"#appeals-with_friend","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Значение «Никнейм друга, если играете с кем-то» должно быть строкой.","max":255,"tooLong":"Значение «Никнейм друга, если играете с кем-то» должно содержать максимум 255 символов.","skipOnEmpty":1});}},{"id":"appeals-hash_canvas","name":"hash_canvas","container":".field-inputCanvas","input":"#inputCanvas","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Значение «dasdasd» должно быть строкой.","max":255,"tooLong":"Значение «dasdasd» должно содержать максимум 255 символов.","skipOnEmpty":1});}},{"id":"appeals-hash","name":"hash","container":".field-inputNoCanvas","input":"#inputNoCanvas","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Значение «asdasd» должно быть строкой.","max":255,"tooLong":"Значение «asdasd» должно содержать максимум 255 символов.","skipOnEmpty":1});}},{"id":"appeals-subscriber_uuid","name":"SUBSCRIBER_UUID","container":".field-inputSubscribe","input":"#inputSubscribe","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Значение «test» должно быть строкой.","max":500,"tooLong":"Значение «test» должно содержать максимум 500 символов.","skipOnEmpty":1});}},{"id":"appeals-recaptcha","name":"reCaptcha","container":".field-appeals-recaptcha","input":"#appeals-recaptcha","error":".invalid-feedback","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Re Captcha»."});}}], {"errorSummary":".alert.alert-danger","errorCssClass":"is-invalid","successCssClass":"is-valid","validationStateOn":"input"});
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    $(function () {
+      $('[data-bs-toggle="popover"]').popover({
+        title: 'Уточнение',
+        container: 'body'
+  })
+    })
+});</script></body>
+</html>
