@@ -1185,7 +1185,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .from-blue1 {
-  --tw-gradient-from: #37CFFF;
+  --tw-gradient-from: #8B2AB2;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(55 207 255 / 0));
 }
 
@@ -1205,7 +1205,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .to-blue2 {
-  --tw-gradient-to: #3AA1FF;
+  --tw-gradient-to: #8B2AB2;
 }
 
 .to-blue2\/70 {
