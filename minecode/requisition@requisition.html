@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/sweetalert2@10.js"></script>
+
+    <meta name="description" content="Приватный ванильный сервер в игре minecraft c бесплатной проходкой! Подайте заявку и играйте на сервере Kubik Land уже сегодня.">
+    <meta name="keywords" content="приватный, сервер, майнкрафт, minecraft, без доната, бесплатная проходка, Kubik Land, играть, лицензионный, лицензия">
+    <link href="img/logo.png" rel="icon" type="image/png">
+    <meta name="image" content="/img/logo.png">
+    <meta itemprop="description" content="Приватный ванильный сервер в игре minecraft c бесплатной проходкой! Подайте заявку и играйте на сервере Kubik Land уже сегодня.">
+    <meta itemprop="image" content="/img/logo.png">
+    <meta name="language" content="Russian">
+    <meta name="revisit-after" content="3 days">
+    <meta name="og:description" content="Приватный ванильный сервер в игре minecraft c бесплатной проходкой! Подайте заявку и играйте на сервере Kubik Land уже сегодня.">
+    <meta name="og:image" content="/img/logo.png">
+    <meta name="og:url" content="https://kubikland.ru">
+    <meta name="og:site_name" content="Kubik Land">
+    <meta name="og:locale" content="ru_RU">
+    <meta name="og:type" content="website">
+    <meta property="og:site_name" content="Kubik Land">
+    <meta property="og:url" content="https://kubikland.ru">
+
+    <meta itemprop="name" content="Kubik Land - Авторизация">
+    <meta name="og:title" content="Авторизация">
+    <meta property="og:title" content="Авторизация">
+    <meta name="next-head-count" content="24">
+    <title>Kubik Land - Авторизация</title>
+</head>
+<style>
+    body::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background-color: rgba(228, 228, 228, 0);
+        border-radius: 100px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        background-color: #00000025;
+    }
+</style>
+<body class="bg-center bg-no-repeat bg-fixed bg-cover" style="overflow: overlay; background-image: url('img/bkg.jpg');">
+        <div class="preloader">
+        <div class="bg-white fixed w-full h-screen flex items-center justify-center select-none" style="z-index: 1000;">
+            <img src="img/load.gif" alt="">
+        </div>
+    </div>
+
+    <form method="POST">
+        <div class="min-h-screen flex flex-col justify-center sm:py-12 font-main">
+            <div class="p-10 xs:p-0 mx-auto sm:w-full sm:max-w-5xl">
+            	
+                <h1 class="font-bold text-center text-2xl sm:text-4xl mb-5 text-white">Заявка</h1>
+				<div class="bg-white w-full rounded-lg divide-y divide-text shadow-xl mb-3">
+                    <div class="px-5 py-7">
+                        <p class="font-semibold text-center text-base sm:text-lg text-text">Для того, чтобы играть на сервере, у вас должна быть <span class="text-red">лицензия Minecraft</span></p>
+					</div>
+				</div>
+                <div class="bg-white w-full rounded-lg divide-y divide-text shadow-xl mb-3">
+                    <div class="px-5 py-7">
+					<label for="exampleText0" class="form-label inline-block mb-4 text-text font-semibold text-sm sm:text-base">Ваш ник в Minecraft<span class="text-red"> *</span></label>
+					<input 
+					type="text" 
+					class="form-control block px-1 text-sm sm:text-base font-normal text-text bg-white bg-clip-padding border-b-2 border-solid border-b-text/20 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-b-blue1.5 focus:outline-none" 
+					name="nick"/>
+					</div>
+				</div>
+				<div class="bg-white w-full rounded-lg divide-y divide-text shadow-xl mb-3">
+                    <div class="px-5 py-7">
+					<label for="exampleText0" class="form-label inline-block mb-4 text-text font-semibold text-sm sm:text-base">Расскажите о себе. Чем вы любите заниматься в свободное время? (не считая игру в майнкрафт)<span class="text-red"> *</span></label>
+					<textarea
+						class="w-full form-control block px-3 py-1.5 text-sm sm:text-base font-normal text-text bg-white bg-clip-padding border-2 border-solid border-text/20 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue1.5 focus:outline-none"
+						id="exampleFormControlTextarea1"
+						rows="3"
+						placeholder="Текст"
+						name="about"
+					></textarea>
+					</div>
+				</div>
+				<div class="bg-white w-full rounded-lg divide-y divide-text shadow-xl mb-3">
+                    <div class="px-5 py-7">
+					<label for="exampleText0" class="form-label inline-block mb-4 text-text font-semibold text-sm sm:text-base">Чем собираетесь заниматься на сервере?<span class="text-red"> *</span></label>
+					<textarea
+						class="w-full form-control block px-3 py-1.5 text-sm sm:text-base font-normal text-text bg-white bg-clip-padding border-2 border-solid border-text/20 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue1.5 focus:outline-none"
+						id="exampleFormControlTextarea1"
+						rows="3"
+						placeholder="Текст"
+						name="what"
+					></textarea>
+					</div>
+				</div>
+				<div class="bg-white w-full rounded-lg divide-y divide-text shadow-xl mb-3">
+                    <div class="px-5 py-7">
+					<label for="exampleText0" class="form-label inline-block mb-4 text-text font-semibold text-sm sm:text-base">Откуда вы о нас узнали?<span class="text-red"> *</span></label>
+					<input 
+					type="text" 
+					class="form-control block px-1 text-sm sm:text-base font-normal text-text bg-white bg-clip-padding border-b-2 border-solid border-b-text/20 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-b-blue1.5 focus:outline-none" 
+					name="whence"/>
+					</div>
+				</div>
+                <div class="bg-white w-full rounded-lg divide-y divide-text shadow-xl mb-3">
+                    <div class="px-5 py-7">
+                        <p class="font-semibold text-center text-base sm:text-lg text-text">При одобрении, вам сразу выдадут роль в дискорде.<br>Также, <a class="underline text-blue1.5" href="find-req.html"> здесь</a> можно будет отследить статус заявки.</p>
+					</div>
+				</div>
+				<div class="bg-white w-full rounded-lg divide-y divide-text shadow-xl">
+					<div>
+                        <button type="submit" class="flex justify-center items-center align-middle transition duration-200 bg-blue1.5 hover:bg-blue-600 focus:shadow-sm focus:ring-4 focus:ring-blue1.5 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center">
+                            <span class="inline-block mr-2 text-base sm:text-lg">Отправить</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-forward" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+							<path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
+							<path d="M3 6l9 6l9 -6" />
+							<path d="M15 18h6" />
+							<path d="M18 15l3 3l-3 3" />
+							</svg>
+                        </button>
+                    </div>
+                </div>
+                                <a href="index.html">
+                    <div class="flex justify-start items-center mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="#39b9ff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1" />
+                        </svg>
+                        <p class="text-base font-medium text-white">На главную</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </form>
+
+</body>
+<script src="js/preload.js" ></script>
+</html>
