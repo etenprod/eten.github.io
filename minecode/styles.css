@@ -443,7 +443,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-color: rgb(139 42 178 / 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -1652,12 +1652,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .checked\:border-blue1\.5:checked {
   --tw-border-opacity: 1;
-  border-color: rgb(57 185 255 / var(--tw-border-opacity));
+  border-color: rgb(139 42 178 / var(--tw-border-opacity));
 }
 
 .checked\:border-blue1:checked {
   --tw-border-opacity: 1;
-  border-color: rgb(55 207 255 / var(--tw-border-opacity));
+  border-color: rgb(139 42 178 / var(--tw-border-opacity));
 }
 
 .checked\:bg-white:checked {
@@ -1676,12 +1676,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:text-blue1\.5:hover {
   --tw-text-opacity: 1;
-  color: rgb(57 185 255 / var(--tw-text-opacity));
+  color: rgb(139 42 178 / var(--tw-text-opacity));
 }
 
 .hover\:text-blue1:hover {
   --tw-text-opacity: 1;
-  color: rgb(55 207 255 / var(--tw-text-opacity));
+  color: rgb(139 42 178 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-md:hover {
@@ -1692,22 +1692,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .focus\:border-blue1\.5:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(57 185 255 / var(--tw-border-opacity));
+  border-color: rgb(139 42 178 / var(--tw-border-opacity));
 }
 
 .focus\:border-blue1:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(55 207 255 / var(--tw-border-opacity));
+  border-color: rgb(139 42 178 / var(--tw-border-opacity));
 }
 
 .focus\:border-b-blue1\.5:focus {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(57 185 255 / var(--tw-border-opacity));
+  border-bottom-color: rgb(139 42 178 / var(--tw-border-opacity));
 }
 
 .focus\:border-b-blue1:focus {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(55 207 255 / var(--tw-border-opacity));
+  border-bottom-color: rgb(139 42 178 / var(--tw-border-opacity));
 }
 
 .focus\:bg-white:focus {
