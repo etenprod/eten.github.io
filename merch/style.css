@@ -37,8 +37,6 @@ p{
    box-shadow: 0 0 10px #444;
   }
 .border {
-   margin-right: 25px; /* Отступ справа */
-   margin-left: 25px; 
    margin-bottom: 10px; /* Отступ снизу */
    width: 300px;
    background: #cfcfcf;
