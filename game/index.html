@@ -9,8 +9,9 @@
         <div id="main-content">
             <h1 class="header">EtEn Game</h1>
 
-            
-            
+            <div id="main-frame">
+                <canvas id="canvas" width="672" height="512"></canvas>
+            </div> 
             
             <div id="dashboard">
                 <h2>Control Panel</h2>
@@ -30,6 +31,11 @@
                             <tr>
                                 <td>
                                     <input type="radio" name="mode" value="ai" checked>AI Play (NEAT)<br>
+                                </td>                              
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="mode" value="humanvsai" checked>Human vs AI<br>
                                 </td>                              
                             </tr>
                         </tbody>
@@ -64,6 +70,11 @@
                         <tbody id="settings">
                             <tr>
                                 <td>
+                                    <button id="freeze-btn" type="button">Freeze Weights (Console)</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     Frame Speed
                                     <select id="frame-speed">
                                         <option value="24">Very Slow</option>
@@ -77,11 +88,8 @@
                         </tbody>
                     </table>
                 </div>
- 
+
             </div> 
-            <div id="main-frame">
-                <canvas id="canvas" width="672" height="512"></canvas>
-            </div>
         </div>
     </body>
 
