@@ -19,7 +19,7 @@ footer {
 h2 {
   padding-top: 25px;
   padding-bottom: 20px;
-  text-align: center;
+  text-align: left;
   font-family: 'Inter', sans-serif;
   letter-spacing: 8px;
 }
@@ -28,9 +28,9 @@ p{
   line-height: 28px;
 }
 .thumb img  {
-   margin-right: 25px; /* Отступ справа */
-   margin-left: 25px; 
-   margin-bottom: 10px; /* Отступ снизу */
-   border-radius: 10px;
+   margin-right: 15px; /* Отступ справа */
+   margin-left: 15px; 
+   margin-bottom: 15px; /* Отступ снизу */
+   border-radius: 20px;
    border: 5px #303035 solid;
   }
