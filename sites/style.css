@@ -17,6 +17,7 @@ footer {
   flex: 0 0 auto;
 } 
 h2 {
+  font-weight: Extra Bold;
   padding-top: 25px;
   padding-bottom: 20px;
   text-align: left;
