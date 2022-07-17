@@ -1153,7 +1153,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: #15151B;
 }
 
 .bg-blue1\.5 {
