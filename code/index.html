@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=	, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<meta name="description" content="EtEn Code">
+	<link rel="icon" href="img/Code.svg" type="image/svg">
+	<meta name="image" content="img/Code.svg">
+	<meta name="author" content="darud">
+	<meta name="copyright" content="Made by Darud">
+	<title>EtEn Code</title>
+	<script type="text/javascript">
+
+function Encrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+ rnd = Math.round(Math.random() * 122) + 68;
+ Temp[i] = theText.charCodeAt(i) + rnd;
+ Temp2[i] = rnd;
+}
+for (i = 0; i < TextSize; i++) {
+ output += String.fromCharCode(Temp[i], Temp2[i]);
+}
+return output;
+}
+function unEncrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+ Temp[i] = theText.charCodeAt(i);
+ Temp2[i] = theText.charCodeAt(i + 1);
+}
+for (i = 0; i < TextSize; i = i+2) {
+ output += String.fromCharCode(Temp[i] - Temp2[i]);
+}
+return output;
+}
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+}
+</script>
+</head>
+<body>
+	<div class="row">
+		<div class="column">
+			<div id="logo">
+				<img src="img/Code.svg" alt="">
+				<h1>EtEn Code</h1>
+			</div>
+			</div>
+			</div>
+	<hr>
+<form name=encform onsubmit="return false;">
+<p>
+<textarea name=box1 rows=10 cols=40 placeholder="Текст" ></textarea>
+<br><p>
+<input type=button value="Зашифровать" class="button" onClick="this.form.box3.value=Encrypt(this.form.box1.value);">
+<br><p>
+<textarea name=box2 rows=10 cols=40 placeholder="Код"></textarea>
+<br><p>
+<input type=button value="Расшифровать" class="button" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
+<br><p>
+<textarea name=box3 rows=10 cols=40 id="myInput"></textarea>
+<br><p>
+<button class="button" onclick="myFunction()">Скопировать</button> 
+  
+</form>
+</div>
+<hr>
+
+<div class="row">
+	<div class="column">
+		<div id="logo-footer">
+			<a href="https://eten.pp.ua"><img src="img/logo.svg" alt=""></a>
+			<h4>EtEn Sites</h4>
+			<div id="title-text-footer">
+				<h5>Made by <br><a href="https://eten.pp.ua/" target="_blank">Darud</a></h5>
+			</div>
+		</div>
+	</div>
+		<div class="column">
+			<div class="wrapper">
+				<div id="media-wr"><a href="https://discord.gg/k445e4uSFf" target="_blank"><img src="img/discord.svg" alt="" id="media"></a></div>
+				<div id="media-wr"><a href="https://youtube.com/channel/UCIsfI4D-Zquiw6xHqn5zKew" target="_blank"><img src="img/youtube.svg" alt="" id="media"></a></div>
+				<div id="media-wr"><a href="https://instagram.com/eternal_enemies?igshid=YmMyMTA2M2Y=" target="_blank"><img src="img/inst.svg" alt="" id="media"></a></div>
+				<div id="media-wr"><a href="https://t.me/etenmusic" target="_blank"><img src="img/tg.svg" alt="" id="media"></a></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
