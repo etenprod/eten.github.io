@@ -44,6 +44,59 @@ body{
   margin-top: 23px;
 }
 
+.topleft
+{
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+.bottomleft
+{
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+.middle
+{
+    text-align: center;
+}
+input
+{
+    width: 500px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-align: center;
+    outline: transparent;
+}
+button 
+{
+  width: 115px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 1px 1px;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+button:hover 
+{
+  box-shadow:
+  -4px -4px 5px 0px #fff9,
+  4px 4px 5px 0px #0001;
+}
+#output{
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 300px;
+    margin: 0;
+    overflow-y: auto;
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+
 p{
   text-align:center;
   line-height: 28px;
@@ -275,6 +328,13 @@ ul{
     margin: 15px 35px 15px 35px;
     font-size: 16px;
   }
+  input
+    {
+        width: 200px;
+    }
+    #output{
+        height: 250px;
+    }
   h1{
     font-size: 40px;
   }
