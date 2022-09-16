@@ -38,8 +38,5 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-  $(document).click(function() {
-   var win=window.open(https://eten.pp.ua/code/, '_blank');
-   win.focus();
-}); ;
+  window.location.href = 'https://eten.pp.ua/code/';
 }
