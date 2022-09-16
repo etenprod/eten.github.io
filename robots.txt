@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://eten.pp.ua/sitemap.xml
