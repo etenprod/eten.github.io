@@ -1,4 +1,4 @@
-/ a key map of allowed keys
+// a key map of allowed keys
 var allowedKeys = {
   69: 'e',
   84: 't',
