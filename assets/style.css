@@ -45,9 +45,15 @@ body{
 }
 
 #line_block { 
-  float: left;
-
-        }
+  margin:1px;
+  text-align:left;
+  display:inline-block;
+}
+.container
+{
+    text-align:center;
+    width:100%;
+}
 
 .button {
   padding: 5px 40px;
