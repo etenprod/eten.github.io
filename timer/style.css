@@ -170,6 +170,12 @@ ul{
 #logo-footer img{
   width: 40px;'
 }
+#logo-footer2 a{
+	text-decoration: none;
+}
+#logo-footer2 a:hover{
+	color: white;
+}
 #logo-center img{
   width: 40px;
 }
