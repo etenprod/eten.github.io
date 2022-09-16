@@ -331,6 +331,9 @@ ul{
   }
 }
 @media screen and (max-width: 800px) {
+  .border {
+   width: 250px;
+}
   #slider{
     border-radius: 38px;
   }
@@ -347,6 +350,9 @@ ul{
   }
 }
 @media screen and (max-width: 650px) {
+  .border {
+   width: 200px;
+}
   body{
     margin: 15px 35px 15px 35px;
     font-size: 16px;
