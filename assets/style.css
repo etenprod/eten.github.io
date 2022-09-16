@@ -147,6 +147,10 @@ ul{
 #media{
 	width: 40px;
 }
+#media2{
+	width: 94px;
+	height: 33px;
+}
 #logo, #header, #logo-footer,#logo-footer2, #logo-center{
 	display: flex;
 	align-items: center;
