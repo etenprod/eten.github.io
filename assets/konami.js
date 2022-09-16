@@ -38,5 +38,5 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-  window.location.href = 'https://eten.pp.ua/code/';
+  window.location.href = 'https://eten.pp.ua/hiddensites/';
 }
