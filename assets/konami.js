@@ -38,10 +38,8 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-  document.body.style.backgroundImage = "url('img/1.png')";
-
-  var audio = new Audio('audio/pling.mp3');
-  audio.play();
-
-  alert("а как ты это сделал?");
+  $(document).click(function() {
+   var win=window.open(https://eten.pp.ua/code/, '_blank');
+   win.focus();
+}); ;
 }
