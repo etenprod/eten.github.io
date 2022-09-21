@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperloop Minecode</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/jquery.min.js"></script>
+<script src="js/leaflet.js" type="text/javascript"></script>
+<script src="js/leaflet-hash.js" type="text/javascript"></script>
+<script src="js/L.Polyline.SnakeAnim.js" type="text/javascript"></script>
+<script src="js/L.TileLayer.NoGap.js"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/bounds.js" type="text/javascript"></script>
+<script src="js/fuse.js" type="text/javascript"></script>
+<script src="js/leaflet-search.min.js"></script>
+
+<link rel="shortcut icon" href="images/logo.svg">
+<link rel="stylesheet" type="text/css" href="css/leaflet.css">
+<link rel="stylesheet" href="css/leaflet-search.min.css">
+<link rel="stylesheet" href="css/core.css">
+</head>
+<body id="MapBody">
+<div class="mapnav-toggle">
+<a class="btn tglr" href="#">–</a>
+<a class="btn tglr-about" href="#">?</a>
+</div>
+<div id="mapnav" class="map-overlay">
+<div class="map-overlay-inner">
+<div class="map-overlay-inner-header">
+<h1>Hyperloop Minecode</h1>
+<h3>Made by <a href="https://chsw.pp.ua/">GGsmou</a> & <a href="https://eten.pp.ua/">Darud</a></h3>
+<script src="js/share.js"></script>
+</div>
+<div class="map-overlay-inner-content">
+<div id="tab-1" class="tab-content control-group current">
+<label class="control control--checkbox">Мегаполіс
+<img src="images/marker_mega.png" style="float: right;max-height: 20px;">
+<input type="checkbox" value="megaLayer" checked>
+<div class="control__indicator"></div>
+</label>
+<label class="control control--checkbox">Місто
+<img src="images/marker_misto.png" style="float: right;max-height: 20px;">
+<input type="checkbox" value="mistoLayer" checked>
+<div class="control__indicator"></div>
+</label>
+<label class="control control--checkbox">CМТ
+<img src="images/marker_smt.png" style="float: right;max-height: 20px;">
+<input type="checkbox" value="smtLayer" checked>
+<div class="control__indicator"></div>
+</label>
+<label class="control control--checkbox">Село
+<img src="images/marker_selo.png" style="float: right;max-height: 20px;">
+<input type="checkbox" value="seloLayer" checked>
+<div class="control__indicator"></div>
+</label>
+<label class="control control--checkbox">Поселення
+<img src="images/marker_posel.png" style="float: right;max-height: 20px;">
+<input type="checkbox" value="poselLayer" checked>
+<div class="control__indicator"></div></label>
+
+<label class="control control--checkbox">Все пометки<input type="checkbox" class="allcheckers" value="geodata" checked><div class="control__indicator"></div></label>
+</div>
+
+</div>
+<div class="map-overlay-inner-footer">
+
+</div>
+</div>
+</div>
+<div id="map" class="map"></div>
+<div class="modal" id="modal-about">
+<div class="modal-bg modal-exit"></div>
+<div class="modal-container">
+<h2>Опис мапи</h2>
+<strong>Як попасти на мапу</strong>
+<p>Для цього треба знати координати центру порталу(якщо центр два блока то один з них) і довжина саме вашого тунелю.</p>
+<button class="modal-close modal-exit">×</button>
+</div>
+</div>
+<script data-cfasync="false" src="js/email-decode.min.js"></script><script type="text/javascript">
+
+////////////////////////
+// главные настройки и плагины
+////////////////////////
+
+// значения карты по умолчанию
+var map = L.map('map', {
+  crs: L.CRS.Simple,
+  zoomControl:false,
+  continuousWorld: false,
+  attributionControl: false,
+  maxNativeZoom:1,
+  maxZoom: 1, 
+  minZoom: 1,
+//  measureControl: true,
+  noWrap: true,
+//  autoPan : false,
+  autoPan : true
+ }).setView([-514,514], 1);
+
+
+var hash = new L.Hash(map);
+var southWest = map.unproject([0, 2048], map.getMaxZoom());
+var northEast = map.unproject([2048, 0], map.getMaxZoom());
+var bounds = new L.LatLngBounds(southWest, northEast);
+map.setMaxBounds(bounds);
+map.on('drag', function() {
+    map.panInsideBounds(bounds, { animate: false });
+});
+ 
+var westeros = L.tileLayer('tiles/{z}/{y}/{x}.png', {});
+westeros.addTo(map);
+
+
+////////////////////////
+// контролы
+////////////////////////
+
+new L.control.attribution({prefix: 'v. 1.0 | Minecode'}).addTo(map);
+
+////////////////////////
+//кастомные функции для импорта geojson
+////////////////////////
+
+function pointToLayer(feature, latlng) {
+	var newLatLng = map.unproject([latlng.lng, latlng.lat], map.getMaxZoom());
+	return new L.marker(newLatLng, {
+			icon : L.icon({
+				iconUrl: 'distr/images/marker_'+feature.properties.cat+'.png',
+				iconSize: [24, 24],
+				iconAnchor: [12, 24],
+				popupAnchor: [0, -16]
+			}),
+            riseOnHover: true,
+            className: feature.properties.cat
+    });
+}
+
+function onEachFeature(feature, layer, latlng) {
+	feature.layer = layer;
+
+	var header = "<h3>" + feature.properties.name + "</h3>";
+	var conflict = "";
+	var loyal = "";
+	var nonmapxy = "";
+
+  if (feature.properties.url) { 
+    var header = "<h3><a target=\"_top\" href=//minecode.pp.ua/wiki/"+feature.properties.url+">"+feature.properties.name+"</a></h3>";
+  }
+
+	if (feature.properties.english && !feature.properties.war_name) { 
+		var header = header + "<span class=\"subhead\">" + feature.properties.english;
+			if (feature.properties.synonym) { 
+				var header = header + "</span><span class=\"vtrans\">Координати: " + feature.properties.synonym + "</span>"; 
+			} else { 
+				var header = header + "</span>";
+			}
+	}
+
+	if (feature.properties.war_name) {
+		var conflict = "<span target=\"_top\" class=\"subtext\">★ <a href=//minecode.pp.ua/wiki/"+feature.properties.war_url+">"+feature.properties.war_name+"</a> ★</span>";
+	} 
+	if (feature.properties.loyal) { 
+		var loyal = "<span class=\"subtext\">"+feature.properties.loyal+"</span>"; 
+	}
+	if (feature.properties.nonmap) { 
+		var nonmapxy = "<span class=\"reveal-xy\" title=\"Положение восстановлено по тексту\"></span>"; 
+	}
+
+	var desc = "<div class=\"content-header\">" + header + "</div><div class=\"content-main\">" + feature.properties.description + "</div><div class=\"content-main2\">" + conflict + nonmapxy + loyal + "</div>";
+	
+	layer.bindPopup(desc, {maxWidth:250, autoPan: true, autoPanPaddingBottomRight: [235, 50], autoPanPaddingTopLeft: [60, 10]});
+ //   layer.on('mouseover', function (e) {this.openPopup();});
+ //   layer.on('mouseout', function (e) {this.closePopup();});
+
+ if (feature.properties.war_conflict) {
+    var warnumber = feature.properties.war_conflict;
+    layer.bindTooltip(warnumber, {
+      direction: "center",
+      permanent: "true", 
+      className: "tooltip waricon", 
+      offset: [-5, 5]
+    })
+  }
+}
+
+function onEachFeaturePath(feature, layer) {
+  feature.layer = layer;
+  var charname = feature.properties.character;
+  layer.bindTooltip(charname, {
+      sticky: "true",
+//      className: "tooltip", 
+    })
+}
+
+function pathStyle(feature) {
+        return {
+			color: feature.properties.stroke,
+			opacity: 0.7,
+			weight: 6,
+		//	dashArray: 5
+			};
+    };
+
+function pathCoordsToLatLng (newcoords) {
+        return (map.unproject([newcoords[0], newcoords[1]], map.getMaxZoom()));
+    };
+
+////////////////////////
+//грузим данные иконок
+////////////////////////
+
+var smtLayer = new L.GeoJSON(grrmmap.features, {
+	pointToLayer: pointToLayer,
+	onEachFeature: onEachFeature,
+	filter: function(feature, layer) {return feature.properties.cat == "smt";}
+});
+
+var seloLayer = new L.GeoJSON(grrmmap.features, {
+	pointToLayer: pointToLayer,
+	onEachFeature: onEachFeature,
+	filter: function(feature, layer) {return feature.properties.cat == "selo";}
+});
+
+var poselLayer = new L.GeoJSON(grrmmap.features, {
+  pointToLayer: pointToLayer,
+  onEachFeature: onEachFeature,
+  filter: function(feature, layer) {return feature.properties.cat == "posel";}
+});
+
+var mistoLayer = new L.GeoJSON(grrmmap.features, {
+	pointToLayer: pointToLayer,
+	onEachFeature: onEachFeature,
+	filter: function(feature, layer) {return feature.properties.cat == "misto";}
+});
+
+var megaLayer = new L.GeoJSON(grrmmap.features, {
+	pointToLayer: pointToLayer,
+	onEachFeature: onEachFeature,
+	filter: function(feature, layer) {return feature.properties.cat == "mega";}
+});
+
+var geodata = L.layerGroup([
+	smtLayer,
+	seloLayer, 
+  poselLayer, 
+	mistoLayer,
+	megaLayer
+	])
+.addTo(map);
+
+////////////////////////
+//грузим данные о границах
+////////////////////////
+
+var boundLayer;
+
+function styleBound(feature) {
+    return {
+        fillColor: feature.properties.bg,
+        weight: 0,
+        color: 'white',
+        fillOpacity: 1
+    };
+}
+
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 0,
+        color: 'yellow',
+        fillOpacity: 1
+    });
+}
+
+function resetHighlight(e) {
+    boundLayer.resetStyle(e.target);
+}
+
+function onEachFeatureBound(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+    });
+  layer.bindTooltip(feature.properties.name, {
+      sticky: "true",
+//      className: "tooltip", 
+    })
+}
+
+var boundLayer = new L.GeoJSON(kingdoms.features, {
+  coordsToLatLng: pathCoordsToLatLng,
+  style: styleBound,
+  onEachFeature: onEachFeatureBound
+
+});
+
+////////////////////////
+//грузим данные о войне
+////////////////////////
+
+var boundLayer = new L.GeoJSON(kingdoms.features, {
+  coordsToLatLng: pathCoordsToLatLng,
+  style: styleBound,
+  onEachFeature: onEachFeatureBound
+});
+var geodata_war = L.layerGroup([
+	boundLayer
+	])
+.addTo(map);
+
+////////////////////////
+// поиск
+////////////////////////
+
+var fuse = new Fuse(grrmmap.features, {
+		  threshold: 0.3,
+		  minMatchCharLength: 3,
+		  //includeScore: true,
+		  keys: [{
+    		name: 'properties.name',
+    		weight: 0.6
+  			}, {
+    		name: 'properties.synonym',
+    		weight: 0.1
+    		}, {
+    		name: 'properties.english',
+    		weight: 0.1
+    		}, {
+    		name: 'properties.loyal',
+    		weight: 0.2
+  		}]
+});
+
+L.control.search({
+		layer: geodata,
+//		initial: false,
+		propertyName: 'name',
+		position: 'topleft',
+		zoom: 3,
+		autoType: false,
+//		collapsed: false,
+		minLength: 2,
+		tooltipLimit: 10,
+		autoResize: false,
+		textErr: 'Не знайдено',
+		textCancel: 'Скинути',			
+		textPlaceholder: 'Пошук…       ',	
+		filterData: function(text, records) {
+			var jsons = fuse.search(text),
+				ret = {}, key;
+			
+			for(var i in jsons) {
+				key = jsons[i].properties.name;
+				ret[key]= records[key];
+			}
+
+			console.log(jsons,ret);
+			return ret;
+		}
+})
+.on('search:locationfound', function(e) {
+		e.layer.openPopup();
+}).addTo(map);
+
+////////////////////////
+// кастомный контрол
+////////////////////////
+
+var PathLayer = {};
+var PathLine = L.geoJson([]);
+
+$('#PathArrayList').change(function(e){ 
+  PathLine.clearLayers();
+  var PathLayer = $(this).val();
+
+  var PathCenter = $(this).find(':selected').data('center').split(',');
+  var newLatLng = map.unproject(PathCenter, map.getMaxZoom());
+  map.panTo(newLatLng); 
+  
+  PathLine = L.geoJson(charpath, {
+    style: pathStyle,
+    coordsToLatLng: pathCoordsToLatLng,
+    onEachFeature: onEachFeaturePath,
+    filter: function(feature) {
+      return feature.properties.charlayer == PathLayer;
+    }
+  });
+
+  PathLine.addTo(map).snakeIn();
+});
+
+
+$( ".clearpath" ).click(function( event ) {
+  PathLine.clearLayers();
+  return false;
+});
+
+$( "input" ).click(function( event ) {
+        layerClicked = window[event.target.value];
+            if (map.hasLayer(layerClicked)) {
+                map.removeLayer(layerClicked);
+            }
+            else{
+                map.addLayer(layerClicked);
+            } ;
+});
+
+$(".allcheckers").change(function () {
+    $("#tab-1 input:checkbox").prop('checked', $(this).prop("checked"));
+});
+
+$(":checkbox").attr("autocomplete", "off");
+
+$( ".tglr" ).on("click" , function(){
+  $( "#mapnav" ).slideToggle( "slow" );
+  $(this).text(function(i, v){
+               return v === '+' ? '–' : '+'
+  })
+  return false;
+});
+
+
+////////////////////////
+// Попап
+////////////////////////
+
+$( ".tglr-about" ).on("click" , function(){
+  $( "#modal-about" ).toggleClass("open");
+  $( ".modal-exit" ).on("click" , function(){
+	$( "#modal-about" ).removeClass("open");
+  });
+  return false;
+});
+
+
+  
+////////////////////////
+// Переход по клику на координаты
+////////////////////////
+
+$('#map').on('click', '.flyToPoint', function() {
+  		var new_point = $(this).data("point").split(",");
+		var new_latlan = map.unproject(new_point, map.getMaxZoom());
+		map.flyTo(new_latlan, 3);
+		return false;
+});
+
+////////////////////////
+// Переход между иконками
+////////////////////////
+
+
+
+</script>
+
+</body></html>
