@@ -150,7 +150,7 @@ function onEachFeature(feature, layer, latlng) {
 	}
 
 	if (feature.properties.war_name) {
-		var conflict = "<span target=\"_top\" class=\"subtext\">★ <a href=//minecode.pp.ua/wiki/"+feature.properties.war_url+">"+feature.properties.war_name+"</a> ★</span>";
+		var conflict = "<span target=\"_top\" class=\"subtext\">★ <a href="+feature.properties.war_url+">"+feature.properties.war_name+"</a> ★</span>";
 	} 
 	if (feature.properties.loyal) { 
 		var loyal = "<span class=\"subtext\">"+feature.properties.loyal+"</span>"; 
