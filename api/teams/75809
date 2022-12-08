@@ -1,7 +1,7 @@
 {
   "status": true,
   "data": {
-    "id": 10132,
+    "id": 75809,
     "url": "kepki",
     "name": "Левант",
     "description": "Строим фермы и носим кепочки.",
@@ -28,10 +28,10 @@
           "offset": 460
         },
         "world": "overworld",
-        "banner": 10132
+        "banner": 75809
       },
       {
-        "id": 555,
+        "id": 1,
         "name": "ТРЦ NewtLock",
         "description": "",
         "owner": "Левант",
@@ -45,7 +45,7 @@
           "offset": 75
         },
         "world": "overworld",
-        "banner": 10132
+        "banner": 75809
       }
     ],
     "members": [
