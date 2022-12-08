@@ -2,6 +2,16 @@
   "status": true,
   "data": {
     "id": 75809,
+    "url": "",
+    "name": "",
+    "description": "",
+    "info": "",
+    "banner": "",
+    "recruit": true,
+    "tier": 0,
+    "discord": "",
+    "images": [],
+    "played": 937443,
     "marxs": [
       {
         "id": 12,
@@ -23,7 +33,7 @@
       {
         "id": 1,
         "name": "Карпатія",
-        "description": "info0",
+        "description": "",
         "owner": "Карпатія",
         "owner_type": 0,
         "owner_id": 0,
