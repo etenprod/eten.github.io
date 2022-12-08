@@ -1,17 +1,6 @@
 {
   "status": true,
   "data": {
-    "id": 75809,
-    "url": "karpatiya",
-    "name": "Карпатія",
-    "description": "info1",
-    "info": "info2 \"text\".",
-    "banner": "16b6p6x",
-    "recruit": true,
-    "tier": 0,
-    "discord": "5w6wTGCZmC",
-    "images": [],
-    "played": 937443,
     "marxs": [
       {
         "id": 12,
