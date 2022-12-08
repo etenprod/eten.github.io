@@ -14,23 +14,6 @@
     "played": 937443,
     "marxs": [
       {
-        "id": 12,
-        "name": "Карпатія",
-        "description": "info3",
-        "owner": "Карпатія",
-        "owner_type": 0,
-        "owner_id": 0,
-        "x": -15,
-        "z": -460,
-        "branch": {
-          "color": "red",
-          "direction": "left",
-          "offset": 460
-        },
-        "world": "overworld",
-        "banner": 75809
-      },
-      {
         "id": 1,
         "name": "Карпатія",
         "description": "",
