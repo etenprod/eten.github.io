@@ -2,10 +2,10 @@
   "status": true,
   "data": {
     "id": 75809,
-    "url": "kepki",
-    "name": "Левант",
-    "description": "Строим фермы и носим кепочки.",
-    "info": "Привествую! Мы довольно  дружная община которая любит строить фермы точка. РП направление основано на тематике сериала \"Острые козырьки\".",
+    "url": "karpatiya",
+    "name": "Карпатія",
+    "description": "info1",
+    "info": "info2 \"text\".",
     "banner": "16b6p6x",
     "recruit": true,
     "tier": 0,
@@ -15,9 +15,9 @@
     "marxs": [
       {
         "id": 12,
-        "name": "Левант",
-        "description": "База Резвых кепочек",
-        "owner": "Левант",
+        "name": "Карпатія",
+        "description": "info3",
+        "owner": "Карпатія",
         "owner_type": 0,
         "owner_id": 0,
         "x": -15,
@@ -32,15 +32,15 @@
       },
       {
         "id": 1,
-        "name": "ТРЦ NewtLock",
+        "name": "Карпатія",
         "description": "",
-        "owner": "Левант",
+        "owner": "Карпатія",
         "owner_type": 0,
         "owner_id": 0,
-        "x": 75,
-        "z": -10,
+        "x": -82,
+        "z": -31,
         "branch": {
-          "color": "yellow",
+          "color": "green",
           "direction": "left",
           "offset": 75
         },
