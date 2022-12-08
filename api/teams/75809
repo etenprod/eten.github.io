@@ -4,8 +4,13 @@
     "id": 75809,
     "url": "karpatiya",
     "name": "Карпатія",
-    "description": "info1564",
+    "description": "info1",
     "info": "info2 \"text\".",
+    "banner": "16b6p6x",
+    "recruit": true,
+    "tier": 0,
+    "discord": "5w6wTGCZmC",
+    "images": [],
     "played": 937443,
     "marxs": [
       {
@@ -64,111 +69,6 @@
         "permission": 2,
         "played": 6324512,
         "on_server": "sur"
-      },
-      {
-        "id": 8561,
-        "nick": "Yumanity",
-        "permission": 0,
-        "played": 34216,
-        "on_server": ""
-      },
-      {
-        "id": 10540,
-        "nick": "Arthurka",
-        "permission": 0,
-        "played": 534203,
-        "on_server": ""
-      },
-      {
-        "id": 10805,
-        "nick": "de_Sin",
-        "permission": 0,
-        "played": 734753,
-        "on_server": ""
-      },
-      {
-        "id": 10893,
-        "nick": "flmtzmn",
-        "permission": 0,
-        "played": 447504,
-        "on_server": ""
-      },
-      {
-        "id": 10639,
-        "nick": "Mrun",
-        "permission": 0,
-        "played": 700531,
-        "on_server": ""
-      },
-      {
-        "id": 5120,
-        "nick": "_TheR1disca_",
-        "permission": 0,
-        "played": 741334,
-        "on_server": ""
-      },
-      {
-        "id": 5989,
-        "nick": "YUDAj",
-        "permission": 1,
-        "played": 2140645,
-        "on_server": ""
-      },
-      {
-        "id": 10282,
-        "nick": "trator1k",
-        "permission": 0,
-        "played": 3532562,
-        "on_server": ""
-      },
-      {
-        "id": 10577,
-        "nick": "GlebBeliaev",
-        "permission": 0,
-        "played": 19435,
-        "on_server": ""
-      },
-      {
-        "id": 8707,
-        "nick": "PrometheusX77",
-        "permission": 0,
-        "played": 58114,
-        "on_server": ""
-      },
-      {
-        "id": 1755,
-        "nick": "_DanGamer",
-        "permission": 0,
-        "played": 1906155,
-        "on_server": ""
-      },
-      {
-        "id": 11588,
-        "nick": "MangoCrystal",
-        "permission": 0,
-        "played": 2112558,
-        "on_server": "sur"
-      },
-      {
-        "id": 8663,
-        "nick": "olegpin",
-        "permission": 0,
-        "played": 127674,
-        "on_server": ""
-      },
-      {
-        "id": 1412,
-        "nick": "m1lto",
-        "permission": 0,
-        "played": 400710,
-        "on_server": ""
-      },
-      {
-        "id": 6630,
-        "nick": "bellach_KOMAP",
-        "permission": 0,
-        "played": 1166645,
-        "on_server": ""
       }
     ]
   }
