@@ -7,7 +7,7 @@
     "description": "info1",
     "info": "info2 \"text\".",
     "banner": "16b6p6x",
-    "recruit": true, 
+    "recruit": false, 
     "tier": 0,
     "discord": "5w6wTGCZmC",
     "images": [],
