@@ -24,7 +24,7 @@
         "x": -82,
         "z": -31,
         "branch": {
-          "color": "red",
+          "color": "yellow",
           "direction": "right",
           "offset": 75
         },
