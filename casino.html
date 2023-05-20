@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Казино</title>
+  <style>
+  hr
+  {
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 3px solid #414147;
+    margin: 1em 0;
+    padding: 0;
+}
+  body{
+  background:#15151B;
+  color:#fff;
+  text-align: center
+  
+  }
+  h1{
+  margin: 0px;
+  }
+  h2{
+  font-size: 40px;
+  margin: 0px;
+  }
+    .counter {
+      display: inline-block;
+      font-size: 40px;
+    }
+.button {
+  background-color: #5C52CF;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button2 {
+  background-color: #FEC90B;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+.button2:hover {opacity: 1}
+.counter1{
+font-size: 80px;
+}
+  </style>
+</head>
+<body>
+  <div class="counter">
+  <h1>|1-12|</h1>
+    Ваша ставка:<span id="counter1" class="counter1">5</span><br>
+    <button onclick="increaseBet(1)" class="button">Поднять ставку</button>
+    <button onclick="resetBet(1)" class="button2">Сбросить</button>
+  </div><br><br>
+  <hr>
+  <div class="counter">
+  <h1>|13-24|</h1>
+    Ваша ставка:<span id="counter2" class="counter1">5</span><br>
+    <button onclick="increaseBet(2)" class="button">Поднять ставку</button>
+    <button onclick="resetBet(2)" class="button2">Сбросить</button>
+  </div><br><br>
+  <hr>
+  <div class="counter">
+  <h1>|25-36|</h1>
+    Ваша ставка:<span id="counter3" class="counter1">5</span><br>
+    <button onclick="increaseBet(3)" class="button">Поднять ставку</button>
+    <button onclick="resetBet(3)" class="button2">Сбросить</button>
+  </div>
+
+  <script>
+    var betValues = {
+      1: [10, 20, 40, 80, 120, 180, 250, 370, 550, 820, 1000],
+      2: [10, 20, 40, 80, 120, 180, 250, 370, 550, 820, 1000],
+      3: [10, 20, 40, 80, 120, 180, 250, 370, 550, 820, 1000]
+    };
+
+    var currentBets = {
+      1: 5,
+      2: 5,
+      3: 5
+    };
+
+    function increaseBet(counterNumber) {
+      var counterElement = document.getElementById('counter' + counterNumber);
+      var currentBet = currentBets[counterNumber];
+      var betIndex = betValues[counterNumber].indexOf(currentBet);
+
+      if (betIndex < betValues[counterNumber].length - 1) {
+        var newBet = betValues[counterNumber][betIndex + 1];
+        counterElement.innerText = newBet;
+        currentBets[counterNumber] = newBet;
+      }
+    }
+
+    function resetBet(counterNumber) {
+      var counterElement = document.getElementById('counter' + counterNumber);
+      counterElement.innerText = '5';
+      currentBets[counterNumber] = 5;
+    }
+  </script>
+</body>
+</html>
