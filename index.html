@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eten.tech</title>
+
+  <!-- Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Reset ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #F3F1F9;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Layout ===== */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+/* ===== Header (точно под твои требования) ===== */
+.header{
+  /* отступы 2.5% от ширины экрана только для хедера */
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  padding-top: 33px;   /* можно потом доточить */
+  padding-bottom: 0;
+  color: rgb(255, 255, 255);
+}
+
+.header__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height: 48px;
+}
+
+/* left: logo + brand */
+.header__left{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+
+.header__logo{
+  width: 46px;
+  height: 19px;
+  display:block;
+}
+
+/* Helvetica Neue Thin, 20px */
+.header__brand{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;          /* thin */
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+/* right: nav + circles */
+.header__right{
+  display:flex;
+  align-items:center;
+  gap: 86px; /* расстояние между якорями и кружками (если нужно — скажешь) */
+}
+
+/* nav */
+.header__nav{
+  display:flex;
+  align-items:center;
+  gap: 86px;                /* между якорями 86px */
+}
+
+.header__link{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;         /* regular */
+  font-size: 12px;
+  letter-spacing: 0;        /* если надо uppercase spacing — скажешь */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* icon buttons */
+.header__icons{
+  display:flex;
+  align-items:center;
+  gap: 12px;                /* между кружками (если другое — скажешь) */
+}
+
+.header__iconBtn{
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,0.09);  /* белый 9% */
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  padding: 0;
+}
+
+.header__iconSvg{
+  width: 14px;
+  height: 14px;
+  display:block;
+}
+
+/* на мобилке потом решим, пока не трогаю адаптив */
+
+    /* ===== Hero ===== */
+    /* ===== HERO (первая секция) ===== */
+
+/* хедер поверх фона */
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* hero стартует от самого верха, высота 958 */
+.hero{
+  position: relative;
+  height: 958px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* фон-картинка */
+.hero__bg{
+  position: absolute;
+  inset: 0;
+  background-image: url("background.png"); /* TODO: поставь свой файл */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* если нужен затемняющий слой поверх картинки — пока выключено */
+/*
+.hero__bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.15);
+}
+*/
+
+.hero__inner{
+  position: relative;
+  height: 958px; /* чтобы совпало с hero */
+  z-index: 1;
+}
+
+/* правый текст */
+.hero__rightText{
+  position: absolute;
+  right: 2.5vw;          /* твои 2.5% */
+  top: calc(33px + 48px + 149px); 
+  /* 33px padding-top хедера + 48px высота хедера + 149px от хедера вниз */
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;      /* пока regular, скажешь — поменяем */
+  font-size: 50px;       /* пока черновое, ты скажешь точный */
+  line-height: 1.1;
+  letter-spacing: 1px;
+  max-width: 520px;      /* чтобы не растягивалось */
+  letter-spacing: 0.05em;
+}
+.hero__leftBlock{
+  position: absolute;
+  left: 2.5vw;
+  top: calc(33px + 48px + 253px);
+}
+
+
+/* левый текст */
+.hero__leftText{
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;        /* medium */
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  max-width: 420px;
+}
+
+.hero__leftDesc{
+  margin-top: 30px;        /* отступ 30px от заголовка */
+  max-width: 360px;
+  font-size: 10px;
+  font-weight: 100;
+  letter-spacing: 0.10em;
+  line-height: 1.5;
+  color: #fff;
+  position: static;        /* ВАЖНО: чтобы был в потоке */
+}
+
+.hero__squares{
+  display: flex;
+  gap: 34px;               /* расстояние между квадратами */
+  margin-top: 205px;       /* отступ от текста описания */
+}
+
+.hero__square{
+  width: 215px;
+  height: 215px;
+  border-radius: 16px;
+}
+
+/* левый — светлый */
+.hero__square--light{
+  background: #F0F0F0;
+}
+
+
+
+
+/* лёгкая виньетка по краям (даёт 3D-объём) */
+/* iOS / iPhone-style glass */
+.hero__square--glass{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+
+  /* стеклянная “тело-поверхность” */
+  background:
+    radial-gradient(140% 120% at 20% 15%, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.10) 38%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0.03) 100%),
+    linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 55%, rgba(0,0,0,0.10) 100%);
+
+  /* внешняя рамка */
+  border: 1px solid rgba(255,255,255,0.22);
+
+  /* мягкая глубина (как у iOS карточек) */
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+}
+
+/* блик сверху-слева + внутренняя рамка */
+.hero__square--glass::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: 16px;
+  pointer-events:none;
+
+  background:
+    /* мягкий блик */
+    radial-gradient(120px 120px at 22% 18%, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.12) 45%, rgba(255,255,255,0) 70%),
+    /* тонкая внутренняя рамка */
+    linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  padding: 1px; /* толщина внутренней рамки */
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0.9;
+}
+
+/* лёгкая виньетка по краям (объём) */
+.hero__square--glass::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: 16px;
+  pointer-events:none;
+  background: radial-gradient(120% 120% at 50% 40%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.16) 100%);
+}
+
+
+
+.hero__desc{
+  margin-top: 30px;        /* ровно 33px ниже заголовка */
+  font-size: 10px;         /* размер 10 */
+  font-weight: 100;        /* regular */
+  line-height: 1.5;
+  text-transform: none;    /* НЕ капсом */
+  letter-spacing: 0;
+  color: #fff;
+  text-align: right;
+  word-wrap: break-word;
+  letter-spacing: 0.1em;
+}
+
+.hero__desc span{
+  font-weight: 600;        /* semibold */
+}
+
+
+.hero__chips{
+  position: absolute;
+  right: 2.5vw;
+
+  bottom: 0;              /* прижали к низу hero */
+  transform: translateY(-36px); /* подняли ровно на высоту квадратов */
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+
+/* верхний ряд прижат вправо */
+.hero__chipsTop{
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  width: fit-content;
+}
+
+/* нижний ряд — отдельная линия */
+.hero__chipsBottom{
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  width: fit-content;
+}
+
+
+
+/* базовый чип */
+.chip{
+  height: 33px;                    /* всегда 33 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 20px;                 /* +20px по бокам от текста */
+  border-radius: 999px;
+
+  font-family: "Michroma", sans-serif;
+  font-size: 15px;
+  font-weight: 400;                /* regular */
+  letter-spacing: 0.05em;          /* 5% */
+  line-height: 1;
+  color: rgb(255, 255, 255);
+
+  border: 1px solid rgb(255, 255, 255);
+  background: rgba(255,255,255,0.00);
+}
+
+/* чип с иконкой */
+.chip--icon{
+  width: 56px;                     /* круглая капсула под иконку (можно подогнать) */
+  padding: 0;                      /* тут не нужен padding */
+}
+
+.chip__icon{
+  width: 13px;
+  height: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip__icon img{
+  width: 13px;
+  height: 13px;
+  display:block;
+}
+
+    .hero__left,
+    .hero__center,
+    .hero__right {
+      min-height: 200px;
+    }
+
+    /* ===== Services ===== */
+    .services {
+      width: 100%;
+    }
+
+    .services__inner {
+      padding: 80px 0;
+    }
+
+    .services__header {
+      margin-bottom: 32px;
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      min-height: 180px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      width: 100%;
+    }
+
+    .faq__inner {
+      padding: 80px 0;
+    }
+
+    .faq__header {
+      margin-bottom: 32px;
+    }
+
+    .faq__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .faq__column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .faq-item {
+      min-height: 64px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      width: 100%;
+    }
+
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr auto;
+      gap: 32px;
+      padding: 80px 0;
+    }
+
+    .footer__brand,
+    .footer__nav,
+    .footer__social,
+    .footer__meta,
+    .footer__cta {
+      min-height: 40px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer__inner {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero__inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .faq__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+<header class="header">
+  <div class="header__inner">
+    <div class="header__left">
+      <!-- SVG logo placeholder (46x19) -->
+      <div class="header__logo" aria-label="Eten Tech logo">
+        <!-- TODO: вставишь сюда свой SVG -->
+         <img src="logo.svg" alt="Eten Tech logo" >
+      </div>
+
+      <div class="header__brand">Eten Tech</div>
+    </div>
+
+    <div class="header__right">
+      <nav class="header__nav" aria-label="Навігація">
+        <a class="header__link" href="#home">ГОЛОВНА</a>
+        <a class="header__link" href="#services">ПОСЛУГИ</a>
+        <a class="header__link" href="#faq">ПИТАННЯ</a>
+      </nav>
+
+      <div class="header__icons" aria-label="Соц. іконки">
+        <button class="header__iconBtn" type="button" aria-label="Icon 1">
+          <span class="header__iconSvg"><img src="icon1.svg" alt="Icon 1" ></span>
+        </button>
+        <button class="header__iconBtn" type="button" aria-label="Icon 2">
+          <span class="header__iconSvg"><img src="icon2.svg" alt="Icon 2" ></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__bg"></div>
+
+  <div class="hero__inner">
+<div class="hero__leftBlock">
+  <div class="hero__leftText">
+    МAРКЕТИНГ<br>
+    ЯК СИСТЕМА,<br>
+    А НЕ ВИПАДКОВІСТЬ
+  </div>
+  <p class="hero__leftDesc">
+  Ми будуємо цілісні рішення, де кожен елемент працює на спільний результат.
+</p>
+<div class="hero__squares">
+  <div class="hero__square hero__square--light"></div>
+  <div class="hero__square hero__square--glass"></div>
+</div>
+</div>
+  <div class="hero__rightText">
+    КРЕАТИВНОЕ<br>
+    МАРКЕТИНГОВОЕ<br>
+    АГЕНТСТВО
+
+    <p class="hero__desc">
+      Ми створюємо бренди, що <span>виділяються</span> та маркетинг,<br>
+      який приносить <span>результат</span>
+    </p>
+  </div>
+<div class="hero__chips">
+  <div class="hero__chipsTop">
+    <span class="chip chip--icon" aria-label="icon chip">
+      <span class="chip__icon" aria-hidden="true">
+          <img src="icon3.svg" alt="Icon 3" >
+          <circle cx="6.5" cy="6.5" r="5" stroke="white" stroke-width="1.2" opacity="0.9"/>
+          <path d="M4.2 6.6L6.0 8.3L8.9 4.9" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+      </span>
+    </span>
+
+    <span class="chip">web</span>
+  </div>
+
+  <div class="hero__chipsBottom">
+    <span class="chip">target</span>
+    <span class="chip">smm</span>
+    <span class="chip">design</span>
+    <span class="chip">branding</span>
+  </div>
+</div>
+</div>
+</section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services__inner">
+        <div class="services__header"></div>
+
+        <div class="services__grid">
+          <div class="service-card"></div>
+          <div class="service-card"></div>
+          <div class="service-card"></div>
+          <div class="service-card"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq__inner">
+        <div class="faq__header"></div>
+
+        <div class="faq__grid">
+          <div class="faq__column">
+            <div class="faq-item"></div>
+            <div class="faq-item"></div>
+            <div class="faq-item"></div>
+          </div>
+
+          <div class="faq__column">
+            <div class="faq-item"></div>
+            <div class="faq-item"></div>
+            <div class="faq-item"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand"></div>
+        <div class="footer__nav"></div>
+        <div class="footer__social"></div>
+        <div class="footer__meta"></div>
+        <div class="footer__cta"></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
