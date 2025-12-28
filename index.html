@@ -20,9 +20,6 @@
       margin: 0;
       padding: 0;
     }
-    html, body{
-  touch-action: manipulation;
-}
 
     body {
       background: #F3F1F9;
@@ -689,12 +686,12 @@
       }
 
       .header__drawer{
+        padding: 12px 14px;         /* было 14/14 — делаем компактнее */
+  width: min(86vw, 200px);
         display:block;
         position:absolute;
         top: calc(18px + 48px + 12px);
         right: 5vw;
-        width: min(78vw, 320px);
-        padding: 14px 14px;
         border-radius: 16px;
         background: rgba(255,255,255,0.12);
         border: 1px solid rgba(255,255,255,0.18);
@@ -717,27 +714,65 @@
       .header__drawerSocial{
         display:flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
       }
 
       .header__drawerSocial{
-        margin-top: 12px;
-        padding-top: 12px;
-        border-top: 1px solid rgba(255,255,255,0.18);
+        margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  display: flex;
+  flex-direction: row;        /* важно: в ряд */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;                  /* расстояние между иконками */
+  flex-wrap: nowrap; 
       }
 
       .header__drawerLink{
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #fff;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-        text-decoration-thickness: 1px;
-        width: fit-content;
-      }
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-decoration: none;
+  padding: 4px 0;  
+  color: #fff;
+
+  /* было underline — убираем */
+  text-decoration: none;
+
+  width: fit-content;
+}
+.header__drawerSocial{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+
+  /* новое */
+  display: flex;
+  gap: 12px;
+}
+
+/* чтобы иконки выглядели как на десктопе */
+.header__drawerIconBtn{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,0.09);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__drawerIconBtn img{
+  width: 14px;
+  height: 14px;
+  display: block;
+}
 
       /* hero */
       .hero{
@@ -1006,9 +1041,15 @@
       </nav>
 
       <div class="header__drawerSocial" aria-label="Соцмережі">
-        <a class="header__drawerLink" href="#" target="_blank" rel="noopener">INSTAGRAM</a>
-        <a class="header__drawerLink" href="#" target="_blank" rel="noopener">TELEGRAM</a>
-      </div>
+  <a class="header__drawerIconBtn" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+    <img src="icon1.svg" alt="">
+  </a>
+
+  <a class="header__drawerIconBtn" href="#" target="_blank" rel="noopener" aria-label="Telegram">
+    <img src="icon2.svg" alt="">
+  </a>
+</div>
+
     </div>
   </header>
 
