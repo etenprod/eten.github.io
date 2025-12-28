@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eten.tech</title> 
+  <title>eten.tech</title>
 
   <!-- Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -180,6 +180,7 @@
   background-position: center;
   background-repeat: no-repeat;
       z-index: 0;
+      
     }
 
     .hero__inner{
@@ -655,6 +656,9 @@
   }
 }
     @media (max-width: 1000px){
+      .hero, .hero__inner{
+    height: 100svh; /* вместо 820px */
+  }
 
         .container{
     padding-left: 5vw;
@@ -740,6 +744,7 @@
       .hero{
         height: 820px;
       }
+/* отдаляем фон на мобилке */
 
       .hero__inner{
         height: 820px;
