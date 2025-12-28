@@ -18,12 +18,24 @@
       margin: 0;
       padding: 0;
     }
-html{
-  background: #F3F1F9;   /* цвет “низа” */
+html::before{
+  content:"";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* высота “фиолетовой зоны” — можешь увеличить */
+  height: max(140px, env(safe-area-inset-top));
+  background: #260D51;
+
+  z-index: 0;
+  pointer-events: none;
 }
     body {
-      background-color: #2C0B59;
-      min-height: 100%;
+      position: relative;
+  z-index: 1;
+      background-color: #F3F1F9;
       font-family: 'Montserrat', sans-serif;
     }
 
@@ -542,7 +554,6 @@ html{
 
     /* ===== Footer ===== */
     .footer{
-      background-color: #F3F1F9;
       padding: 46px 0 46px;
       padding-left: 2.5vw;
       padding-right: 2.5vw;
