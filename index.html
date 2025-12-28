@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eten.tech</title> 
+  <title>eten.tech</title>
 
   <!-- Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,363 +31,336 @@
 
     /* ===== Layout ===== */
     .container {
-      max-width: 1240px;
+      padding-left: 15.5vw;
+      padding-right: 15.5vw;
       margin: 0 auto;
-      padding: 0 24px;
     }
 
-/* ===== Header (точно под твои требования) ===== */
-.header{
-  /* отступы 2.5% от ширины экрана только для хедера */
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
-  padding-top: 33px;   /* можно потом доточить */
-  padding-bottom: 0;
-  color: rgb(255, 255, 255);
-}
+    /* ===== Header (точно под твои требования) ===== */
+    .header{
+      /* отступы 2.5% от ширины экрана только для хедера */
+      padding-left: 2.5vw;
+      padding-right: 2.5vw;
+      padding-top: 33px;   /* можно потом доточить */
+      padding-bottom: 0;
+      color: rgb(255, 255, 255);
 
-.header__inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  min-height: 48px;
-}
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
 
-/* left: logo + brand */
-.header__left{
-  display:flex;
-  align-items:center;
-  gap: 12px;
-}
+    .header__inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height: 48px;
+    }
 
-.header__logo{
-  width: 46px;
-  height: 19px;
-  display:block;
-}
+    /* left: logo + brand */
+    .header__left{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+    }
 
-/* Helvetica Neue Thin, 20px */
-.header__brand{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100;          /* thin */
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0.05em;
-}
+    .header__logo{
+      width: 46px;
+      height: 19px;
+      display:block;
+    }
 
-/* right: nav + circles */
-.header__right{
-  display:flex;
-  align-items:center;
-  gap: 86px; /* расстояние между якорями и кружками (если нужно — скажешь) */
-}
+    /* Helvetica Neue Thin, 20px */
+    .header__brand{
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 100;          /* thin */
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: 0.05em;
+    }
 
-/* nav */
-.header__nav{
-  display:flex;
-  align-items:center;
-  gap: 86px;                /* между якорями 86px */
-}
+    /* right: nav + circles */
+    .header__right{
+      display:flex;
+      align-items:center;
+      gap: 86px; /* расстояние между якорями и кружками (если нужно — скажешь) */
+    }
 
-.header__link{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;         /* regular */
-  font-size: 12px;
-  letter-spacing: 0;        /* если надо uppercase spacing — скажешь */
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
+    /* nav */
+    .header__nav{
+      display:flex;
+      align-items:center;
+      gap: 86px;                /* между якорями 86px */
+    }
 
-/* icon buttons */
-.header__icons{
-  display:flex;
-  align-items:center;
-  gap: 12px;                /* между кружками (если другое — скажешь) */
-}
+    .header__link{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;         /* regular */
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
 
-.header__iconBtn{
-  width: 48px;
-  height: 48px;
-  border-radius: 999px;
-  border: 0;
-  background: rgba(255,255,255,0.09);  /* белый 9% */
-  display:grid;
-  place-items:center;
-  cursor:pointer;
-  padding: 0;
-}
+    /* icon buttons */
+    .header__icons{
+      display:flex;
+      align-items:center;
+      gap: 12px;                /* между кружками (если другое — скажешь) */
+    }
 
-.header__iconSvg{
-  width: 14px;
-  height: 14px;
-  display:block;
-}
+    .header__iconBtn{
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255,255,255,0.09);  /* белый 9% */
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+      padding: 0;
+    }
 
-/* на мобилке потом решим, пока не трогаю адаптив */
+    .header__iconSvg{
+      width: 14px;
+      height: 14px;
+      display:block;
+    }
+
+    /* ===== добавлено: burger + drawer ===== */
+    .header__burger{
+      display:none; /* включим на мобилке */
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255,255,255,0.09);
+      cursor:pointer;
+      padding: 0;
+      position: relative;
+    }
+
+    .header__burger span{
+      position:absolute;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    .header__burger span:nth-child(1){ top: 16px; }
+    .header__burger span:nth-child(2){ top: 23px; }
+    .header__burger span:nth-child(3){ top: 30px; }
+
+    .header__drawer{
+      display:none; /* включим на мобилке */
+    }
 
     /* ===== Hero ===== */
-    /* ===== HERO (первая секция) ===== */
+    .hero{
+      position: relative;
+      height: 958px;
+      width: 100%;
+      overflow: hidden;
+    }
 
-/* хедер поверх фона */
-.header{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
+    .hero__bg{
+      position: absolute;
+      inset: 0;
+      background-image: url("background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
 
-/* hero стартует от самого верха, высота 958 */
-.hero{
-  position: relative;
-  height: 958px;
-  width: 100%;
-  overflow: hidden;
-}
+    .hero__inner{
+      position: relative;
+      height: 958px;
+      z-index: 1;
+    }
 
-/* фон-картинка */
-.hero__bg{
-  position: absolute;
-  inset: 0;
-  background-image: url("background.png"); /* TODO: поставь свой файл */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
+    .hero__rightText{
+      position: absolute;
+      right: 2.5vw;
+      top: calc(33px + 48px + 149px);
+      text-align: right;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 1.1;
+      max-width: 520px;
+      letter-spacing: 0.05em;
+    }
 
-/* если нужен затемняющий слой поверх картинки — пока выключено */
-/*
-.hero__bg::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(0,0,0,.15);
-}
-*/
+    .hero__leftBlock{
+      position: absolute;
+      left: 2.5vw;
+      top: calc(33px + 48px + 253px);
+    }
 
-.hero__inner{
-  position: relative;
-  height: 958px; /* чтобы совпало с hero */
-  z-index: 1;
-}
+    .hero__leftText{
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      max-width: 420px;
+    }
 
-/* правый текст */
-.hero__rightText{
-  position: absolute;
-  right: 2.5vw;          /* твои 2.5% */
-  top: calc(33px + 48px + 149px); 
-  /* 33px padding-top хедера + 48px высота хедера + 149px от хедера вниз */
-  text-align: right;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;      /* пока regular, скажешь — поменяем */
-  font-size: 50px;       /* пока черновое, ты скажешь точный */
-  line-height: 1.1;
-  letter-spacing: 1px;
-  max-width: 520px;      /* чтобы не растягивалось */
-  letter-spacing: 0.05em;
-}
-.hero__leftBlock{
-  position: absolute;
-  left: 2.5vw;
-  top: calc(33px + 48px + 253px);
-}
+    .hero__leftDesc{
+      margin-top: 30px;
+      max-width: 360px;
+      font-size: 10px;
+      font-weight: 100;
+      letter-spacing: 0.10em;
+      line-height: 1.5;
+      color: #fff;
+      position: static;
+    }
 
+    .hero__squares{
+      display: flex;
+      gap: 34px;
+      margin-top: 205px;
+    }
 
-/* левый текст */
-.hero__leftText{
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;        /* medium */
-  font-size: 30px;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  max-width: 420px;
-}
+    .hero__square{
+      width: 215px;
+      height: 215px;
+      border-radius: 16px;
+      transform: translateY(-18px);
+    }
 
-.hero__leftDesc{
-  margin-top: 30px;        /* отступ 30px от заголовка */
-  max-width: 360px;
-  font-size: 10px;
-  font-weight: 100;
-  letter-spacing: 0.10em;
-  line-height: 1.5;
-  color: #fff;
-  position: static;        /* ВАЖНО: чтобы был в потоке */
-}
+    .hero__square--light{
+      background: #F0F0F0;
+    }
 
-.hero__squares{
-  display: flex;
-  gap: 34px;               /* расстояние между квадратами */
-  margin-top: 205px;       /* отступ от текста описания */
-}
+    .hero__square--glass{
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background:
+        radial-gradient(140% 120% at 20% 15%, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.10) 38%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0.03) 100%),
+        linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 55%, rgba(0,0,0,0.10) 100%);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+    }
 
-.hero__square{
-  width: 215px;
-  height: 215px;
-  border-radius: 16px;
-}
+    .hero__square--glass::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius: 16px;
+      pointer-events:none;
+      background:
+        radial-gradient(120px 120px at 22% 18%, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.12) 45%, rgba(255,255,255,0) 70%),
+        linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
+      mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      padding: 1px;
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      opacity: 0.9;
+    }
 
-/* левый — светлый */
-.hero__square--light{
-  background: #F0F0F0;
-}
+    .hero__square--glass::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius: 16px;
+      pointer-events:none;
+      background: radial-gradient(120% 120% at 50% 40%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.16) 100%);
+    }
 
+    .hero__desc{
+      margin-top: 30px;
+      font-size: 10px;
+      font-weight: 100;
+      line-height: 1.5;
+      text-transform: none;
+      letter-spacing: 0.1em;
+      color: #fff;
+      text-align: right;
+      word-wrap: break-word;
+    }
 
+    .hero__desc span{
+      font-weight: 600;
+    }
 
+    .hero__chips{
+      position: absolute;
+      right: 2.5vw;
+      bottom: 0;
+      transform: translateY(-54px);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-end;
+    }
 
-/* лёгкая виньетка по краям (даёт 3D-объём) */
-/* iOS / iPhone-style glass */
-.hero__square--glass{
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
+    .hero__chipsTop{
+      display: flex;
+      gap: 6px;
+      justify-content: flex-end;
+      width: fit-content;
+    }
 
-  /* стеклянная “тело-поверхность” */
-  background:
-    radial-gradient(140% 120% at 20% 15%, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.10) 38%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0.03) 100%),
-    linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 55%, rgba(0,0,0,0.10) 100%);
+    .hero__chipsBottom{
+      display: flex;
+      gap: 6px;
+      justify-content: flex-end;
+      width: fit-content;
+    }
 
-  /* внешняя рамка */
-  border: 1px solid rgba(255,255,255,0.22);
+    .chip{
+      height: 33px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-family: "Michroma", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      color: rgb(255, 255, 255);
+      border: 1px solid rgb(255, 255, 255);
+      background: rgba(255,255,255,0.00);
+    }
 
-  /* мягкая глубина (как у iOS карточек) */
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-}
+    .chip--icon{
+      width: 56px;
+      padding: 0;
+    }
 
-/* блик сверху-слева + внутренняя рамка */
-.hero__square--glass::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius: 16px;
-  pointer-events:none;
+    .chip__icon{
+      width: 13px;
+      height: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  background:
-    /* мягкий блик */
-    radial-gradient(120px 120px at 22% 18%, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.12) 45%, rgba(255,255,255,0) 70%),
-    /* тонкая внутренняя рамка */
-    linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
-
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-
-  padding: 1px; /* толщина внутренней рамки */
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  opacity: 0.9;
-}
-
-/* лёгкая виньетка по краям (объём) */
-.hero__square--glass::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius: 16px;
-  pointer-events:none;
-  background: radial-gradient(120% 120% at 50% 40%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.16) 100%);
-}
-
-
-
-.hero__desc{
-  margin-top: 30px;        /* ровно 33px ниже заголовка */
-  font-size: 10px;         /* размер 10 */
-  font-weight: 100;        /* regular */
-  line-height: 1.5;
-  text-transform: none;    /* НЕ капсом */
-  letter-spacing: 0;
-  color: #fff;
-  text-align: right;
-  word-wrap: break-word;
-  letter-spacing: 0.1em;
-}
-
-.hero__desc span{
-  font-weight: 600;        /* semibold */
-}
-
-
-.hero__chips{
-  position: absolute;
-  right: 2.5vw;
-
-  bottom: 0;              /* прижали к низу hero */
-  transform: translateY(-36px); /* подняли ровно на высоту квадратов */
-
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: flex-end;
-}
-
-
-/* верхний ряд прижат вправо */
-.hero__chipsTop{
-  display: flex;
-  gap: 6px;
-  justify-content: flex-end;
-  width: fit-content;
-}
-
-/* нижний ряд — отдельная линия */
-.hero__chipsBottom{
-  display: flex;
-  gap: 6px;
-  justify-content: flex-end;
-  width: fit-content;
-}
-
-
-
-/* базовый чип */
-.chip{
-  height: 33px;                    /* всегда 33 */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0 20px;                 /* +20px по бокам от текста */
-  border-radius: 999px;
-
-  font-family: "Michroma", sans-serif;
-  font-size: 15px;
-  font-weight: 400;                /* regular */
-  letter-spacing: 0.05em;          /* 5% */
-  line-height: 1;
-  color: rgb(255, 255, 255);
-
-  border: 1px solid rgb(255, 255, 255);
-  background: rgba(255,255,255,0.00);
-}
-
-/* чип с иконкой */
-.chip--icon{
-  width: 56px;                     /* круглая капсула под иконку (можно подогнать) */
-  padding: 0;                      /* тут не нужен padding */
-}
-
-.chip__icon{
-  width: 13px;
-  height: 13px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.chip__icon img{
-  width: 13px;
-  height: 13px;
-  display:block;
-}
+    .chip__icon img{
+      width: 13px;
+      height: 13px;
+      display:block;
+    }
 
     .hero__left,
     .hero__center,
@@ -395,246 +368,808 @@
       min-height: 200px;
     }
 
+    /* ===== Main Light Section ===== */
+    main{
+      background: #F3F1F9;
+      padding: 44px 0 70px;
+    }
+
+    .sectionTitle{
+      margin: 0;
+      font-size: 50px;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      background: linear-gradient(to right, #320C73 0%, #4D1AA4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .sectionDesc{
+      margin: 8px 0 0;
+      background: linear-gradient(to right, #4D1AA4 0%, #6627D4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      font-size: 20px;
+      font-weight: 200;
+      letter-spacing: -0.02em;
+    }
+
     /* ===== Services ===== */
-    .services {
-      width: 100%;
-    }
-
-    .services__inner {
-      padding: 80px 0;
-    }
-
-    .services__header {
-      margin-bottom: 32px;
-    }
-
-    .services__grid {
-      display: grid;
+    .services{
+      margin-top: 22px;
+      display:grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      gap: 18px;
     }
 
-    .service-card {
-      min-height: 180px;
+    .serviceCard{
+      position:relative;
+      border-radius: 16px;
+      background-image: linear-gradient(#FFFFFF, #F9F4FE);
+      box-shadow: 0px 10px 0px 0px #E4D8F8;
+      padding: 25px 25px;
+      overflow:hidden;
+      min-height: 168px;
+    }
+
+    .serviceCard::before{
+      content:"";
+      position:absolute;
+      inset: -40px -30px auto auto;
+      width: 160px; height: 160px;
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+
+    .icon{
+      width: 44px; height: 44px;
+      display:grid;
+      place-items:center;
+      margin-bottom: 30px;
+    }
+
+    .icon img{ width: 44px; height:44px; }
+
+    .serviceCard h3{
+      margin: 0 0 8px;
+      font-size: 30px;
+      font-weight: 500;
+      background: linear-gradient(to right, #320C73 0%, #4D1AA4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .serviceCard p{
+      margin:0;
+      color: #6325CF;
+      font-size: 15px;
+      font-weight: 100;
+      letter-spacing: -0.02em;
     }
 
     /* ===== FAQ ===== */
-    .faq {
-      width: 100%;
+    .faqWrap{
+      margin-top: 42px;
     }
 
-    .faq__inner {
-      padding: 80px 0;
-    }
-
-    .faq__header {
-      margin-bottom: 32px;
-    }
-
-    .faq__grid {
+    .faqGrid{
+      margin-top: 18px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      gap: 30px;
+      align-items: start;
     }
 
-    .faq__column {
+    .faqCol{
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
     }
 
-    .faq-item {
-      min-height: 64px;
+    .faqItem{
+      border-radius: 16px;
+      background-image: linear-gradient(#FFFFFF, #F9F4FE);
+      box-shadow: 0px 10px 0px 0px #E4D8F8;
+      overflow:hidden;
+    }
+
+    .faqBtn{
+      width:100%;
+      text-align:left;
+      padding: 30px 25px 30px 25px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      background: transparent;
+      border:0;
+      cursor:pointer;
+    }
+
+    .faqQ{
+      font-weight: 500;
+      background: linear-gradient(to right, #320C73 0%, #4D1AA4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      font-size: 25px;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .plus{
+      width: 28px; height: 28px;
+      display:grid;
+      place-items:center;
+      flex: 0 0 auto;
+      transition: transform .18s ease;
+    }
+
+    .plus svg{ width: 28px; height:28px; color:#4C1AA2; }
+
+    .faqA{
+      max-height: 0;
+      overflow:hidden;
+      transition: max-height .22s ease;
+      padding: 0 16px;
+    }
+
+    .faqA p{
+      margin: 0 0 14px;
+      color: #6325CF;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      padding-left: 10px;
+    }
+
+    .faqItem[data-open="true"] .faqA{
+      max-height: 220px;
+    }
+    .faqItem[data-open="true"] .plus{
+      transform: rotate(45deg);
     }
 
     /* ===== Footer ===== */
-    .footer {
-      width: 100%;
+    .footer{
+      padding: 46px 0 46px;
+      padding-left: 2.5vw;
+      padding-right: 2.5vw;
     }
 
-    .footer__inner {
+    .footer__inner{
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr auto;
-      gap: 32px;
-      padding: 80px 0;
+      grid-template-columns: 2.2fr 0.9fr 0.9fr 0.9fr 1.4fr auto;
+      align-items: start;
+      column-gap: 64px;
+      row-gap: 24px;
     }
 
-    .footer__brand,
-    .footer__nav,
-    .footer__social,
-    .footer__meta,
-    .footer__cta {
-      min-height: 40px;
+    .footer__title{
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, #320C73 0%, #4D1AA4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      text-transform: uppercase;
     }
 
-    /* ===== Responsive ===== */
-    @media (max-width: 1024px) {
-      .services__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer__inner {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 40px;
-      }
+    .footer__col{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      padding-top: 6px;
     }
 
-    @media (max-width: 768px) {
-      .hero__inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .faq__grid {
-        grid-template-columns: 1fr;
-      }
+    .footer__link{
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #451992;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      display: inline-block;
+      width: fit-content;
     }
 
-    @media (max-width: 480px) {
-      .services__grid {
-        grid-template-columns: 1fr;
+    .footer__meta{
+      gap: 4px;
+    }
+
+    .footer__metaText{
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #451992;
+    }
+
+    .footer__legal{
+      gap: 6px;
+      max-width: none;
+    }
+
+    .footer__cta{
+      justify-self: end;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      color: #4D1AA4;
+      width: fit-content;
+    }
+
+    .footer__ctaIcon{
+      width: 82.5px;
+      height: 82.5px;
+      display: grid;
+      place-items: center;
+    }
+
+    .footer__ctaIcon img{
+      width: 82.5px;
+      height: 82.5px;
+    }
+
+    .footer__ctaText{
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-align: right;
+      line-height: 1.2;
+    }
+
+    /* =========================================================
+       ===== MOBILE (только header + hero, остальное не трогаем)
+       ========================================================= */
+    @media (max-width: 768px){
+
+        .container{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .footer{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+      /* header */
+      .header{
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 18px;
+      }
+
+      .header__right{
+        gap: 12px;
+      }
+
+      .header__nav,
+      .header__icons{
+        display:none;
+      }
+
+      .header__burger{
+        display:block;
+      }
+
+      .header__drawer{
+        display:block;
+        position:absolute;
+        top: calc(18px + 48px + 12px);
+        right: 5vw;
+        width: min(78vw, 320px);
+        padding: 14px 14px;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.18);
+        backdrop-filter: blur(16px) saturate(140%);
+        -webkit-backdrop-filter: blur(16px) saturate(140%);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity .18s ease, transform .18s ease;
+        z-index: 20;
+      }
+
+      .header.is-open .header__drawer{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .header__drawerNav,
+      .header__drawerSocial{
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .header__drawerSocial{
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255,255,255,0.18);
+      }
+
+      .header__drawerLink{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        width: fit-content;
+      }
+
+      /* hero */
+      .hero{
+        height: 820px;
+      }
+
+      .hero__inner{
+        height: 820px;
+      }
+
+      /* левый блок в левый угол */
+      .hero__leftBlock{
+        left: 5vw;
+        top: calc(18px + 48px + 70px);
+      }
+
+      .hero__leftText{
+        font-size: 20px;
+        max-width: 260px;
+      }
+
+      .hero__leftDesc{
+        margin-top: 14px;
+        font-size: 10px;
+        max-width: 250px;
+        letter-spacing: 0.08em;
+      }
+
+      /* квадраты пропадают */
+      .hero__squares{
+        display:none;
+      }
+
+      /* правый текст остается, но компактнее */
+      .hero__rightText{
+        right: 5vw;
+        top: calc(18px + 48px + 220px);
+        font-size: 34px;
+        max-width: 280px;
+        line-height: 1.08;
+      }
+
+      .hero__desc{
+        margin-top: 14px;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        max-width: 280px;
+      }
+
+      /* chips: 2 строки, в нижней убираем branding */
+      .hero__chips{
+        right: 5vw;
+        transform: translateY(-38px);
+      }
+
+      .hero__chipsBottom .chip:last-child{
+        display:none; /* убирает branding (последний чип) */
+      }
+
+      .chip{
+        height: 30px;
+        font-size: 13px;
+        padding: 0 16px;
+      }
+
+      .chip--icon{
+        width: 52px;
+        padding: 0;
       }
     }
+    html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
   </style>
 </head>
 
 <body>
 
   <!-- HEADER -->
-<header class="header">
-  <div class="header__inner">
-    <div class="header__left">
-      <!-- SVG logo placeholder (46x19) -->
-      <div class="header__logo" aria-label="Eten Tech logo">
-        <!-- TODO: вставишь сюда свой SVG -->
-         <img src="logo.svg" alt="Eten Tech logo" >
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <div class="header__logo" aria-label="Eten Tech logo">
+          <img src="logo.svg" alt="Eten Tech logo" >
+        </div>
+        <div class="header__brand">Eten Tech</div>
       </div>
 
-      <div class="header__brand">Eten Tech</div>
+      <div class="header__right">
+        <!-- desktop nav -->
+        <nav class="header__nav" aria-label="Навігація">
+          <a class="header__link" href="#home">ГОЛОВНА</a>
+          <a class="header__link" href="#services">ПОСЛУГИ</a>
+          <a class="header__link" href="#faq">ПИТАННЯ</a>
+        </nav>
+
+        <!-- desktop icons -->
+        <div class="header__icons" aria-label="Соц. іконки">
+          <button class="header__iconBtn" type="button" aria-label="Icon 1">
+            <span class="header__iconSvg"><img src="icon1.svg" alt="Icon 1" ></span>
+          </button>
+          <button class="header__iconBtn" type="button" aria-label="Icon 2">
+            <span class="header__iconSvg"><img src="icon2.svg" alt="Icon 2" ></span>
+          </button>
+        </div>
+
+        <!-- mobile burger -->
+        <button class="header__burger" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <div class="header__right">
-      <nav class="header__nav" aria-label="Навігація">
-        <a class="header__link" href="#home">ГОЛОВНА</a>
-        <a class="header__link" href="#services">ПОСЛУГИ</a>
-        <a class="header__link" href="#faq">ПИТАННЯ</a>
+    <!-- mobile drawer -->
+    <div class="header__drawer" aria-hidden="true">
+      <nav class="header__drawerNav" aria-label="Навігація (mobile)">
+        <a class="header__drawerLink" href="#home">ГОЛОВНА</a>
+        <a class="header__drawerLink" href="#services">ПОСЛУГИ</a>
+        <a class="header__drawerLink" href="#faq">ПИТАННЯ</a>
       </nav>
 
-      <div class="header__icons" aria-label="Соц. іконки">
-        <button class="header__iconBtn" type="button" aria-label="Icon 1">
-          <span class="header__iconSvg"><img src="icon1.svg" alt="Icon 1" ></span>
-        </button>
-        <button class="header__iconBtn" type="button" aria-label="Icon 2">
-          <span class="header__iconSvg"><img src="icon2.svg" alt="Icon 2" ></span>
-        </button>
+      <div class="header__drawerSocial" aria-label="Соцмережі">
+        <a class="header__drawerLink" href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a class="header__drawerLink" href="#" target="_blank" rel="noopener">TELEGRAM</a>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero__bg"></div>
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
 
-  <div class="hero__inner">
-<div class="hero__leftBlock">
-  <div class="hero__leftText">
-    МAРКЕТИНГ<br>
-    ЯК СИСТЕМА,<br>
-    А НЕ ВИПАДКОВІСТЬ
-  </div>
-  <p class="hero__leftDesc">
-  Ми будуємо цілісні рішення, де кожен елемент працює на спільний результат.
-</p>
-<div class="hero__squares">
-  <div class="hero__square hero__square--light"></div>
-  <div class="hero__square hero__square--glass"></div>
-</div>
-</div>
-  <div class="hero__rightText">
-    КРЕАТИВНОЕ<br>
-    МАРКЕТИНГОВОЕ<br>
-    АГЕНТСТВО
+    <div class="hero__inner">
+      <div class="hero__leftBlock">
+        <div class="hero__leftText">
+          МAРКЕТИНГ<br>
+          ЯК СИСТЕМА,<br>
+          А НЕ ВИПАДКОВІСТЬ
+        </div>
+        <p class="hero__leftDesc">
+          Ми будуємо цілісні рішення, де кожен елемент працює на спільний результат.
+        </p>
+        <div class="hero__squares">
+          <div class="hero__square hero__square--light"></div>
+          <div class="hero__square hero__square--glass"></div>
+        </div>
+      </div>
 
-    <p class="hero__desc">
-      Ми створюємо бренди, що <span>виділяються</span> та маркетинг,<br>
-      який приносить <span>результат</span>
-    </p>
-  </div>
-<div class="hero__chips">
-  <div class="hero__chipsTop">
-    <span class="chip chip--icon" aria-label="icon chip">
-      <span class="chip__icon" aria-hidden="true">
-          <img src="icon3.svg" alt="Icon 3" >
-          <circle cx="6.5" cy="6.5" r="5" stroke="white" stroke-width="1.2" opacity="0.9"/>
-          <path d="M4.2 6.6L6.0 8.3L8.9 4.9" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-      </span>
-    </span>
+      <div class="hero__rightText">
+        КРЕАТИВНОЕ<br>
+        МАРКЕТИНГОВОЕ<br>
+        АГЕНТСТВО
 
-    <span class="chip">web</span>
-  </div>
+        <p class="hero__desc">
+          Ми створюємо бренди, що <span>виділяються</span> та маркетинг,<br>
+          який приносить <span>результат</span>
+        </p>
+      </div>
 
-  <div class="hero__chipsBottom">
-    <span class="chip">target</span>
-    <span class="chip">smm</span>
-    <span class="chip">design</span>
-    <span class="chip">branding</span>
-  </div>
-</div>
-</div>
-</section>
+      <div class="hero__chips">
+        <div class="hero__chipsTop">
+          <span class="chip chip--icon" aria-label="icon chip">
+            <span class="chip__icon" aria-hidden="true">
+              <img src="icon3.svg" alt="Icon 3" >
+              <circle cx="6.5" cy="6.5" r="5" stroke="white" stroke-width="1.2" opacity="0.9"/>
+              <path d="M4.2 6.6L6.0 8.3L8.9 4.9" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+            </span>
+          </span>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="services__inner">
-        <div class="services__header"></div>
+          <span class="chip">web</span>
+        </div>
 
-        <div class="services__grid">
-          <div class="service-card"></div>
-          <div class="service-card"></div>
-          <div class="service-card"></div>
-          <div class="service-card"></div>
+        <div class="hero__chipsBottom">
+          <span class="chip">target</span>
+          <span class="chip">smm</span>
+          <span class="chip">design</span>
+          <span class="chip">branding</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="faq" id="faq">
+  <main>
     <div class="container">
-      <div class="faq__inner">
-        <div class="faq__header"></div>
+      <!-- SERVICES -->
+      <section id="services">
+        <h3 class="sectionTitle">ПОСЛУГИ</h3>
+        <p class="sectionDesc">
+          Наші послуги для малого й середнього бізнесу, якому важливо бути помітним і зрозумілим клієнтам.
+        </p>
 
-        <div class="faq__grid">
-          <div class="faq__column">
-            <div class="faq-item"></div>
-            <div class="faq-item"></div>
-            <div class="faq-item"></div>
+        <div class="services">
+          <article class="serviceCard">
+            <div class="icon" aria-hidden="true">
+              <img src="Vector.svg" alt="" >
+            </div>
+            <h3>Стратегія</h3>
+            <p>
+              Допомагаємо бізнесу зрозуміти, куди рухатись далі: що розвивати, на чому зосередитись і як
+              залучати клієнтів у довгостроковій перспективі.
+            </p>
+          </article>
+
+          <article class="serviceCard">
+            <div class="icon" aria-hidden="true">
+              <img src="Vector-1.svg" alt="" >
+            </div>
+            <h3>SMM</h3>
+            <p>
+              Беремо на себе ведення сторінок: контент, подачу та регулярність.
+              Робимо присутність бізнесу в соцмережах зрозумілою й корисною для клієнтів.
+            </p>
+          </article>
+
+          <article class="serviceCard">
+            <div class="icon" aria-hidden="true">
+              <img src="Vector-2.svg" alt="" >
+            </div>
+            <h3>Реклама</h3>
+            <p>
+              Запускаємо та оптимізуємо рекламу з фокусом на звернення й продажі.
+              Працюємо з тестами, цифрами та реальними результатами.
+            </p>
+          </article>
+
+          <article class="serviceCard">
+            <div class="icon" aria-hidden="true">
+              <img src="Vector-3.svg" alt="" >
+            </div>
+            <h3>Брендинг</h3>
+            <p>
+              Оновлюємо або створюємо візуальний образ бізнесу:
+              допомагаємо виглядати сучасно, впізнавано та викликати довіру.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faqWrap" id="faq">
+        <h3 class="sectionTitle">ПИТАННЯ</h3>
+        <p class="sectionDesc">
+          Найпоширеніші питання про послуги, формат роботи та співпрацю.
+        </p>
+
+        <div class="faqGrid">
+          <!-- LEFT COLUMN -->
+          <div class="faqCol" role="list">
+            <div class="faqItem" data-open="false" role="listitem">
+              <button class="faqBtn" type="button" aria-expanded="false">
+                <span class="faqQ">Скільки коштують ваші послуги?</span>
+                <span class="plus" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="faqA">
+                <p>
+                  Вартість залежить від задач, обсягу робіт та цілей бізнесу. Після короткого обговорення
+                  ми пропонуємо індивідуальний формат і бюджет.
+                </p>
+              </div>
+            </div>
+
+            <div class="faqItem" data-open="false" role="listitem">
+              <button class="faqBtn" type="button" aria-expanded="false">
+                <span class="faqQ">Як швидко можна побачити результат?</span>
+                <span class="plus" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="faqA">
+                <p>
+                  Перші зміни зазвичай видно вже в перші 2–4 тижні (структура, контент, тестові кампанії).
+                  Стабільний ріст — це система й робота на дистанції.
+                </p>
+              </div>
+            </div>
+
+            <div class="faqItem" data-open="false" role="listitem">
+              <button class="faqBtn" type="button" aria-expanded="false">
+                <span class="faqQ">Які послуги можна замовити окремо?</span>
+                <span class="plus" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="faqA">
+                <p>
+                  Окремо можна замовити стратегію, SMM-ведення, запуск реклами або брендинг.
+                  Якщо треба — зберемо пакет під задачу (мінімальний або повний).
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="faq__column">
-            <div class="faq-item"></div>
-            <div class="faq-item"></div>
-            <div class="faq-item"></div>
+          <!-- RIGHT COLUMN -->
+          <div class="faqCol" role="list">
+            <div class="faqItem" data-open="false" role="listitem">
+              <button class="faqBtn" type="button" aria-expanded="false">
+                <span class="faqQ">З чого починається співпраця?</span>
+                <span class="plus" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="faqA">
+                <p>
+                  Починаємо з короткого знайомства та брифу: цілі, продукт, аудиторія, бюджет і очікування.
+                  Далі формуємо план робіт, строки та формат комунікації.
+                </p>
+              </div>
+            </div>
+
+            <div class="faqItem" data-open="false" role="listitem">
+              <button class="faqBtn" type="button" aria-expanded="false">
+                <span class="faqQ">Чи працюєте ви з малим бізнесом?</span>
+                <span class="plus" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="faqA">
+                <p>
+                  Так. Для малого бізнесу ми підбираємо реалістичний формат і пріоритети, щоб результат
+                  відчувався в продажах/зверненнях, а не “просто красиво”.
+                </p>
+              </div>
+            </div>
+
+            <div class="faqItem" data-open="false" role="listitem">
+              <button class="faqBtn" type="button" aria-expanded="false">
+                <span class="faqQ">Чим ви відрізняєтесь від інших агенцій?</span>
+                <span class="plus" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+              </button>
+              <div class="faqA">
+                <p>
+                  Ми не “робимо разово”, а вибудовуємо систему: цілі → стратегія → контент/креатив → тести → аналітика.
+                  Усе під реальні задачі бізнесу та з прозорими результатами.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
+      </section>
     </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand"></div>
-        <div class="footer__nav"></div>
-        <div class="footer__social"></div>
-        <div class="footer__meta"></div>
-        <div class="footer__cta"></div>
+    <div class="footer__inner">
+      <div class="footer__title">
+        SMART BESPOKE<br>
+        DIGITAL WORLD
       </div>
+
+      <nav class="footer__col" aria-label="Навігація у футері">
+        <a class="footer__link" href="#home">ГОЛОВНА</a>
+        <a class="footer__link" href="#services">ПОСЛУГИ</a>
+        <a class="footer__link" href="#faq">ПИТАННЯ</a>
+      </nav>
+
+      <div class="footer__col" aria-label="Соцмережі">
+        <a class="footer__link" href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a class="footer__link" href="#" target="_blank" rel="noopener">TELEGRAM</a>
+      </div>
+
+      <div class="footer__col footer__meta">
+        <div class="footer__metaText">© 2025</div>
+        <div class="footer__metaText">MARKETING AGENCY</div>
+      </div>
+
+      <div class="footer__col footer__legal">
+        <a class="footer__link" href="#">УМОВИ &amp; ПОЛОЖЕННЯ</a>
+        <a class="footer__link" href="#">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
+      </div>
+
+      <a class="footer__cta" href="#contact" aria-label="Почати розмову">
+        <span class="footer__ctaIcon" aria-hidden="true">
+          <img src="Rectangle 4342.svg" alt="" >
+        </span>
+        <span class="footer__ctaText">ПОЧАТИ<br>РОЗМОВУ</span>
+      </a>
     </div>
   </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // FAQ accordion (multiple open)
+    document.querySelectorAll('.faqItem').forEach(item => {
+      const btn = item.querySelector('.faqBtn');
+
+      const isOpenInit = item.getAttribute('data-open') === 'true';
+      btn.setAttribute('aria-expanded', isOpenInit ? 'true' : 'false');
+
+      btn.addEventListener('click', () => {
+        const isOpen = item.getAttribute('data-open') === 'true';
+        item.setAttribute('data-open', isOpen ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      });
+    });
+
+    // ===== добавлено: Burger menu =====
+    const header = document.querySelector('.header');
+    const burger = document.querySelector('.header__burger');
+
+    if (header && burger) {
+      burger.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+        const drawer = header.querySelector('.header__drawer');
+        if (drawer) drawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      });
+
+      // закрывать по клику на ссылку
+      header.querySelectorAll('.header__drawer a[href^="#"]').forEach(a => {
+        a.addEventListener('click', () => {
+          header.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+
+          const drawer = header.querySelector('.header__drawer');
+          if (drawer) drawer.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>
