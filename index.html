@@ -8,6 +8,8 @@
   <!-- Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="hero-640.webp" media="(max-width: 600px)">
+  <link rel="preload" as="image" href="hero-1080.webp" media="(min-width: 601px)">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 
@@ -170,10 +172,13 @@
     .hero__bg{
       position: absolute;
       inset: 0;
-      background-image: url("background.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+       background-image: image-set(
+    url("hero-640.webp") 1x,
+    url("hero-1080.webp") 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
       z-index: 0;
     }
 
@@ -641,6 +646,14 @@
     /* =========================================================
        ===== MOBILE (только header + hero, остальное не трогаем)
        ========================================================= */
+    @media (min-width: 1200px){
+  .hero__bg{
+    background-image: image-set(
+      url("hero-1080.webp") 1x,
+      url("hero-1920.webp") 2x
+    );
+  }
+}
     @media (max-width: 1000px){
 
         .container{
@@ -798,7 +811,7 @@
 
         .services{
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 24px 14px;
   }
 
   .serviceCard{
@@ -836,7 +849,7 @@
   }
 
   .faqCol{
-    gap: 14px;
+    gap: 24px 14px;
   }
 
   .faqBtn{
