@@ -508,8 +508,8 @@
         document.getElementById('crewPrev').style.opacity = idx === 0 ? '0.3' : '1';
         document.getElementById('crewNext').style.opacity = idx >= mx ? '0.3' : '1';
       }
-      document.getElementById('crewNext').addEventListener('click', () => { idx++; render(); });
-      document.getElementById('crewPrev').addEventListener('click', () => { idx--; render(); });
+      document.getElementById('crewNext').addEventListener('click', () => { idx += 2; render(); });
+      document.getElementById('crewPrev').addEventListener('click', () => { idx -= 2; render(); });
       window.addEventListener('resize', render);
       render();
     })();
