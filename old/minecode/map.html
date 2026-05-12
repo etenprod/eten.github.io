@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/sweetalert2@10.js"></script>
+
+    <meta name="description" content="Приватный ванильный сервер в игре minecraft c бесплатной проходкой! Подайте заявку и играйте на сервере Minecode уже сегодня.">
+    <meta name="keywords" content="приватный, сервер, майнкрафт, minecraft, без доната, бесплатная проходка, Minecode, играть, лицензионный, лицензия">
+    <link href="img/logo.svg" rel="icon" type="image/png">
+    <meta name="image" content="/img/logo.svg">
+    <meta itemprop="description" content="Приватный ванильный сервер в игре minecraft c бесплатной проходкой! Подайте заявку и играйте на сервере Minecode уже сегодня.">
+    <meta itemprop="image" content="/img/logo.svg">
+    <meta name="language" content="Russian">
+    <meta name="revisit-after" content="3 days">
+    <meta name="og:description" content="Приватный ванильный сервер в игре minecraft c бесплатной проходкой! Подайте заявку и играйте на сервере Minecode уже сегодня.">
+    <meta name="og:image" content="/img/logo.svg">
+    <meta name="og:url" content="https://eten.pp.ua/minecode/">
+    <meta name="og:site_name" content="Minecode">
+    <meta name="og:locale" content="ru_RU">
+    <meta name="og:type" content="website">
+    <meta property="og:site_name" content="Minecode">
+    <meta property="og:url" content="https://eten.pp.ua/minecode/">
+
+    <meta itemprop="name" content="Minecode - Приватный ванильный сервер Minecraft">
+    <meta name="og:title" content="Приватный ванильный сервер Minecraft">
+    <meta property="og:title" content="Приватный ванильный сервер Minecraft">
+    <meta name="next-head-count" content="24">
+    <title>Minecode - Карта</title>
+
+</head>
+<style>
+    body::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background-color: rgba(228, 228, 228, 0);
+        border-radius: 100px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        background-color: #00000025;
+    }
+</style>
+<body id="map" class=" bg-white" style="overflow: overlay;">
+    <div class="preloader">
+        <div class="bg-white fixed w-full h-screen flex items-center justify-center select-none" style="z-index: 1000;">
+            <img src="img/load.gif" alt="">
+        </div>
+    </div>
+    
+    <header id="myHeader" class="absolute w-full z-40 font-main text-white select-none">
+        <div class="container mx-auto px-3">
+            <div class="flex justify-between py-4">
+                <a href="index.html" class="flex justify-start lg:w-0 lg:flex-1 items-center gap-2">
+                    <img src="img/logo.svg" alt="" width="50" height="42.64">
+                    <p id="myLogoText" class="text-2xl sm:text-3xl font-black text-white">Minecode</p>
+                </a>
+                <nav class="hidden lg:flex place-items-center justify-end md:flex-1 md:w-0 md:gap-4 xl:gap-8">
+                    <a id="l-index" href="https://eten.pp.ua/minecode/" class="scroll-mt-8 pt-1 text-lg font-semibold  hover:text-blue1.5 transition">О&nbsp;сервере
+                        <div id="l-index-line" class="invisible h-1 w-full bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                    </a>
+                    <a id="l-rules" href="rules.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition">Правила
+                        <div id="l-rules-line" class=" invisible h-1 w-full bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                    </a>
+                    <a id="l-map" href="map.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition">Карта
+                        <div id="l-map-line" class="invisible h-1 w-full bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                    </a>
+                    <div>
+                        <a id="loginb1" href="login.html" class="inline-flex items-center py-2 px-4 relative rounded-lg group text-white hidden">
+                            <span class="absolute top-0 left-0 w-full h-full rounded-lg opacity-50 filter blur-sm bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-lg bg-gradient-to-tr filter group-active:opacity-0 group-hover:blur-sm from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-lg bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative inline">
+                                <path d="M9 13.5L14 9.5L9 5.5V8.5H0V10.5H9V13.5Z" fill="#F9F9F9"/>
+                                <path d="M16 0.5H7C5.897 0.5 5 1.397 5 2.5V6.5H7V2.5H16V16.5H7V12.5H5V16.5C5 17.603 5.897 18.5 7 18.5H16C17.103 18.5 18 17.603 18 16.5V2.5C18 1.397 17.103 0.5 16 0.5Z" fill="#F9F9F9"/>
+                            </svg>
+                            <span class="relative font-semibold text-lg ml-2">Вход</span>
+                        </a>
+                        <a id="pc1" href="pc/index.html" class="hidden">
+                            <img id="usericon1" class=" h-12 rounded-xl" src="https://visage.surgeplay.com/face/512/X-Steve" alt="">
+                        </a>
+                    </div>
+                </nav>
+                <div id="burger" class="flex lg:hidden items-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M6.66602 10H33.3327" stroke="url(#paint0_linear_896_344)" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66602 20H33.3327" stroke="url(#paint1_linear_896_344)" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66602 30H33.3327" stroke="url(#paint2_linear_896_344)" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_896_344" x1="4.79102" y1="11.0472" x2="12.0164" y2="-2.43174" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_896_344" x1="4.79102" y1="21.0472" x2="12.0164" y2="7.56826" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_896_344" x1="4.79102" y1="31.0472" x2="12.0164" y2="17.5683" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div id="burgerMenu" class="hidden lg:hidden">
+                <nav class="flex flex-col justify-end lg:w-0 transition gap-2">
+                    <a id="s-index" href="index.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition flex items-center gap-1">
+                        <div id="s-index-line" class="hidden w-1 h-5 bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                        О&nbsp;сервере
+                    </a>
+                    <a id="s-rules" href="rules.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition flex items-center gap-1">
+                        <div id="s-rules-line" class="hidden w-1 h-5 bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                        Правила
+                    </a>
+                    <a id="s-map" href="map.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition flex items-center gap-1">
+                        <div id="s-map-line" class="hidden w-1 h-5 bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                        Карта
+                    </a> 
+                    <div class=" w-full h-0.5 bg-border mt-2"></div>
+                    <div class=" mb-4">
+                        <a id="loginb2" href="login.html" class="inline-flex items-center py-1 px-2 relative rounded-lg group text-white mt-2 hidden">
+                            <span class="absolute top-0 left-0 w-full h-full rounded-lg opacity-50 filter blur-sm bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-lg bg-gradient-to-tr filter group-active:opacity-0 group-hover:blur-sm from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-lg bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative inline">
+                                <path d="M9 13.5L14 9.5L9 5.5V8.5H0V10.5H9V13.5Z" fill="#ffffff"/>
+                                <path d="M16 0.5H7C5.897 0.5 5 1.397 5 2.5V6.5H7V2.5H16V16.5H7V12.5H5V16.5C5 17.603 5.897 18.5 7 18.5H16C17.103 18.5 18 17.603 18 16.5V2.5C18 1.397 17.103 0.5 16 0.5Z" fill="#ffffff"/>
+                            </svg>
+                            <span class="relative font-medium text-lg ml-2">Вход</span>
+                        </a>
+                        <a id="pc2" href="pc/index.html" class="hidden">
+                            <img id="usericon2" class=" h-10 rounded-xl" src="https://visage.surgeplay.com/face/512/X-Steve" alt="">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="startHeader" class=" w-full h-32"></div>
+
+    <main class="min-h-[calc(100vh-277px)] sm:min-h-[calc(100vh-234px)] font-main">
+        <section class="block">
+            <div class="container mx-auto flex justify-center lg:justify-start xl:pl-16 xl:pr-16">
+                <div class="px-3 w-full">
+                    <h1 class="text-3xl text-center sm:text-4xl font-bold text-htext mb-6">Карта в отпуске...</h1>  
+                    <svg class=" w-72 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><ellipse fill="#3B88C3" cx="18" cy="30.54" rx="18" ry="5.36"/><path fill="#88C9F9" d="M33.812 28.538c0 1.616-2.5 2.587-14.482 2.587-10.925 0-13.612-.971-13.612-2.587s5.683-2.926 13.612-2.926 14.482 1.31 14.482 2.926z"/><path fill="#F4900C" d="M7 28.25c0-1 1-5 11-5 12 0 15 4 15 5s0 2-14 2c-12 0-12-1-12-2z"/><circle fill="#FFCC4D" cx="7" cy="6.25" r="5"/><a href="https://kubikland.ru/adminmap/"><circle fill="#FFAC33" cx="7" cy="6.25" r="4"/></a><path fill="#C1694F" d="M26.949 14.467c-.039-.575-.098-1.131-.177-1.662-.095-.636-.214-1.235-.347-1.797-.122-.517-.255-.999-.392-1.442-.205-.666-.417-1.243-.609-1.716-.377-.929-.674-1.46-.674-1.46l-2.583.333s.298.622.621 1.841c.131.495.265 1.09.386 1.784.061.351.118.724.17 1.125.072.558.131 1.167.173 1.823.024.37.041.756.053 1.158.004.146.011.287.013.437.007.469-.026.946-.084 1.422-.053.429-.13.856-.223 1.279-.133.606-.296 1.202-.479 1.77-.149.46-.308.901-.468 1.316-.246.637-.493 1.209-.707 1.687-.358.798-.622 1.33-.622 1.441 0 .351.25 1.007 2 1.444 2.736.684 3-.444 3-.444s.174-.528.376-1.567c.1-.513.206-1.147.303-1.915.058-.459.112-.964.158-1.513.049-.572.089-1.192.118-1.863.021-.508.034-1.051.039-1.615.002-.176.006-.346.006-.527 0-.459-.021-.903-.051-1.339z"/><path fill="#D99E82" d="M24.324 21.362c-1.003-.175-1.643-.467-1.994-.686-.246.637-.493 1.209-.707 1.687.655.356 1.487.64 2.389.796.521.091 1.038.136 1.523.136.296 0 .574-.023.841-.057.1-.513.206-1.147.303-1.915-.318.113-1.107.257-2.355.039zm.758-3.342c-.782-.077-1.383-.249-1.805-.43-.133.606-.296 1.202-.479 1.77.618.233 1.345.401 2.106.476.307.03.611.045.908.045.359 0 .7-.028 1.026-.071.049-.572.089-1.192.118-1.863-.45.098-1.08.152-1.874.073zm.221-1.524c.588 0 1.165-.059 1.692-.163.001-.176.005-.346.005-.527 0-.458-.021-.902-.051-1.339-.378.099-.919.194-1.682.205-.775-.003-1.32-.111-1.698-.219.004.146.011.287.013.437.007.469-.026.946-.084 1.422.545.115 1.148.181 1.76.184h.045zm-.178-3.273c.59-.085 1.137-.238 1.648-.418-.095-.636-.214-1.235-.347-1.797-.354.146-.857.308-1.56.409-.651.094-1.147.088-1.522.055.072.558.131 1.167.173 1.823.109.004.207.021.319.021.42 0 .857-.031 1.289-.093zm.909-3.658c-.206-.665-.418-1.242-.61-1.715-.317.159-.718.326-1.242.471-.568.158-1.027.221-1.395.243.131.495.265 1.09.386 1.784.487-.049.989-.128 1.497-.269.486-.135.937-.316 1.364-.514z"/><path fill="#3E721D" d="M34.549 2.943c-.032-.042-3.202-4.283-7.313-2.423-1.847.835-3.038 2.2-3.469 3.963-.804-1.125-2.026-1.839-3.644-2.127-4.421-.788-7.092 4.123-7.118 4.172-.039.072-.022.16.039.214.062.053.151.057.217.01.02-.015 2.037-1.427 5.396-.828 3.433.611 5.84 1.211 5.864 1.217.015.003.028.005.043.005.048 0 .095-.02.129-.056.022-.024 2.303-2.475 4.4-3.423 3.104-1.404 5.221-.472 5.24-.462.072.033.158.013.209-.049.051-.061.054-.148.007-.213z"/><path fill="#5C913B" d="M31.129 5.401c-3.134-1.655-5.57-.831-7.083.174-1.813-.351-5.201-.357-8.072 3.324-3.525 4.518-.433 10.152-.402 10.209.031.056.09.089.153.089l.021-.001c.071-.009.129-.06.147-.128.011-.039 1.097-3.967 3.843-7.27 1.501-1.805 3.293-3.474 4.554-4.573 1.27.211 3.136.678 4.969 1.702 3.573 1.998 5.212 5.379 5.228 5.413.032.066.101.112.177.099.074-.008.135-.062.151-.134.014-.063 1.392-6.222-3.686-8.904z"/></svg>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#161616] font-main " role="contentinfo">
+        <div class="container px-3 py-5 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex font-medium items-center md:justify-start justify-center select-none" href="index.html">
+                <div class="flex-row text-center">
+                    <div class="inline-flex gap-2 items-center">
+                        <img src="img/logo.svg" alt="" width="50" height="42.64">
+                        <p class="text-xl sm:text-2xl font-black text-white">Minecode</p>
+                    </div>
+                    <p class=" text-center text-[10px] text-white/60 font-light"><a href="https://eten.pp.ua/">© EtEn Company</a></p>
+                </div>
+            </a>
+            <div class="flex flex-wrap w-full justify-center gap-2 mt-2 sm:justify-end sm:gap-4 md:gap-12 sm:mt-0 ">
+                <a href="https://eten.pp.ua/minecode/" class=" inline-flex items-center select-none">
+                    <img src="img/2.svg" alt="" width="22" height="20">
+                    <p class=" ml-1 text-sm sm:text-base lg:text-lg text-white">Спонсировать проект</p>
+                </a>
+                <div class=" flex sm:flex-col">
+                    <p class="text-sm sm:text-lg text-white hidden sm:block select-none">Контакты:</p>
+                    <div class=" inline-flex items-center">
+                        <img src="img/1.svg" alt="" width="20" height="20">
+                        <a href="https://eten.pp.ua/minecode/" class=" ml-1 text-sm lg:text-base text-white">etenprod@gmail.com</a>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-4 items-center">
+                    <a href="https://discord.gg/k445e4uSFf" class="flex items-center justify-center select-none w-[44px] h-[44px]"><img src="img/ds.svg" alt="" width="44" height="44"></a>
+                    <a href="https://eten.pp.ua/minecode/" class="flex items-center select-none"><img src="img/tt.svg" alt="" width="44" height="44"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="js/head.js" ></script>
+<script src="js/preload.js" ></script>
+</html>

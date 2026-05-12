@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eten — identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* hide scrollbar everywhere */
+    html, body {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    /* disable text & image selection everywhere */
+    * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    img {
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Space Mono', monospace;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      padding: 28px 0 20px;
+    }
+    .nav a {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.48px;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav a:hover { color: #fff; }
+
+    /* ── HEADER ── */
+    .header {
+      text-align: center;
+    }
+    .header .logo-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 220px;
+    }
+    .header .logo-strip img {
+      max-height: 194px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0.84px;
+      margin-top: 220px;
+      margin-bottom: 18px;
+    }
+    .header p {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: -0.56px;
+      text-transform: uppercase;
+      line-height: 1.245;
+      max-width: 709px;
+      margin: 0 auto 0;
+    }
+
+    /* ── GRID ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 450px);
+      gap: 140px;
+      justify-content: center;
+      margin-top: 220px;
+      padding: 0 0 80px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      position: relative;
+      width: 450px;
+      height: 582px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0c0c0c;
+      flex-shrink: 0;
+    }
+
+    .card-image {
+      position: absolute;
+      top: 0; left: 0;
+      width: 450px;
+      height: 450px;
+      background: #0c0c0c;
+    }
+
+    .card-logo {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      object-fit: contain;
+      z-index: 2;
+    }
+
+    .card-title {
+      position: absolute;
+      left: 27px;
+      top: 463px;
+      width: 292px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .card-sub {
+      position: absolute;
+      left: 27px;
+      top: 488px;
+      width: 292px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: -0.24px;
+      line-height: 1.245;
+    }
+
+    .card-desc {
+      position: absolute;
+      left: 27px;
+      bottom: 21px;
+      width: 370px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: -0.48px;
+      line-height: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#">main</a>
+    <a href="#">brand</a>
+    <a href="#">workers</a>
+    <a href="#">crew</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-strip">
+      <img src="eten.svg" alt="eten logo" draggable="false" />
+    </div>
+    <h1>eten</h1>
+    <p>An evolving identity applied across different directions — each with its own character, yet connected by a shared core. Built and refined since 2021.</p>
+  </header>
+
+  <!-- GRID -->
+  <main class="grid">
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="eten.ua.svg" alt="eten.ua" draggable="false" />
+      <div class="card-title">eten.ua</div>
+      <div class="card-sub">Auto parts store</div>
+      <div class="card-desc">A local auto parts store focused on practical service, quality components and a clear visual identity.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="eten tech.svg" alt="eten tech" draggable="false" />
+      <div class="card-title">eten tech</div>
+      <div class="card-sub">Digital agency</div>
+      <div class="card-desc">A digital agency focused on visual identity, content creation and social media presence.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="eten game.svg" alt="eten game" draggable="false" />
+      <div class="card-title">eten game</div>
+      <div class="card-sub">Game development</div>
+      <div class="card-desc">A direction focused on creating games, interactive mechanics and experimental gameplay concepts.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="Chum Bank.svg" alt="Chum Bank" draggable="false" />
+      <div class="card-title">Chum Bank</div>
+      <div class="card-sub">Crypto project</div>
+      <div class="card-desc">A crypto-driven project built around simple game mechanics, digital economy and interactive user engagement.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="carsite.ua.svg" alt="carsite.ua" draggable="false" />
+      <div class="card-title">carsite.ua</div>
+      <div class="card-sub">Car marketplace</div>
+      <div class="card-desc">A platform for selling cars with a focus on clean structure and user-friendly experience.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="eten company.svg" alt="eten company" draggable="false" />
+      <div class="card-title">eten company</div>
+      <div class="card-sub">Holding</div>
+      <div class="card-desc">The holding company that existed at the beginning of eten's journey. Managing all the initial projects.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="UKBR.svg" alt="UKBR" draggable="false" />
+      <div class="card-title">UKBR</div>
+      <div class="card-sub">Media</div>
+      <div class="card-desc">A media project for YouTube promotion. It appeared before eten.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-image"></div>
+      <img class="card-logo" src="Code.svg" alt="Code" draggable="false" />
+      <div class="card-title">Code</div>
+      <div class="card-sub">IT company + Media</div>
+      <div class="card-desc">A company that includes several projects. They're in different fields, but all involve interacting with people. Each project has the word 'code' in its name.</div>
+    </div>
+
+  </main>
+
+</body>
+</html>

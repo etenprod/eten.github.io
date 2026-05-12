@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/sweetalert2@10.js"></script>
+
+    <meta name="description" content="Приватний ванільний сервер у грі minecraft з безкоштовною проходкою! Подайте заявку та грайте на сервері Minecode вже сьогодні.">
+    <meta name="keywords" content="приватний, сервер, майнкрафт, minecraft, без донату, безкоштовна проходка, Minecode, грати">
+    <link href="img/logo.svg" rel="icon" type="image/png">
+    <meta name="image" content="/img/logo.svg">
+    <meta itemprop="description" content="Приватний ванільний сервер у грі minecraft з безкоштовною проходкою! Подайте заявку та грайте на сервері Minecode вже сьогодні.">
+    <meta itemprop="image" content="/img/logo.svg">
+    <meta name="language" content="Russian">
+    <meta name="revisit-after" content="3 days">
+    <meta name="og:description" content="Приватний ванільний сервер у грі minecraft з безкоштовною проходкою! Подайте заявку та грайте на сервері Minecode вже сьогодні.">
+    <meta name="og:image" content="/img/logo.svg">
+    <meta name="og:url" content="https://eten.pp.ua/minecode/">
+    <meta name="og:site_name" content="Minecode">
+    <meta name="og:locale" content="ua_UA">
+    <meta name="og:type" content="website">
+    <meta property="og:site_name" content="Minecode">
+    <meta property="og:url" content="https://eten.pp.ua/minecode/">
+
+    <meta itemprop="name" content="Minecode -Приватний ванільний сервер Minecraft">
+    <meta name="og:title" content="Приватний ванільний сервер Minecraft">
+    <meta property="og:title" content="Приватний ванільний сервер Minecraft">
+    <meta name="next-head-count" content="24">
+    <title>Minecode - Приватний ванільний сервер Minecraft</title>
+
+</head>
+<style>
+    body::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background-color: rgba(228, 228, 228, 0);
+        border-radius: 100px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        background-color: #00000025;
+    }
+</style>
+<body id="index" class=" bg-white" style="overflow: overlay;">
+    <div class="preloader">
+        <div class="bg-white fixed w-full h-screen flex items-center justify-center select-none" style="z-index: 1000;">
+            <img src="img/load.gif" alt="">
+        </div>
+    </div>
+    <header id="myHeader" class="absolute w-full z-40 font-main text-white select-none">
+        <div class="container mx-auto px-3">
+            <div class="flex justify-between py-4">
+                <a href="index.html" class="flex justify-start lg:w-0 lg:flex-1 items-center gap-2">
+                    <img src="img/logo.svg" alt="" width="50" height="42.64">
+                    <p id="myLogoText" class="text-2xl sm:text-3xl font-black text-white">Minecode</p>
+                </a>
+                <nav class="hidden lg:flex place-items-center justify-end md:flex-1 md:w-0 md:gap-4 xl:gap-8">
+                    <a id="l-index" href="https://eten.pp.ua/minecode/" class="scroll-mt-8 pt-1 text-lg font-semibold  hover:text-blue1.5 transition">Про&nbsp;сервер
+                        <div id="l-index-line" class="invisible h-1 w-full bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                    </a>
+                    <a id="l-rules" href="rules.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition">Правила
+                        <div id="l-rules-line" class=" invisible h-1 w-full bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                    </a>
+                    <a id="l-map" href="map.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition">Карта
+                        <div id="l-map-line" class="invisible h-1 w-full bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                    </a>
+                    <div>
+                        <a id="loginb1" href="login.html" class="inline-flex items-center py-2 px-4 relative rounded-lg group text-white hidden">
+                            <span class="absolute top-0 left-0 w-full h-full rounded-lg opacity-50 filter blur-sm bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-lg bg-gradient-to-tr filter group-active:opacity-0 group-hover:blur-sm from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-lg bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative inline">
+                                <path d="M9 13.5L14 9.5L9 5.5V8.5H0V10.5H9V13.5Z" fill="#F9F9F9"/>
+                                <path d="M16 0.5H7C5.897 0.5 5 1.397 5 2.5V6.5H7V2.5H16V16.5H7V12.5H5V16.5C5 17.603 5.897 18.5 7 18.5H16C17.103 18.5 18 17.603 18 16.5V2.5C18 1.397 17.103 0.5 16 0.5Z" fill="#F9F9F9"/>
+                            </svg>
+                            <span class="relative font-semibold text-lg ml-2">Вход</span>
+                        </a>
+                        <a id="pc1" href="pc/index.html" class="hidden">
+                            <img id="usericon1" class=" h-12 rounded-xl" src="https://visage.surgeplay.com/face/512/X-Steve" alt="">
+                        </a>
+                    </div>
+                </nav>
+                <div id="burger" class="flex lg:hidden items-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M6.66602 10H33.3327" stroke="url(#paint0_linear_896_344)" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66602 20H33.3327" stroke="url(#paint1_linear_896_344)" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.66602 30H33.3327" stroke="url(#paint2_linear_896_344)" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_896_344" x1="4.79102" y1="11.0472" x2="12.0164" y2="-2.43174" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_896_344" x1="4.79102" y1="21.0472" x2="12.0164" y2="7.56826" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_896_344" x1="4.79102" y1="31.0472" x2="12.0164" y2="17.5683" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div id="burgerMenu" class="hidden lg:hidden">
+                <nav class="flex flex-col justify-end lg:w-0 transition gap-2">
+                    <a id="s-index" href="index.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition flex items-center gap-1">
+                        <div id="s-index-line" class="hidden w-1 h-5 bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                        О&nbsp;сервере
+                    </a>
+                    <a id="s-rules" href="rules.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition flex items-center gap-1">
+                        <div id="s-rules-line" class="hidden w-1 h-5 bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                        Правила
+                    </a>
+                    <a id="s-map" href="map.html" class="pt-1 text-lg font-semibold  hover:text-blue1.5 transition flex items-center gap-1">
+                        <div id="s-map-line" class="hidden w-1 h-5 bg-gradient-to-tr from-blue1 to-blue2 rounded-full"></div>
+                        Карта
+                    </a>
+                    <div class=" w-full h-0.5 bg-border mt-2"></div>
+                    <div class=" mb-4">
+                        <a id="loginb2" href="login.html" class="inline-flex items-center py-1 px-2 relative rounded-lg group text-white mt-2 hidden">
+                            <span class="absolute top-0 left-0 w-full h-full rounded-lg opacity-50 filter blur-sm bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-lg bg-gradient-to-tr filter group-active:opacity-0 group-hover:blur-sm from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-lg bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative inline">
+                                <path d="M9 13.5L14 9.5L9 5.5V8.5H0V10.5H9V13.5Z" fill="#ffffff"/>
+                                <path d="M16 0.5H7C5.897 0.5 5 1.397 5 2.5V6.5H7V2.5H16V16.5H7V12.5H5V16.5C5 17.603 5.897 18.5 7 18.5H16C17.103 18.5 18 17.603 18 16.5V2.5C18 1.397 17.103 0.5 16 0.5Z" fill="#ffffff"/>
+                            </svg>
+                            <span class="relative font-medium text-lg ml-2">Вход</span>
+                        </a>
+                        <a id="pc2" href="pc/index.html" class="hidden">
+                            <img id="usericon2" class=" h-10 rounded-xl" src="https://visage.surgeplay.com/face/512/X-Steve" alt="">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    </div>
+    <main class="min-h-[calc(100vh-277px)] sm:min-h-[calc(100vh-234px)] font-main">
+        <section class=" block bg-cover bg-center select-none" style="background-image: url('img/1.png');">
+            <div class="container mx-auto py-22 pt-48 pb-40 flex justify-center lg:justify-start xl:pl-16 xl:pr-16">
+                <div class=" lg:w-6/12 p-3 items-center relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 30" fill="none" class="absolute bottom-3 left-3 h-5 w-6 sm:h-7 sm:w-8">
+                        <path d="M33.0742 28.5C33.0742 29.3284 32.4026 30 31.5742 30L1.38283e-05 30V30C1.3988e-05 28.3431 1.34316 27 3.00001 27L31.5742 27C32.4026 27 33.0742 27.6716 33.0742 28.5V28.5Z" fill="url(#paint0_linear_595_1178)"/>
+                        <path d="M1.38283e-05 30L1.85472e-05 1.65371C1.86993e-05 0.740388 0.74041 -2.56397e-06 1.65373 -2.49155e-06V-2.49155e-06C2.56705 -2.41912e-06 3.30744 0.740389 3.30744 1.65371L3.30743 26.6926C3.30743 28.5192 1.82665 30 1.38283e-05 30V30Z" fill="url(#paint1_linear_595_1178)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_595_1178" x1="35.3998" y1="-1.41509" x2="-4.51099" y2="1.66299" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_595_1178" x1="35.3998" y1="-1.41509" x2="-4.51099" y2="1.66299" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 30" fill="none" class="absolute top-3 right-3 h-5 w-6 sm:h-7 sm:w-8">
+                        <path d="M0.925781 1.5C0.925781 0.671573 1.59735 1.31135e-07 2.42578 1.31135e-07H34V1.31135e-07C34 1.65685 32.6568 3 31 3H2.42578C1.59735 3 0.925781 2.32843 0.925781 1.5V1.5Z" fill="url(#paint0_linear_595_1177)"/>
+                        <path d="M34 1.31135e-07L34 28.3463C34 29.2596 33.2596 30 32.3463 30V30C31.433 30 30.6926 29.2596 30.6926 28.3463L30.6926 3.30742C30.6926 1.48078 32.1733 5.8711e-08 34 1.31135e-07V1.31135e-07Z" fill="url(#paint1_linear_595_1177)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_595_1177" x1="-1.39975" y1="31.4151" x2="38.511" y2="28.337" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_595_1177" x1="-1.39975" y1="31.4151" x2="38.511" y2="28.337" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9146FFF"/>
+                        <stop offset="1" stop-color="#8B2AB2"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <p class=" text-center text-4xl sm:text-6xl lg:text-5xl 2xl:text-6xl font-bold text-white leading-none sm:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight mt-3 sm:mt-6 lg:mt-5 2xl:mt-6">Приватний<br>ванільний сервер</p>
+                    <p class="mt-3 sm:mt-6 lg:mt-5 2xl:mt-6 text-center text-base sm:text-2xl lg:text-xl 2xl:text-2xl font-medium text-white">Тут ви зможете реалізувати свої<br>найшаленіші ідеї!</p>
+                    <div class="flex space-x-2 justify-center mt-3 sm:mt-6 lg:mt-5 2xl:mt-6">
+                        <a href="https://discord.gg/k445e4uSFf" class="px-4 py-2 sm:px-5 sm:py-2.5 relative rounded-lg group text-white font-medium inline-block">
+                            <span class="absolute top-0 left-0 w-full h-full rounded-lg opacity-50 filter blur-sm bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-lg shadow-xl bg-gradient-to-tr filter group-active:opacity-0 group-hover:blur-sm from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-lg bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="relative font-bold text-base sm:text-2xl lg:text-xl 2xl:text-2xl">Подати заяву</span>
+                        </a>
+                    </div>
+                    <p class="mb-3 sm:mb-6 lg:mb-5 2xl:mb-6 text-center text-sm text-white/70 font-light">Ліцензія не є обов'язковою</p>
+                </div>
+            </div>
+            <div class="relative -mt-12 lg:-mt-24">
+                <svg class=" w-full" viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+                      <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
+                      <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+                    </g>
+                    <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
+                    </g>
+                  </g>
+                </svg>
+            </div>
+        </section>
+
+        <section id="startHeader" class="block">
+            <div class="container mx-auto flex justify-center lg:justify-start xl:pl-16 xl:pr-16 mt-9">
+                <div class="flex flex-col lg:flex-row mb-9">
+                    <div class="flex lg:w-6/12 p-3 items-center">
+                        <div id="about" class="scroll-mt-32">
+                            <div class="inline-flex gap-3 items-end">
+                                <h1 class="text-3xl sm:text-4xl font-bold text-htext">Про сервер</h1>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                    <path d="M18 10.8889H18.0178M16.2222 18H18V25.1111H19.7778M34 18C34 26.8366 26.8366 34 18 34C9.16344 34 2 26.8366 2 18C2 9.16344 9.16344 2 18 2C26.8366 2 34 9.16344 34 18Z" stroke="url(#paint0_linear_773_365)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_773_365" x1="-0.25" y1="35.5094" x2="38.405" y2="32.8053" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#9146FF"/>
+                                    <stop offset="1" stop-color="#8B2AB2"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p class="text-base sm:text-lg font-medium text-text mt-6">Minecode – сервер у грі minecraft, спрямований на справжнє ванільне виживання. Ми зберегли всі ванільні механіки одиночної гри. У нас ви зможете виживати, будувати, спілкуватися і просто проводити час у затишній атмосфері.
+                                Ідіть назустріч пригодам разом з нами!</p>
+                        </div>
+                    </div>
+                    <div class=" lg:w-6/12 p-3">
+                        <img class=" rounded-3xl shadow-lg" src="img/2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto flex flex-col justify-center items-center xl:pl-16 xl:pr-16 mt-9">
+                <div class="px-3 flex flex-col justify-center items-center mb-6">
+                    <h1 class="text-3xl sm:text-4xl font-bold text-htext mx-8 mb-1 text-center">Чому ми?</h1>
+                    <div class=" h-1 w-full bg-gradient-to-tr from-blue1/70 to-blue2/70 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-2 grid-flow-row-dense auto-rows-fr md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-6 w-full px-3 mb-9">
+                    <div class="flex justify-center items-center col-span-2 lg:col-span-1 xl:col-span-2 border-2 border-border rounded-2xl p-4">
+                        <div>
+                            <div class="flex justify-center items-center gap-2 sm:gap-4">
+                                <img src="img/8.svg" alt="" width="100" height="100">
+                                <h1 class="text-xl sm:text-2xl text-htext font-bold text-center ">Сто&nbsp;відсоткова ваніла</h1>
+                            </div>
+                            <p class=" text-center text-base sm:text-lg text-text font-medium mt-3">На сервері стоять лише допоміжні плагіни та дата-паки, які не змінюють геймплей ванільної гри.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center border-2 border-border rounded-2xl p-4 col-span-2 md:col-span-1 ">
+                        <div>
+                            <div class="flex justify-center">
+                                <img src="img/7.svg" alt="" width="100" height="100">
+                            </div>
+                            <h1 class=" text-xl sm:text-2xl text-htext font-bold text-center mt-3 ">Безкоштовна прохідка</h1>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center col-span-2 lg:col-span-1 xl:col-span-2 border-2 border-border rounded-2xl p-4 ">
+                        <div>
+                            <div class="flex justify-center items-center gap-2 sm:gap-4">
+                                <img src="img/6.svg" alt="" width="95" height="100">
+                                <h1 class=" text-xl sm:text-2xl text-htext font-bold text-center ">Немає&nbsp;донат речей</h1>
+                            </div>
+                            <p class=" text-center text-base sm:text-lg text-text font-medium mt-3">У нас немає нав'язливого доната, тут можна купити тільки косметичні предмети, а не турбо-мечі чи всякі палиці-вбивалки</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center border-2 border-border rounded-2xl p-4 col-span-2 md:col-span-1 ">
+                        <div>
+                            <div class="flex justify-center">
+                                <img src="img/5.svg" alt="" width="100" height="100">
+                            </div>
+                            <h1 class=" text-xl sm:text-2xl text-htext font-bold text-center mt-3 ">Голосовий чат</h1>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center col-span-2 lg:col-span-1 xl:col-span-2 border-2 border-border rounded-2xl p-4 ">
+                        <div>
+                            <div class="flex justify-center items-center gap-2 sm:gap-4">
+                                <img src="img/Vector.svg" alt="" width="72" height="100">
+                                <h1 class=" text-xl sm:text-2xl text-htext font-bold text-center ">Доброзичливе ком'юніті</h1>
+                            </div>
+                            <p class=" text-center text-base sm:text-lg text-text font-medium mt-3">У нас дуже привітні та чуйні гравці. Тут будь-хто зможе знайти друзів та однодумців</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center border-2 border-border rounded-2xl p-4 col-span-2 md:col-span-1 xl:col-span-2 2xl:col-span-1 ">
+                        <div>
+                            <div class="flex justify-center">
+                                <img src="img/4.svg" alt="" width="80" height="100">
+                            </div>
+                            <h1 class=" text-xl sm:text-2xl text-htext font-bold text-center mt-3 ">Компетентна адміністрація</h1>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center border-2 border-border rounded-2xl p-4 col-span-2 md:col-span-1 xl:col-span-2 2xl:col-span-1">
+                        <div>
+                            <div class="flex justify-center">
+                                <img src="img/3.svg" alt="" width="100" height="100">
+                            </div>
+                            <h1 class=" text-xl sm:text-2xl text-htext font-bold text-center mt-3">Унікальні плагіни</h1>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container mx-auto lg:justify-start xl:pl-16 xl:pr-16 mt-9 flex flex-col flex-nowrap items-center px-3">
+                <div class="px-3 flex flex-col justify-center items-center mb-6">
+                    <h1 class="text-3xl sm:text-4xl font-bold text-htext mx-8 mb-1 text-center hidden md:block">Часто задавані питання</h1>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-htext mx-8 mb-1 text-center md:hidden">FAQ</h1>
+                    <div class=" h-1 w-full bg-gradient-to-tr from-blue1/70 to-blue2/70 rounded-full"></div>
+                </div>
+                <div class="w-full lg:w-[820px] bg-gradient-to-tr from-blue1/20 to-blue2/20 rounded-3xl py-5 px-5 sm:px-10 mb-3 shadow-sm">
+                    <h1 class=" text-xl sm:text-2xl text-htext font-semibold hidden md:block">Який розмір картки?</h1>
+                    <p class="pl-3 text-base sm:text-lg text-text font-medium hidden md:block">Карта основного світу розміром? на?. Інші світи не обмежені</p>
+                    <div x-data={show:false} class="md:hidden">
+                        <div class="flex justify-between items-center">
+                            <h1 class=" text-xl sm:text-2xl text-htext font-semibold">Який розмір картки?</h1>
+                            <button  @click="show=!show" class="" type="button">
+                                <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                                <svg x-show="show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div x-show="show">
+                            <p class="pl-3 text-base sm:text-lg text-text font-medium">Карта основного світу розміром? на?. Інші світи не обмежені</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[820px] bg-gradient-to-tr from-blue1/20 to-blue2/20 rounded-3xl py-5 px-5 sm:px-10  mb-3 shadow-sm">
+                    <h1 class=" text-xl sm:text-2xl text-htext font-semibold hidden md:block">На сервері є голосовий чат?</h1>
+                    <p class="pl-3 text-base sm:text-lg text-text font-medium hidden md:block">Так, він здійснений за допомогою моди Plasmo Voice</p>
+                    <div x-data={show:false} class="md:hidden">
+                        <div class="flex justify-between items-center">
+                            <h1 class=" text-xl sm:text-2xl text-htext font-semibold">На сервері є голосовий чат?</h1>
+                            <button  @click="show=!show" class="" type="button">
+                                <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                                <svg x-show="show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div x-show="show">
+                            <p class="pl-3 text-base sm:text-lg text-text font-medium">Так, він здійснений за допомогою моди Plasmo Voice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[820px] bg-gradient-to-tr from-blue1/20 to-blue2/20 rounded-3xl py-5 px-5 sm:px-10  mb-3 shadow-sm">
+                    <h1 class=" text-xl sm:text-2xl text-htext font-semibold hidden md:block">Сервер працює завжди?</h1>
+                    <p class="pl-3 text-base sm:text-lg text-text font-medium hidden md:block">Сервер працює 24/7 за винятком рестартів та тих. робіт</p>
+                    <div x-data={show:false} class="md:hidden">
+                        <div class="flex justify-between items-center">
+                            <h1 class=" text-xl sm:text-2xl text-htext font-semibold">Сервер працює завжди?</h1>
+                            <button  @click="show=!show" class="" type="button">
+                                <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                                <svg x-show="show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div x-show="show">
+                            <p class="pl-3 text-base sm:text-lg text-text font-medium">Сервер працює 24/7 за винятком рестартів та тих. робіт</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[820px] bg-gradient-to-tr from-blue1/20 to-blue2/20 rounded-3xl py-5 px-5 sm:px-10  mb-9 shadow-sm">
+                    <h1 class=" text-xl sm:text-2xl text-htext font-semibold hidden md:block">Чи є на сервері валюта?</h1>
+                    <p class="pl-3 text-base sm:text-lg text-text font-medium hidden md:block">Умовна валюта – алмазна руда. Але ніхто її не стверджував, кожен має право продавати за те, за що хоче</p>
+                    <div x-data={show:false} class="md:hidden">
+                        <div class="flex justify-between items-center">
+                            <h1 class=" text-xl sm:text-2xl text-htext font-semibold">Чи є на сервері валюта?</h1>
+                            <button  @click="show=!show" class="" type="button">
+                                <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                                <svg x-show="show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div x-show="show">
+                            <p class="pl-3 text-base sm:text-lg text-text font-medium">Умовна валюта – алмазна руда. Але ніхто її не стверджував, кожен має право продавати за те, за що хоче</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="w-full lg:w-[820px] bg-gradient-to-tr from-blue1/20 to-blue2/20 rounded-3xl py-5 px-5 sm:px-10  mb-9 shadow-sm">
+                    <h1 class=" text-xl sm:text-2xl text-htext font-semibold hidden md:block">Где кнопка донат ?</h1>
+                    <p class="pl-3 text-base sm:text-lg text-text font-medium hidden md:block"> Изначально сервер планировался только для друзей и знакомых. В принципе, так и было первых два сезона, но сейчас Kubik Land открыт для всех желающих. Сам по себе донат в его привычном представлении добавлять не планируем. Если вы желаете поддержать разработчика, то вот вам <a href="https://yoomoney.ru/to/4100117662971236" class="underline">ссылка</a></p>
+                    <div x-data={show:false} class="md:hidden">
+                        <div class="flex justify-between items-center">
+                            <h1 class=" text-xl sm:text-2xl text-htext font-semibold">Где кнопка донат ?</h1>
+                            <button  @click="show=!show" class="" type="button">
+                                <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                                <svg x-show="show" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#211e1e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div x-show="show">
+                            <p class="pl-3 text-base sm:text-lg text-text font-medium"> Изначально сервер планировался только для друзей и знакомых. В принципе, так и было первых два сезона, но сейчас Kubik Land открыт для всех желающих. Сам по себе донат в его привычном представлении добавлять не планируем. Если вы желаете поддержать разработчика, то вот вам <a href="https://yoomoney.ru/to/4100117662971236" class="underline">ссылка</a></p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section class=" block bg-center bg-cover select-none" style="background-image: url('img/3.png');">
+            <div class="relative -top-[1px]">
+                <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class=" rotate-180 w-full">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                      <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+                      <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
+                      <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+                    </g>
+                    <g transform="translate(-4.000000, 76.000000)" fill="#ffffff" fill-rule="nonzero">
+                      <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
+                    </g>
+                  </g>
+                </svg>
+            </div>
+            <div class="container mx-auto pb-20 flex justify-center lg:justify-start xl:pl-16 xl:pr-16">
+                <div class=" lg:w-6/12 items-center relative"></div>
+                <div class=" lg:w-6/12 p-3 items-center relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 30" fill="none" class="absolute bottom-3 left-3 h-5 w-6 sm:h-7 sm:w-8">
+                        <path d="M33.0742 28.5C33.0742 29.3284 32.4026 30 31.5742 30L1.38283e-05 30V30C1.3988e-05 28.3431 1.34316 27 3.00001 27L31.5742 27C32.4026 27 33.0742 27.6716 33.0742 28.5V28.5Z" fill="url(#paint0_linear_595_1178)"/>
+                        <path d="M1.38283e-05 30L1.85472e-05 1.65371C1.86993e-05 0.740388 0.74041 -2.56397e-06 1.65373 -2.49155e-06V-2.49155e-06C2.56705 -2.41912e-06 3.30744 0.740389 3.30744 1.65371L3.30743 26.6926C3.30743 28.5192 1.82665 30 1.38283e-05 30V30Z" fill="url(#paint1_linear_595_1178)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_595_1178" x1="35.3998" y1="-1.41509" x2="-4.51099" y2="1.66299" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#37CFFF"/>
+                        <stop offset="1" stop-color="#3AA1FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_595_1178" x1="35.3998" y1="-1.41509" x2="-4.51099" y2="1.66299" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#37CFFF"/>
+                        <stop offset="1" stop-color="#3AA1FF"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 30" fill="none" class="absolute top-3 right-3 h-5 w-6 sm:h-7 sm:w-8">
+                        <path d="M0.925781 1.5C0.925781 0.671573 1.59735 1.31135e-07 2.42578 1.31135e-07H34V1.31135e-07C34 1.65685 32.6568 3 31 3H2.42578C1.59735 3 0.925781 2.32843 0.925781 1.5V1.5Z" fill="url(#paint0_linear_595_1177)"/>
+                        <path d="M34 1.31135e-07L34 28.3463C34 29.2596 33.2596 30 32.3463 30V30C31.433 30 30.6926 29.2596 30.6926 28.3463L30.6926 3.30742C30.6926 1.48078 32.1733 5.8711e-08 34 1.31135e-07V1.31135e-07Z" fill="url(#paint1_linear_595_1177)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_595_1177" x1="-1.39975" y1="31.4151" x2="38.511" y2="28.337" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#37CFFF"/>
+                        <stop offset="1" stop-color="#3AA1FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_595_1177" x1="-1.39975" y1="31.4151" x2="38.511" y2="28.337" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#37CFFF"/>
+                        <stop offset="1" stop-color="#3AA1FF"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <p class=" text-center text-4xl sm:text-6xl lg:text-5xl 2xl:text-6xl font-bold text-white leading-none sm:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight mt-3 sm:mt-6 lg:mt-5 2xl:mt-6">Понравился наш<br>сервер?</p>
+                    <p class="mt-3 sm:mt-6 lg:mt-5 2xl:mt-6 text-center text-base sm:text-2xl lg:text-xl 2xl:text-2xl font-medium text-white">Скорей подавай заявку</p>
+                    <div class="flex space-x-2 justify-center mt-3 sm:mt-6 lg:mt-5 2xl:mt-6">
+                        <a href="https://discord.gg/k445e4uSFf" class="px-4 py-2 sm:px-5 sm:py-2.5 relative rounded-lg group text-white font-medium inline-block">
+                            <span class="absolute top-0 left-0 w-full h-full rounded-lg opacity-50 filter blur-sm bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded-lg shadow-xl bg-gradient-to-tr filter group-active:opacity-0 group-hover:blur-sm from-blue1 to-blue2"></span>
+                            <span class="absolute inset-0 w-full h-full transition duration-200 ease-out rounded-lg bg-gradient-to-tr from-blue1 to-blue2"></span>
+                            <span class="relative font-bold text-base sm:text-2xl lg:text-xl 2xl:text-2xl">Подати заяву</span>
+                        </a>
+                    </div>
+                    <p class="mb-3 sm:mb-6 lg:mb-5 2xl:mb-6 text-center text-sm text-white/70 font-light">Ліцензія не є обов'язковою</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#161616] font-main " role="contentinfo">
+        <div class="container px-3 py-5 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex font-medium items-center md:justify-start justify-center select-none" href="index.html">
+                <div class="flex-row text-center">
+                    <div class="inline-flex gap-2 items-center">
+                        <img src="img/logo.svg" alt="" width="50" height="42.64">
+                        <p class="text-xl sm:text-2xl font-black text-white">Minecode</p>
+                    </div>
+                    <p class=" text-center text-[10px] text-white/60 font-light"><a href="https://eten.pp.ua/">© EtEn Company</a></p>
+                </div>
+            </a>
+            <div class="flex flex-wrap w-full justify-center gap-2 mt-2 sm:justify-end sm:gap-4 md:gap-12 sm:mt-0 ">
+                <a href="https://eten.pp.ua/minecode/" class=" inline-flex items-center select-none">
+                    <img src="img/2.svg" alt="" width="22" height="20">
+                    <p class=" ml-1 text-sm sm:text-base lg:text-lg text-white">Спонсорувати проект</p>
+                </a>
+                <div class=" flex sm:flex-col">
+                    <p class="text-sm sm:text-lg text-white hidden sm:block select-none">Контакти:</p>
+                    <div class=" inline-flex items-center">
+                        <img src="img/1.svg" alt="" width="20" height="20">
+                        <a href="https://eten.pp.ua/minecode/" class=" ml-1 text-sm lg:text-base text-white">etenprod@gmail.com</a>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-4 items-center">
+                    <a href="https://discord.gg/k445e4uSFf" class="flex items-center justify-center select-none w-[44px] h-[44px]"><img src="img/ds.svg" alt="" width="44" height="44"></a>
+                    <a href="https://eten.pp.ua/minecode/" class="flex items-center select-none"><img src="img/tt.svg" alt="" width="44" height="44"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="js/head.js" ></script>
+<script src="js/preload.js" ></script>
+</html>
