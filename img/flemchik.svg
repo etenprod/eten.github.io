@@ -1,8 +1,7 @@
 <svg width="289" height="289" viewBox="0 0 289 289" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="289" height="289" fill="#0C0C0C"/>
+<rect width="289" height="289" fill="#020202"/>
 <rect width="289" height="289" fill="url(#pattern0_4152_1130)" fill-opacity="0.05"/>
-<path d="M163.727 123H125.273C122.912 123 121 124.924 121 127.3V153.1C121 155.476 122.912 157.4 125.273 157.4H140.227V161.7H135.955V166H153.045V161.7H148.773V157.4H163.727C166.088 157.4 168 155.476 168 153.1V127.3C168 124.924 166.088 123 163.727 123ZM163.727 153.1H125.273V127.3H163.727V153.1Z" fill="black"/>
-<path d="M163.727 153.1H125.273V127.3H163.727V153.1Z" fill="black"/>
+<path d="M163.727 123H125.273C122.912 123 121 124.924 121 127.3V153.1C121 155.476 122.912 157.4 125.273 157.4H140.227V161.7H135.955V166H153.045V161.7H148.773V157.4H163.727C166.088 157.4 168 155.476 168 153.1V127.3C168 124.924 166.088 123 163.727 123Z" fill="white" fill-opacity="0.5"/>
 <defs>
 <pattern id="pattern0_4152_1130" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_4152_1130" transform="scale(0.000976562)"/>
