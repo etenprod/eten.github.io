@@ -41,10 +41,18 @@
     }
 
     .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
       display: flex;
       justify-content: center;
       gap: 26px;
-      padding: 28px 0 20px;
+      padding: 22px 0 18px;
+      background: rgba(0, 0, 0, 0.70);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
     .nav a {
       font-family: 'Orbitron', sans-serif;
@@ -63,7 +71,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 220px;
+      margin-top: 280px;
     }
     .header .logo-strip img {
       max-height: 194px;
@@ -176,6 +184,40 @@
       color: rgba(255,255,255,0.8);
       letter-spacing: -0.48px;
       line-height: 1;
+    }
+
+    @media (max-width: 1100px) {
+      .grid {
+        grid-template-columns: 450px;
+        gap: 60px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .nav {
+        gap: 16px;
+        padding: 16px 16px 14px;
+      }
+      .nav a { font-size: 13px; }
+
+      .header .logo-strip { margin-top: 60px; }
+      .header .logo-strip img { max-height: 100px; }
+      .header h1 { margin-top: 50px; font-size: 20px; }
+      .header p { font-size: 11px; padding: 0 20px; }
+
+      .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 0;
+        margin-top: 60px;
+        padding: 0 0 60px;
+      }
+
+      .card {
+        transform: scale(0.82);
+        transform-origin: top center;
+        margin-bottom: -65px;
+      }
     }
 
   </style>
