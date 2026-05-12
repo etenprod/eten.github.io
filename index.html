@@ -187,14 +187,132 @@
       line-height: 1;
     }
 
+    .crew-section {
+      margin-top: 140px;
+      padding-bottom: 80px;
+    }
+    .crew-viewport {
+      overflow: hidden;
+      padding-left: max(20px, calc(50vw - 520px));
+    }
+    .crew-track {
+      display: flex;
+      gap: 55px;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .crew-card {
+      position: relative;
+      flex-shrink: 0;
+      width: 289px;
+      height: 360px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.048), 0 8px 32px rgba(0,0,0,0.6);
+    }
+    .crew-card-img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 289px;
+      height: 289px;
+      background-color: #000;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='289' height='289'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.045)' stroke-width='1.2'%3E%3Cpath d='M-20 180 C60 120, 140 200, 200 140 S320 60, 400 120 S480 220, 520 180'/%3E%3Cpath d='M-20 260 C40 200, 120 300, 190 240 S310 160, 390 220 S470 320, 520 270'/%3E%3Cpath d='M30 -20 C80 60, 60 160, 120 200 S200 300, 160 380 S100 440, 140 490'/%3E%3Cpath d='M160 -20 C200 80, 180 180, 240 220 S340 300, 300 400 S240 450, 280 510'/%3E%3Cpath d='M-20 80 C80 60, 160 120, 220 80 S340 20, 420 80 S490 160, 530 120'/%3E%3Cpath d='M-20 360 C60 320, 140 400, 210 350 S330 280, 410 340'/%3E%3Cpath d='M80 -20 C100 80, 60 180, 100 260 S140 360, 100 430'/%3E%3C/g%3E%3C/svg%3E");
+      overflow: hidden;
+    }
+    .crew-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .crew-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 180px; height: 120px;
+      background: radial-gradient(ellipse at bottom right, rgba(255,255,255,0.03) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .crew-name {
+      position: absolute;
+      left: 20px;
+      top: 301px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .crew-role {
+      position: absolute;
+      left: 20px;
+      top: 326px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: -0.24px;
+    }
+    .crew-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 20px 0 max(20px, calc(50vw - 520px));
+    }
+    .crew-progress-wrap {
+      flex: 1;
+      max-width: 280px;
+      height: 2px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 1px;
+      overflow: hidden;
+    }
+    .crew-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: rgba(255,255,255,0.5);
+      border-radius: 1px;
+      transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .crew-arrows {
+      display: flex;
+      gap: 12px;
+    }
+    .crew-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .crew-btn:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
     @media (max-width: 1100px) {
       .grid {
         grid-template-columns: 450px;
         gap: 60px;
       }
+      .crew-viewport { padding-left: 20px; }
+      .crew-controls { padding-left: 20px; }
     }
 
     @media (max-width: 500px) {
+      .crew-section { margin-top: 80px; }
+      .crew-controls { padding-left: 20px; }
+      .crew-progress-wrap { max-width: 120px; }
+
       .nav {
         gap: 16px;
         padding: 16px 16px 14px;
@@ -228,8 +346,7 @@
   <nav class="nav">
     <a href="#main">main</a>
     <a href="#brand">brand</a>
-    <a href="#">workers</a>
-    <a href="#">crew</a>
+    <a href="#crew">crew</a>
   </nav>
 
   <header class="header">
@@ -308,6 +425,63 @@
 
   </main>
 
+  <section class="crew-section" id="crew">
+    <div class="crew-viewport">
+      <div class="crew-track" id="crewTrack">
+
+        <div class="crew-card">
+          <div class="crew-card-img"><img src="img/crew/darud.png" alt="darud" draggable="false" /></div>
+          <div class="crew-name">darud</div>
+          <div class="crew-role">Leader</div>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-card-img"><img src="img/crew/yukito.png" alt="Yukito" draggable="false" /></div>
+          <div class="crew-name">Yukito</div>
+          <div class="crew-role">Programmer</div>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-card-img"><img src="img/crew/flemchik.png" alt="Flemchik" draggable="false" /></div>
+          <div class="crew-name">Flemchik</div>
+          <div class="crew-role">Media</div>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-card-img"><img src="img/crew/ukrainian-bear.png" alt="Ukrainian Bear" draggable="false" /></div>
+          <div class="crew-name">Ukrainian Bear</div>
+          <div class="crew-role">Media</div>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-card-img"><img src="img/crew/spilka.png" alt="Spilka" draggable="false" /></div>
+          <div class="crew-name">Spilka</div>
+          <div class="crew-role">Designer</div>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-card-img"><img src="img/crew/member6.png" alt="" draggable="false" /></div>
+          <div class="crew-name">—</div>
+          <div class="crew-role">—</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="crew-controls">
+      <div class="crew-progress-wrap">
+        <div class="crew-progress-fill" id="crewProgress"></div>
+      </div>
+      <div class="crew-arrows">
+        <button class="crew-btn" id="crewPrev" aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9L11 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="crew-btn" id="crewNext" aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4L12 9L7 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
@@ -316,6 +490,29 @@
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    (function() {
+      const track = document.getElementById('crewTrack');
+      const fill  = document.getElementById('crewProgress');
+      const CARD  = 289, GAP = 55, TOTAL = 6;
+      let idx = 0;
+
+      function maxIdx() {
+        return Math.max(0, TOTAL - Math.floor(window.innerWidth / (CARD + GAP)));
+      }
+      function render() {
+        const mx = maxIdx();
+        idx = Math.max(0, Math.min(idx, mx));
+        track.style.transform = `translateX(-${idx * (CARD + GAP)}px)`;
+        fill.style.width = mx > 0 ? `${(idx / mx) * 100}%` : '0%';
+        document.getElementById('crewPrev').style.opacity = idx === 0 ? '0.3' : '1';
+        document.getElementById('crewNext').style.opacity = idx >= mx ? '0.3' : '1';
+      }
+      document.getElementById('crewNext').addEventListener('click', () => { idx++; render(); });
+      document.getElementById('crewPrev').addEventListener('click', () => { idx--; render(); });
+      window.addEventListener('resize', render);
+      render();
+    })();
 
     const seq = 'tech';
     let buf = '';
