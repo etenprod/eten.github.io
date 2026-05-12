@@ -512,6 +512,14 @@
       }
       document.getElementById('crewNext').addEventListener('click', () => { idx++; render(); });
       document.getElementById('crewPrev').addEventListener('click', () => { idx--; render(); });
+
+      let touchStartX = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const delta = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(delta) > 50) { idx += delta > 0 ? 1 : -1; render(); }
+      });
+
       window.addEventListener('resize', render);
       render();
     })();
