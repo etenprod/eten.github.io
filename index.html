@@ -190,9 +190,9 @@
     .crew-section {
       margin-top: 140px;
       padding-bottom: 80px;
+      overflow: hidden;
     }
     .crew-viewport {
-      overflow: hidden;
       padding-left: max(20px, calc(50vw - 520px));
     }
     .crew-track {
@@ -259,7 +259,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 28px 20px 0 max(20px, calc(50vw - 520px));
+      padding: 28px max(20px, calc(50vw - 520px)) 0 max(20px, calc(50vw - 520px));
     }
     .crew-progress-wrap {
       flex: 1;
@@ -283,7 +283,7 @@
     .crew-btn {
       width: 44px;
       height: 44px;
-      border-radius: 50%;
+      border-radius: 8px;
       border: 1px solid rgba(255,255,255,0.1);
       background: rgba(255,255,255,0.04);
       color: rgba(255,255,255,0.6);
@@ -305,7 +305,7 @@
         gap: 60px;
       }
       .crew-viewport { padding-left: 20px; }
-      .crew-controls { padding-left: 20px; }
+      .crew-controls { padding: 28px 20px 0 20px; }
     }
 
     @media (max-width: 500px) {
@@ -430,39 +430,39 @@
       <div class="crew-track" id="crewTrack">
 
         <div class="crew-card">
-          <div class="crew-card-img"><img src="img/crew/darud.png" alt="darud" draggable="false" /></div>
+          <div class="crew-card-img"><img src="img/darud.svg" alt="darud" draggable="false" /></div>
           <div class="crew-name">darud</div>
           <div class="crew-role">Leader</div>
         </div>
 
         <div class="crew-card">
-          <div class="crew-card-img"><img src="img/crew/yukito.png" alt="Yukito" draggable="false" /></div>
+          <div class="crew-card-img"><img src="img/yukito.svg" alt="Yukito" draggable="false" /></div>
           <div class="crew-name">Yukito</div>
           <div class="crew-role">Programmer</div>
         </div>
 
         <div class="crew-card">
-          <div class="crew-card-img"><img src="img/crew/flemchik.png" alt="Flemchik" draggable="false" /></div>
+          <div class="crew-card-img"><img src="img/flemchik.svg" alt="Flemchik" draggable="false" /></div>
           <div class="crew-name">Flemchik</div>
           <div class="crew-role">Media</div>
         </div>
 
         <div class="crew-card">
-          <div class="crew-card-img"><img src="img/crew/ukrainian-bear.png" alt="Ukrainian Bear" draggable="false" /></div>
+          <div class="crew-card-img"><img src="img/ukrainian-bear.svg" alt="Ukrainian Bear" draggable="false" /></div>
           <div class="crew-name">Ukrainian Bear</div>
           <div class="crew-role">Media</div>
         </div>
 
         <div class="crew-card">
-          <div class="crew-card-img"><img src="img/crew/spilka.png" alt="Spilka" draggable="false" /></div>
+          <div class="crew-card-img"><img src="img/spilka.svg" alt="Spilka" draggable="false" /></div>
           <div class="crew-name">Spilka</div>
           <div class="crew-role">Designer</div>
         </div>
 
         <div class="crew-card">
-          <div class="crew-card-img"><img src="img/crew/member6.png" alt="" draggable="false" /></div>
-          <div class="crew-name">—</div>
-          <div class="crew-role">—</div>
+          <div class="crew-card-img"><img src="img/elem.svg" alt="" draggable="false" /></div>
+          <div class="crew-name">Elem</div>
+          <div class="crew-role">error63</div>
         </div>
 
       </div>
