@@ -316,6 +316,13 @@
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    const seq = 'tech';
+    let buf = '';
+    document.addEventListener('keydown', e => {
+      buf = (buf + e.key).slice(-seq.length);
+      if (buf === seq) window.open('https://etentech.pp.ua/', '_blank');
+    });
   </script>
 </body>
 </html>
