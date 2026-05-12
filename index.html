@@ -106,7 +106,7 @@
       height: 582px;
       border-radius: 14px;
       overflow: hidden;
-      background: #0a0a0a;
+      background: #000;
       border: 1px solid rgba(255,255,255,0.1);
       box-shadow:
         inset 0 1px 0 rgba(255,255,255,0.1),
@@ -119,8 +119,20 @@
       top: 0; left: 0;
       width: 450px;
       height: 450px;
-      background-color: #080808;
+      background-color: #000;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='450' height='450'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.045)' stroke-width='1.2'%3E%3Cpath d='M-20 180 C60 120, 140 200, 200 140 S320 60, 400 120 S480 220, 520 180'/%3E%3Cpath d='M-20 260 C40 200, 120 300, 190 240 S310 160, 390 220 S470 320, 520 270'/%3E%3Cpath d='M30 -20 C80 60, 60 160, 120 200 S200 300, 160 380 S100 440, 140 490'/%3E%3Cpath d='M160 -20 C200 80, 180 180, 240 220 S340 300, 300 400 S240 450, 280 510'/%3E%3Cpath d='M300 -20 C320 80, 280 180, 340 230 S420 290, 400 390'/%3E%3Cpath d='M-20 80 C80 60, 160 120, 220 80 S340 20, 420 80 S490 160, 530 120'/%3E%3Cpath d='M-20 360 C60 320, 140 400, 210 350 S330 280, 410 340 S490 420, 530 380'/%3E%3Cpath d='M80 -20 C100 80, 60 180, 100 260 S140 360, 100 430'/%3E%3Cpath d='M380 -20 C400 80, 360 160, 380 250 S420 340, 380 430'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 260px;
+      height: 160px;
+      background: radial-gradient(ellipse at bottom right, rgba(255,255,255,0.09) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 3;
     }
 
     .card-logo {
